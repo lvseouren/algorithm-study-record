@@ -29,4 +29,5 @@ void subsets()
 	vector<int> nums = { 1,2,3 };
 	Solution_subsets s;
 	s.subsets(nums);
+	//s.subsets_backtrack(nums);
 }
