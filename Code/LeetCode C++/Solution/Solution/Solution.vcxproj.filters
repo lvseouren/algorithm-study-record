@@ -27,13 +27,19 @@
     <ClCompile Include="Solution_subsets.cpp">
       <Filter>源文件\solution</Filter>
     </ClCompile>
+    <ClCompile Include="Solution_maxDepth.cpp">
+      <Filter>源文件\solution</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Solution_maxDepth.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
     <ClInclude Include="Solution_findRepeatNumber.h">
-      <Filter>源文件\solution</Filter>
+      <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Solution_subsets.h">
-      <Filter>源文件\solution</Filter>
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

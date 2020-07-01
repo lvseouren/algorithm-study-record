@@ -141,10 +141,12 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Solution_findRepeatNumber.cpp" />
+    <ClCompile Include="Solution_maxDepth.cpp" />
     <ClCompile Include="Solution_subsets.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solution_findRepeatNumber.h" />
+    <ClInclude Include="Solution_maxDepth.h" />
     <ClInclude Include="Solution_subsets.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
