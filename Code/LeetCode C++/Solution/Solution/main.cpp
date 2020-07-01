@@ -43,6 +43,6 @@ void maxDepth()
 	root.right = new TreeNode(20);
 	root.right->left = new TreeNode(15);
 	root.right->right = new TreeNode(7);
-	int ret = s.maxDepth(&root);
+	int ret = s.maxDepth_iterate_bfs(&root);
 	cout << "最大深度为：" << ret << endl;
 }
