@@ -7,17 +7,11 @@
 #include "Solution_findRepeatNumber.h"
 #include "Solution_subsets.h"
 #include "Solution_maxDepth.h"
+#include "Solution_validateBinarySearchTree.h"
 
 void findRepeatNumber();
 void subsets();
 void maxDepth();
-
-int main()
-{
-	//findRepeatNumber();
-	//subsets();
-	maxDepth();
-}
 
 void findRepeatNumber()
 {
@@ -45,4 +39,27 @@ void maxDepth()
 	root.right->right = new TreeNode(7);
 	int ret = s.maxDepth_iterate_bfs(&root);
 	cout << "最大深度为：" << ret << endl;
+}
+
+void isValidBST()
+{
+	TreeNode root(4);
+	root.left = new TreeNode(3);
+	root.right = new TreeNode(15);
+	root.right->left = new TreeNode(9);
+	root.right->right = new TreeNode(20);
+	Solution_validateBinarySearchTree s;
+	bool ret = s.isValidBST(&root);
+	if (ret)
+		cout << "是有效的二叉查找树" << endl;
+	else
+		cout << "不是有效的二叉查找树" << endl;
+}
+
+int main()
+{
+	//findRepeatNumber();
+	//subsets();
+	//maxDepth();
+	isValidBST();
 }
