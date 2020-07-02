@@ -9,10 +9,21 @@
 #include "Solution_maxDepth.h"
 #include "Solution_validateBinarySearchTree.h"
 #include "Solution_insertIntoBST.h"
+#include "Solution_reverseList.h"
 
 void findRepeatNumber();
 void subsets();
 void maxDepth();
+
+void PrintList(ListNode* head)
+{
+	while(head)
+	{
+		cout << head->val<<",";
+		head = head->next;
+	}
+	cout << endl;
+}
 
 void PrintBST_preOrder(TreeNode* root)
 {
@@ -83,11 +94,25 @@ void insertBST()
 	cout << endl;
 }
 
+void reverseList()
+{
+	ListNode* head = new ListNode(10);
+	ListNode* cur = head;
+	cur->next = new ListNode(11);
+	cur = cur->next;
+	cur->next = new ListNode(12);
+	PrintList(head);
+	Solution_reverseList s;
+	s.reverseList(head);
+	PrintList(head);
+}
+
 int main()
 {
 	//findRepeatNumber();
 	//subsets();
 	//maxDepth();
 	//isValidBST();
-	insertBST();
+	//insertBST();
+	reverseList();
 }
