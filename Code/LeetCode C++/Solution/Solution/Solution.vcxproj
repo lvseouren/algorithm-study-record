@@ -141,12 +141,14 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Solution_findRepeatNumber.cpp" />
+    <ClCompile Include="Solution_insertIntoBST.cpp" />
     <ClCompile Include="Solution_maxDepth.cpp" />
     <ClCompile Include="Solution_subsets.cpp" />
     <ClCompile Include="Solution_validateBinarySearchTree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solution_findRepeatNumber.h" />
+    <ClInclude Include="Solution_insertIntoBST.h" />
     <ClInclude Include="Solution_maxDepth.h" />
     <ClInclude Include="Solution_subsets.h" />
     <ClInclude Include="Solution_validateBinarySearchTree.h" />

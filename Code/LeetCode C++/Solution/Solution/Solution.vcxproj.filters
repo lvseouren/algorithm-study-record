@@ -33,6 +33,9 @@
     <ClCompile Include="Solution_validateBinarySearchTree.cpp">
       <Filter>源文件\solution</Filter>
     </ClCompile>
+    <ClCompile Include="Solution_insertIntoBST.cpp">
+      <Filter>源文件\solution</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solution_maxDepth.h">
@@ -48,6 +51,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="TreeNode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_insertIntoBST.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

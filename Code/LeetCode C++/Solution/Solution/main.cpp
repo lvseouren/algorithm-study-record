@@ -8,10 +8,20 @@
 #include "Solution_subsets.h"
 #include "Solution_maxDepth.h"
 #include "Solution_validateBinarySearchTree.h"
+#include "Solution_insertIntoBST.h"
 
 void findRepeatNumber();
 void subsets();
 void maxDepth();
+
+void PrintBST_preOrder(TreeNode* root)
+{
+	if (root == NULL)
+		return;
+	cout << root->val << ",";
+	PrintBST_preOrder(root->left);
+	PrintBST_preOrder(root->right);
+}
 
 void findRepeatNumber()
 {
@@ -56,10 +66,28 @@ void isValidBST()
 		cout << "不是有效的二叉查找树" << endl;
 }
 
+void insertBST()
+{
+	TreeNode root(40);
+	root.left = new TreeNode(2);
+	root.right = new TreeNode(57);
+	root.left->left = new TreeNode(1);
+	root.left->right = new TreeNode(3);
+	Solution_insertIntoBST s;
+	cout << "插入前的树：";
+	PrintBST_preOrder(&root);
+	cout << endl;
+	s.insertIntoBST(&root, 5);
+	cout << "插入后的树：";
+	PrintBST_preOrder(&root);
+	cout << endl;
+}
+
 int main()
 {
 	//findRepeatNumber();
 	//subsets();
 	//maxDepth();
-	isValidBST();
+	//isValidBST();
+	insertBST();
 }
