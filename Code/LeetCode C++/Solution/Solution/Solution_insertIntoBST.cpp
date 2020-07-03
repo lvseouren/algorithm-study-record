@@ -17,6 +17,10 @@ TreeNode* Solution_insertIntoBST::insertIntoBST(TreeNode* root, int val)
 	return root;
 }
 
+void Solution_insertIntoBST::RunTest()
+{
+}
+
 void Solution_insertIntoBST::insertBST_DFS(TreeNode* root, int val)
 {
 	if (root == NULL)
@@ -32,4 +36,8 @@ void Solution_insertIntoBST::insertBST_DFS(TreeNode* root, int val)
 			insertBST_DFS(root->right, val);
 		else
 			root->right = new TreeNode(val);
+}
+
+void Solution_insertIntoBST::RunTestCase(vector<int>, int)
+{
 }
