@@ -16,7 +16,7 @@ public:
 	void setxy(int x, int y);
 private:
 	void getxy(int* x, int* y);
-	const int rootTabNum = 8;
+	const int rootTabNum = 7;
 	int curMaxY;
 	int startY;
 };

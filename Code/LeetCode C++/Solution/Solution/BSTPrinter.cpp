@@ -25,7 +25,7 @@ void BSTPrinter::print(TreeNode* root)
 	int x, y;
 	getxy(&x, &y);
 	startY = y;
-	printDFS(root, rootTabNum, y);
+	printDFS(root, rootTabNum*8, y);
 	setxy(0, curMaxY + 1);
 }
 
@@ -48,10 +48,10 @@ void BSTPrinter::printDFS(TreeNode* root, int tabNum, int depth = 0)
 	}
 
 	curMaxY = curMaxY < depth ? depth : curMaxY;
-	setxy(0, depth);
-	printTab(tabNum);
+	setxy(tabNum, depth);
+	//printSpace(tabNum);
 	cout << root->val << ",";
-	int offset = rootTabNum/pow(2, depth-startY+1);
+	int offset = rootTabNum*8/pow(2, depth-startY+1);
 	printDFS(root->left, tabNum-offset, depth+1);
 	printDFS(root->right, tabNum+offset, depth+1);
 }

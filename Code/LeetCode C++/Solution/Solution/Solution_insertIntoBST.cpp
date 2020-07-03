@@ -20,7 +20,7 @@ TreeNode* Solution_insertIntoBST::insertIntoBST(TreeNode* root, int val)
 void Solution_insertIntoBST::RunTest()
 {
 	RunTestCase({ 40,2,1,3,57 },5);
-	RunTestCase({ 40,2,1,3,57 }, 56);
+	RunTestCase({ 40,2,1,3,5,57 }, 6);
 }
 
 void Solution_insertIntoBST::insertBST_DFS(TreeNode* root, int val)
@@ -42,9 +42,10 @@ void Solution_insertIntoBST::insertBST_DFS(TreeNode* root, int val)
 
 void Solution_insertIntoBST::RunTestCase(vector<int> list, int val)
 {
+	cout<<"²âÊÔÓÃÀý:"<<endl;
 	TreeNode* root = bstPrinter->generateBST(&list);
 	bstPrinter->print(root);
-	cout << endl;
+	cout << "---------------------------------------------------------²åÈë£º" << val <<"------------------------------------------------------------"<< endl;
 	insertBST_DFS(root, val);
 	bstPrinter->print(root);
 	cout << endl;
