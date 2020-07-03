@@ -5,40 +5,41 @@ Solution_reverseBetween::Solution_reverseBetween(){}
 
 ListNode* Solution_reverseBetween::reverseBetween(ListNode* head, int m, int n)
 {
-	if (m == n)
-		return head;
-	ListNode* ret = head;
-	int i = 1;
-	ListNode* left = NULL;
-	while (i < m && head != NULL)
-	{
-		i++;
-		if (i == m)
-			left = head;
-		head = head->next;
-	}
-
 	if (head == NULL)
 		return head;
-
-	ListNode* next;
+	int i = 0;
+	ListNode* left = NULL;//左断点,当m==1时，为NULL
+	ListNode* nodeM = NULL;
 	ListNode* prev = NULL;
-	while(i++<=n&&head!=NULL)
+	ListNode* next = NULL;
+	ListNode* dummy = head;
+	while(i<m)
 	{
-		next = head->next;
-		head->next = prev;
-		prev = head;
-		head = next;
+		prev = dummy;
+		dummy = dummy->next;
+		i++;
+		if (i == m - 1)
+			left = prev;
 	}
-	if(left!=NULL)
+	nodeM = prev;
+	while(i<n&&dummy)
 	{
-		left->next->next = head;
+		next = dummy->next;
+		dummy->next = prev;
+		prev = dummy;
+		dummy = next;
+		i++;
+	}
+	
+	nodeM->next = dummy;
+	if (left)
+	{
 		left->next = prev;
 	}
-	if (m == 1)
-		return prev;
 	else
-		return ret;
+		head = prev;
+
+	return head;
 }
 
 void Solution_reverseBetween::RunTest()
@@ -49,10 +50,12 @@ void Solution_reverseBetween::RunTest()
 	RunTestCase({ 5,6,7,8,9 }, 1, 5);
 	RunTestCase({ 5,6,7,8,9 }, 2, 5);
 	RunTestCase({ 5,6,7,8,9 }, 2, 4);
+	RunTestCase({ 1,2,3 }, 1, 2);
 }
 
 void Solution_reverseBetween::RunTestCase(vector<int> list, int m, int n)
 {
+	cout << "m=" << m << ",n=" << n<<","<<endl;
 	ListPrinter* listPrinter = new ListPrinter();
 	ListNode* testCase1 = new ListNode(list);
 	listPrinter->print(testCase1);
