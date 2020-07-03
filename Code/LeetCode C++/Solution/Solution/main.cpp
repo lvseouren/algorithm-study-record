@@ -13,6 +13,7 @@
 #include "Solution_reverseBetween.h"
 #include "Solution_mergeTwoList.h"
 #include "BSTPrinter.h"
+#include "Solution_solveNQueens.h"
 
 void PrintBST_preOrder(TreeNode* root)
 {
@@ -95,16 +96,21 @@ void mergeTwoList()
 	s.RunTest();
 }
 
+void solveNQueens()
+{
+	Solution_solveNQueens s;
+	s.RunTest();
+}
+
 int main()
 {
 	//findRepeatNumber();
 	//subsets();
 	//maxDepth();
 	//isValidBST();
-	insertBST();
+	//insertBST();
 	//reverseList();
 	//reverserBetween();
 	//mergeTwoList();
-	//BSTPrinter* printer = new BSTPrinter();
-	//printer->testConsolePos();
+	solveNQueens();
 }

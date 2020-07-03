@@ -149,6 +149,7 @@
     <ClCompile Include="Solution_mergeTwoList.cpp" />
     <ClCompile Include="Solution_reverseBetween.cpp" />
     <ClCompile Include="Solution_reverseList.cpp" />
+    <ClCompile Include="Solution_solveNQueens.cpp" />
     <ClCompile Include="Solution_subsets.cpp" />
     <ClCompile Include="Solution_validateBinarySearchTree.cpp" />
   </ItemGroup>
@@ -162,6 +163,7 @@
     <ClInclude Include="Solution_mergeTwoList.h" />
     <ClInclude Include="Solution_reverseBetween.h" />
     <ClInclude Include="Solution_reverseList.h" />
+    <ClInclude Include="Solution_solveNQueens.h" />
     <ClInclude Include="Solution_subsets.h" />
     <ClInclude Include="Solution_validateBinarySearchTree.h" />
     <ClInclude Include="TreeNode.h" />
