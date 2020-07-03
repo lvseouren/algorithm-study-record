@@ -12,10 +12,7 @@
 #include "Solution_reverseList.h"
 #include "Solution_reverseBetween.h"
 #include "Solution_mergeTwoList.h"
-
-void findRepeatNumber();
-void subsets();
-void maxDepth();
+#include "BSTPrinter.h"
 
 void PrintBST_preOrder(TreeNode* root)
 {
@@ -71,19 +68,8 @@ void isValidBST()
 
 void insertBST()
 {
-	TreeNode root(40);
-	root.left = new TreeNode(2);
-	root.right = new TreeNode(57);
-	root.left->left = new TreeNode(1);
-	root.left->right = new TreeNode(3);
 	Solution_insertIntoBST s;
-	cout << "插入前的树：";
-	PrintBST_preOrder(&root);
-	cout << endl;
-	s.insertIntoBST(&root, 5);
-	cout << "插入后的树：";
-	PrintBST_preOrder(&root);
-	cout << endl;
+	s.RunTest();
 }
 
 void reverseList()
@@ -115,8 +101,8 @@ int main()
 	//subsets();
 	//maxDepth();
 	//isValidBST();
-	//insertBST();
-	reverseList();
+	insertBST();
+	//reverseList();
 	//reverserBetween();
 	//mergeTwoList();
 }

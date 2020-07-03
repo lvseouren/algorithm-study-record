@@ -19,6 +19,12 @@
     <Filter Include="源文件\helper">
       <UniqueIdentifier>{e4285932-5c49-4291-a321-ad1603e1a121}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\helper">
+      <UniqueIdentifier>{55d19e9d-db8f-4c94-a354-ef7043739233}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\solution">
+      <UniqueIdentifier>{857bea2c-68b8-4c9d-b42b-8a5d7c54d1a7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -54,40 +60,46 @@
     <ClCompile Include="SolutionBase.cpp">
       <Filter>源文件\solution</Filter>
     </ClCompile>
+    <ClCompile Include="BSTPrinter.cpp">
+      <Filter>源文件\helper</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Solution_maxDepth.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_findRepeatNumber.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_subsets.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_validateBinarySearchTree.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="TreeNode.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Solution_insertIntoBST.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_reverseList.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_reverseBetween.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="ListPrinter.h">
-      <Filter>头文件</Filter>
+      <Filter>头文件\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="BSTPrinter.h">
+      <Filter>头文件\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_findRepeatNumber.h">
+      <Filter>头文件\solution</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_insertIntoBST.h">
+      <Filter>头文件\solution</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_maxDepth.h">
+      <Filter>头文件\solution</Filter>
     </ClInclude>
     <ClInclude Include="Solution_mergeTwoList.h">
-      <Filter>头文件</Filter>
+      <Filter>头文件\solution</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_reverseBetween.h">
+      <Filter>头文件\solution</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_reverseList.h">
+      <Filter>头文件\solution</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_subsets.h">
+      <Filter>头文件\solution</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_validateBinarySearchTree.h">
+      <Filter>头文件\solution</Filter>
     </ClInclude>
     <ClInclude Include="SolutionBase.h">
-      <Filter>头文件</Filter>
+      <Filter>头文件\solution</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

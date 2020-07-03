@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BSTPrinter.cpp" />
     <ClCompile Include="ListPrinter.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SolutionBase.cpp" />
@@ -152,6 +153,7 @@
     <ClCompile Include="Solution_validateBinarySearchTree.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BSTPrinter.h" />
     <ClInclude Include="ListPrinter.h" />
     <ClInclude Include="SolutionBase.h" />
     <ClInclude Include="Solution_findRepeatNumber.h" />
