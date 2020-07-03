@@ -1,7 +1,7 @@
 #include "BSTPrinter.h"
 #include "Solution_insertIntoBST.h"
 #include <deque>
-
+#include <math.h>
 BSTPrinter::BSTPrinter()
 {
 	curMaxY = 0;
@@ -13,11 +13,18 @@ void BSTPrinter::printTab(int n)
 		cout << "\t";
 }
 
+void BSTPrinter::printSpace(int n)
+{
+	for (int i = 0; i < n; i++)
+		cout << " ";
+}
+
 void BSTPrinter::print(TreeNode* root)
 {
 	//printBFS(root);
 	int x, y;
 	getxy(&x, &y);
+	startY = y;
 	printDFS(root, rootTabNum, y);
 	setxy(0, curMaxY + 1);
 }
@@ -44,8 +51,9 @@ void BSTPrinter::printDFS(TreeNode* root, int tabNum, int depth = 0)
 	setxy(0, depth);
 	printTab(tabNum);
 	cout << root->val << ",";
-	printDFS(root->left, tabNum-1, depth+1);
-	printDFS(root->right, tabNum+1, depth+1);
+	int offset = rootTabNum/pow(2, depth-startY+1);
+	printDFS(root->left, tabNum-offset, depth+1);
+	printDFS(root->right, tabNum+offset, depth+1);
 }
 
 void BSTPrinter::printBFS(TreeNode* root)

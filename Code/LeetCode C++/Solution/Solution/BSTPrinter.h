@@ -6,6 +6,7 @@ class BSTPrinter
 public:
 	BSTPrinter();
 	void printTab(int n);
+	void printSpace(int n);
 	void print(TreeNode* node);
 	void printDFS(TreeNode* root);
 	void printDFS(TreeNode* root, int tabNum, int depth);
@@ -15,7 +16,8 @@ public:
 	void setxy(int x, int y);
 private:
 	void getxy(int* x, int* y);
-	const int rootTabNum = 5;
+	const int rootTabNum = 8;
 	int curMaxY;
+	int startY;
 };
 
