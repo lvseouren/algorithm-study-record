@@ -105,4 +105,6 @@ int main()
 	//reverseList();
 	//reverserBetween();
 	//mergeTwoList();
+	//BSTPrinter* printer = new BSTPrinter();
+	//printer->testConsolePos();
 }
