@@ -36,3 +36,17 @@ ListNode* Solution_reverseList::reverseRecursive(ListNode* prev, ListNode* head)
 	head->next = prev;
 	return reverseRecursive(head, next);
 }
+
+void Solution_reverseList::RunTest()
+{
+	RunTestCase({ 10, 11, 12, 13, 14,15 });
+}
+
+void Solution_reverseList::RunTestCase(vector<int> list)
+{
+	ListNode* l = new ListNode(list); 
+	listPrinter->print(l);
+	l = reverseListRecursive(l);
+	listPrinter->print(l);
+	cout << endl;
+}
