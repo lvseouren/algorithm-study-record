@@ -103,6 +103,7 @@ void reverseList()
 	cur->next = new ListNode(12);
 	PrintList(head);
 	Solution_reverseList s;
+	//head = s.reverseListRecursive(head);
 	head = s.reverseList(head);
 	PrintList(head);
 }

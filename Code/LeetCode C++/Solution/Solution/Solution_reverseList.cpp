@@ -5,7 +5,6 @@ Solution_reverseList::Solution_reverseList()
 
 ListNode* Solution_reverseList::reverseList(ListNode* head)
 {
-	ListNode* ret = head;
 	ListNode* prev = NULL;
 	ListNode* next;
 	while(head)
@@ -14,7 +13,21 @@ ListNode* Solution_reverseList::reverseList(ListNode* head)
 		head->next = prev;
 		prev = head;
 		head = next;
-		ret = prev;
 	}
-	return ret;
+	return prev;
+}
+
+ListNode* Solution_reverseList::reverseListRecursive(ListNode* head)
+{
+	return reverseRecursive(NULL, head);
+}
+
+ListNode* Solution_reverseList::reverseRecursive(ListNode* prev, ListNode* head)
+{
+	if (head == NULL)
+		return prev;
+	
+	ListNode* next = head->next;
+	head->next = prev;
+	return reverseRecursive(head, next);
 }
