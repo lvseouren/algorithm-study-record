@@ -11,10 +11,9 @@ ListNode* Solution_reverseList::reverseList(ListNode* head)
 	while(head)
 	{
 		next = head->next;
-		if(prev!=NULL)
-			head->next = prev;
+		head->next = prev;
 		prev = head;
-		head = head->next;
+		head = next;
 		ret = prev;
 	}
 	return ret;
