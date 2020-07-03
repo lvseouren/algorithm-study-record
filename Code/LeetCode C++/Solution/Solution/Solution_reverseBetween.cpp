@@ -42,6 +42,34 @@ ListNode* Solution_reverseBetween::reverseBetween(ListNode* head, int m, int n)
 	return head;
 }
 
+ListNode* Solution_reverseBetween::reverseBetweenRecursive(ListNode* head, int m, int n)
+{
+	stop = false;
+	left = head;
+	reverseAndRecurse(head, m, n);
+	return head;
+}
+
+void Solution_reverseBetween::reverseAndRecurse(ListNode* right, int m, int n)
+{
+	if (n == 1)
+		return;
+	right = right->next;
+	if (m > 1)
+		left = left->next;
+	reverseAndRecurse(right, m - 1, n - 1);
+	if (left == right || right->next == left)
+		stop = true;
+
+	if(!stop)
+	{
+		int temp = left->val;
+		left->val = right->val;
+		right->val = temp;
+		left = left->next;
+	}
+}
+
 void Solution_reverseBetween::RunTest()
 {
 	RunTestCase({ 5 }, 1, 1);
@@ -59,7 +87,8 @@ void Solution_reverseBetween::RunTestCase(vector<int> list, int m, int n)
 	ListPrinter* listPrinter = new ListPrinter();
 	ListNode* testCase1 = new ListNode(list);
 	listPrinter->print(testCase1);
-	testCase1 = reverseBetween(testCase1, m, n);
+	//testCase1 = reverseBetween(testCase1, m, n);
+	testCase1 = reverseBetweenRecursive(testCase1, m, n);
 	listPrinter->print(testCase1);
 	cout << endl;
 }
