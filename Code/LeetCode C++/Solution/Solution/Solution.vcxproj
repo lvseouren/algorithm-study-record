@@ -143,6 +143,7 @@
     <ClCompile Include="Solution_findRepeatNumber.cpp" />
     <ClCompile Include="Solution_insertIntoBST.cpp" />
     <ClCompile Include="Solution_maxDepth.cpp" />
+    <ClCompile Include="Solution_reverseBetween.cpp" />
     <ClCompile Include="Solution_reverseList.cpp" />
     <ClCompile Include="Solution_subsets.cpp" />
     <ClCompile Include="Solution_validateBinarySearchTree.cpp" />
@@ -151,6 +152,7 @@
     <ClInclude Include="Solution_findRepeatNumber.h" />
     <ClInclude Include="Solution_insertIntoBST.h" />
     <ClInclude Include="Solution_maxDepth.h" />
+    <ClInclude Include="Solution_reverseBetween.h" />
     <ClInclude Include="Solution_reverseList.h" />
     <ClInclude Include="Solution_subsets.h" />
     <ClInclude Include="Solution_validateBinarySearchTree.h" />

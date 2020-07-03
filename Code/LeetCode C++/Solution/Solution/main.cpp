@@ -10,6 +10,7 @@
 #include "Solution_validateBinarySearchTree.h"
 #include "Solution_insertIntoBST.h"
 #include "Solution_reverseList.h"
+#include "Solution_reverseBetween.h"
 
 void findRepeatNumber();
 void subsets();
@@ -96,15 +97,20 @@ void insertBST()
 
 void reverseList()
 {
-	ListNode* head = new ListNode(10);
-	ListNode* cur = head;
-	cur->next = new ListNode(11);
-	cur = cur->next;
-	cur->next = new ListNode(12);
+	ListNode* head = new ListNode({ 10, 11, 12, 13, 14,15 });
 	PrintList(head);
 	Solution_reverseList s;
 	//head = s.reverseListRecursive(head);
 	head = s.reverseList(head);
+	PrintList(head);
+}
+
+void reverserBetween()
+{
+	ListNode* head = new ListNode({3,5});
+	PrintList(head);
+	Solution_reverseBetween s;
+	head = s.reverseBetween(head, 1, 2);
 	PrintList(head);
 }
 
@@ -115,5 +121,6 @@ int main()
 	//maxDepth();
 	//isValidBST();
 	//insertBST();
-	reverseList();
+	//reverseList();
+	reverserBetween();
 }

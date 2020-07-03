@@ -19,7 +19,12 @@ ListNode* Solution_reverseList::reverseList(ListNode* head)
 
 ListNode* Solution_reverseList::reverseListRecursive(ListNode* head)
 {
-	return reverseRecursive(NULL, head);
+	if (head == NULL || head->next == NULL)
+		return head;
+	ListNode* ret = reverseListRecursive(head->next);
+	head->next->next = head;
+	head->next = NULL;
+	return ret;
 }
 
 ListNode* Solution_reverseList::reverseRecursive(ListNode* prev, ListNode* head)
