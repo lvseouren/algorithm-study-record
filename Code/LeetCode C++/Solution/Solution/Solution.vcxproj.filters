@@ -16,6 +16,9 @@
     <Filter Include="源文件\solution">
       <UniqueIdentifier>{b4bc6a9e-9155-4ecb-87eb-1fec75c551d1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\helper">
+      <UniqueIdentifier>{e4285932-5c49-4291-a321-ad1603e1a121}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -42,6 +45,9 @@
     <ClCompile Include="Solution_reverseBetween.cpp">
       <Filter>源文件\solution</Filter>
     </ClCompile>
+    <ClCompile Include="ListPrinter.cpp">
+      <Filter>源文件\helper</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solution_maxDepth.h">
@@ -66,6 +72,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Solution_reverseBetween.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ListPrinter.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

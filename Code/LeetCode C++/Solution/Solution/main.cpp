@@ -107,11 +107,13 @@ void reverseList()
 
 void reverserBetween()
 {
-	ListNode* head = new ListNode({3,5});
-	PrintList(head);
+	//ListNode* head = new ListNode({3,5});
+	//PrintList(head);
+	//Solution_reverseBetween s;
+	//head = s.reverseBetween(head, 1, 2);
+	//PrintList(head);
 	Solution_reverseBetween s;
-	head = s.reverseBetween(head, 1, 2);
-	PrintList(head);
+	s.RunTest();
 }
 
 int main()

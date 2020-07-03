@@ -13,7 +13,7 @@ struct TreeNode {
 
 struct ListNode {
 	int val;
-	ListNode* next;
+	ListNode* next = NULL;
 	ListNode(int x) : val(x), next(NULL) {}
 	ListNode(vector<int> x)
 	{
