@@ -1,4 +1,5 @@
 #include "Solution_reverseBetween.h"
+#include "ListPrinter.h"
 
 Solution_reverseBetween::Solution_reverseBetween(){}
 
@@ -34,5 +35,28 @@ ListNode* Solution_reverseBetween::reverseBetween(ListNode* head, int m, int n)
 		left->next->next = head;
 		left->next = prev;
 	}
-	return ret;
+	if (m == 1)
+		return prev;
+	else
+		return ret;
+}
+
+void Solution_reverseBetween::RunTest()
+{
+	RunTestCase({ 5 }, 1, 1);
+	RunTestCase({ 3,5 }, 1, 1);
+	RunTestCase({ 3,5 }, 1, 2);
+	RunTestCase({ 5,6,7,8,9 }, 1, 5);
+	RunTestCase({ 5,6,7,8,9 }, 2, 5);
+	RunTestCase({ 5,6,7,8,9 }, 2, 4);
+}
+
+void Solution_reverseBetween::RunTestCase(vector<int> list, int m, int n)
+{
+	ListPrinter* listPrinter = new ListPrinter();
+	ListNode* testCase1 = new ListNode(list);
+	listPrinter->print(testCase1);
+	testCase1 = reverseBetween(testCase1, m, n);
+	listPrinter->print(testCase1);
+	cout << endl;
 }
