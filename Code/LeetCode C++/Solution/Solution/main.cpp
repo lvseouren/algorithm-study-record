@@ -11,6 +11,7 @@
 #include "Solution_insertIntoBST.h"
 #include "Solution_reverseList.h"
 #include "Solution_reverseBetween.h"
+#include "Solution_mergeTwoList.h"
 
 void findRepeatNumber();
 void subsets();
@@ -116,6 +117,12 @@ void reverserBetween()
 	s.RunTest();
 }
 
+void mergeTwoList()
+{
+	Solution_mergeTwoList s;
+	s.RunTest();
+}
+
 int main()
 {
 	//findRepeatNumber();
@@ -124,5 +131,6 @@ int main()
 	//isValidBST();
 	//insertBST();
 	//reverseList();
-	reverserBetween();
+	//reverserBetween();
+	mergeTwoList();
 }

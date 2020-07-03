@@ -48,6 +48,9 @@
     <ClCompile Include="ListPrinter.cpp">
       <Filter>源文件\helper</Filter>
     </ClCompile>
+    <ClCompile Include="Solution_mergeTwoList.cpp">
+      <Filter>源文件\solution</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Solution_maxDepth.h">
@@ -75,6 +78,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="ListPrinter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_mergeTwoList.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
