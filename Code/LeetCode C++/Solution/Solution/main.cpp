@@ -17,16 +17,6 @@ void findRepeatNumber();
 void subsets();
 void maxDepth();
 
-void PrintList(ListNode* head)
-{
-	while(head)
-	{
-		cout << head->val<<",";
-		head = head->next;
-	}
-	cout << endl;
-}
-
 void PrintBST_preOrder(TreeNode* root)
 {
 	if (root == NULL)
@@ -98,12 +88,8 @@ void insertBST()
 
 void reverseList()
 {
-	ListNode* head = new ListNode({ 10, 11, 12, 13, 14,15 });
-	PrintList(head);
 	Solution_reverseList s;
-	//head = s.reverseListRecursive(head);
-	head = s.reverseList(head);
-	PrintList(head);
+	s.RunTest();
 }
 
 void reverserBetween()
@@ -130,7 +116,7 @@ int main()
 	//maxDepth();
 	//isValidBST();
 	//insertBST();
-	//reverseList();
+	reverseList();
 	//reverserBetween();
-	mergeTwoList();
+	//mergeTwoList();
 }
