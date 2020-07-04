@@ -47,26 +47,15 @@ int Solution_maxPathSum::maxPathSum(TreeNode* root)
 	return curMaxSum;
 }
 
-int GetMax(int a, int b)
-{
-	return a > b ? a : b;
-}
-
 int Solution_maxPathSum::calMaxPathSum(TreeNode* root)
 {
 	if (root == NULL)
 		return 0;
 
-	int leftPathSum = calMaxPathSum(root->left);
-	int rightPathSum = calMaxPathSum(root->right);
-	int maxSideNum = leftPathSum > rightPathSum ? leftPathSum : rightPathSum;
-	int maxPathNum = root->val;
-	if (leftPathSum > 0 && rightPathSum > 0)
-		maxPathNum = maxPathNum + leftPathSum + rightPathSum;
-	else
-		maxPathNum = maxSideNum>0?maxPathNum + maxSideNum:maxPathNum;
+	int leftPathSum = max(calMaxPathSum(root->left),0);
+	int rightPathSum = max(calMaxPathSum(root->right),0);
+	int maxPathNum = root->val + leftPathSum + rightPathSum;
+	curMaxSum = max(curMaxSum, maxPathNum);
 
-	curMaxSum = maxPathNum > curMaxSum ? maxPathNum : curMaxSum;
-
-	return GetMax(maxSideNum+root->val, root->val);
+	return(root->val + max(leftPathSum, rightPathSum));
 }

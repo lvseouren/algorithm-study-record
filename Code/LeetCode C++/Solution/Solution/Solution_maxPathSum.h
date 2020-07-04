@@ -1,5 +1,7 @@
 #pragma once
 #include "TreeNode.h"
+#include <algorithm>
+
 class Solution_maxPathSum
 {
 public:
