@@ -75,6 +75,9 @@
     <ClCompile Include="Solution_maxPathSum.cpp">
       <Filter>源文件\solution</Filter>
     </ClCompile>
+    <ClCompile Include="Solution_longestValidParentheses.cpp">
+      <Filter>源文件\solution</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TreeNode.h">
@@ -122,8 +125,11 @@
     <ClInclude Include="Solution_solveNQueens.h">
       <Filter>头文件\solution</Filter>
     </ClInclude>
-    <ClInclude Include="Solution_maxPathSum.h">
+    <ClInclude Include="Solution_longestValidParentheses.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_maxPathSum.h">
+      <Filter>头文件\solution</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

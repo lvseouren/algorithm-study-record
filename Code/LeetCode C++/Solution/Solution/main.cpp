@@ -16,6 +16,7 @@
 #include "Solution_solveNQueens.h"
 #include "Solution_findAllTreePath.h"
 #include "Solution_maxPathSum.h"
+#include "Solution_longestValidParentheses.h"
 
 void PrintBST_preOrder(TreeNode* root)
 {
@@ -116,6 +117,12 @@ void maxPathSum()
 	s.RunTest();
 }
 
+void longestValidParentheses()
+{
+	Solution_longestValidParentheses s;
+	s.RunTest();
+}
+
 int main()
 {
 	//findRepeatNumber();
@@ -128,5 +135,6 @@ int main()
 	//mergeTwoList();
 	//solveNQueens();
 	//findAllTreePath();
-	maxPathSum();
+	//maxPathSum();
+	longestValidParentheses();
 }
