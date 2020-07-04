@@ -77,6 +77,11 @@ void BSTPrinter::printBFS(TreeNode* root)
 	}
 }
 
+TreeNode* BSTPrinter::generateBST(vector<int> list)
+{
+	return generateBST(&list);
+}
+
 TreeNode* BSTPrinter::generateBST(vector<int>* list)
 {
 	if (list == NULL || list->size() == 0)
