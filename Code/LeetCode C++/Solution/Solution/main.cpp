@@ -15,6 +15,7 @@
 #include "BSTPrinter.h"
 #include "Solution_solveNQueens.h"
 #include "Solution_findAllTreePath.h"
+#include "Solution_maxPathSum.h"
 
 void PrintBST_preOrder(TreeNode* root)
 {
@@ -109,6 +110,12 @@ void findAllTreePath()
 	s.RunTest();
 }
 
+void maxPathSum()
+{
+	Solution_maxPathSum s;
+	s.RunTest();
+}
+
 int main()
 {
 	//findRepeatNumber();
@@ -120,5 +127,6 @@ int main()
 	//reverserBetween();
 	//mergeTwoList();
 	//solveNQueens();
-	findAllTreePath();
+	//findAllTreePath();
+	maxPathSum();
 }

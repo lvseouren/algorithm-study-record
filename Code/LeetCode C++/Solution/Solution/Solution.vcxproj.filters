@@ -72,6 +72,9 @@
     <ClCompile Include="VectorPrinter.cpp">
       <Filter>源文件\helper</Filter>
     </ClCompile>
+    <ClCompile Include="Solution_maxPathSum.cpp">
+      <Filter>源文件\solution</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TreeNode.h">
@@ -118,6 +121,9 @@
     </ClInclude>
     <ClInclude Include="Solution_solveNQueens.h">
       <Filter>头文件\solution</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_maxPathSum.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -147,6 +147,7 @@
     <ClCompile Include="Solution_findRepeatNumber.cpp" />
     <ClCompile Include="Solution_insertIntoBST.cpp" />
     <ClCompile Include="Solution_maxDepth.cpp" />
+    <ClCompile Include="Solution_maxPathSum.cpp" />
     <ClCompile Include="Solution_mergeTwoList.cpp" />
     <ClCompile Include="Solution_reverseBetween.cpp" />
     <ClCompile Include="Solution_reverseList.cpp" />
@@ -163,6 +164,7 @@
     <ClInclude Include="Solution_findRepeatNumber.h" />
     <ClInclude Include="Solution_insertIntoBST.h" />
     <ClInclude Include="Solution_maxDepth.h" />
+    <ClInclude Include="Solution_maxPathSum.h" />
     <ClInclude Include="Solution_mergeTwoList.h" />
     <ClInclude Include="Solution_reverseBetween.h" />
     <ClInclude Include="Solution_reverseList.h" />
