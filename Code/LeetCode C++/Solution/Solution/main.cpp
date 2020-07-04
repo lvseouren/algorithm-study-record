@@ -14,6 +14,7 @@
 #include "Solution_mergeTwoList.h"
 #include "BSTPrinter.h"
 #include "Solution_solveNQueens.h"
+#include "Solution_findAllTreePath.h"
 
 void PrintBST_preOrder(TreeNode* root)
 {
@@ -102,6 +103,12 @@ void solveNQueens()
 	s.RunTest();
 }
 
+void findAllTreePath()
+{
+	Solution_findAllTreePath s;
+	s.RunTest();
+}
+
 int main()
 {
 	//findRepeatNumber();
@@ -112,5 +119,6 @@ int main()
 	//reverseList();
 	//reverserBetween();
 	//mergeTwoList();
-	solveNQueens();
+	//solveNQueens();
+	findAllTreePath();
 }

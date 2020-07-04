@@ -143,6 +143,7 @@
     <ClCompile Include="ListPrinter.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SolutionBase.cpp" />
+    <ClCompile Include="Solution_findAllTreePath.cpp" />
     <ClCompile Include="Solution_findRepeatNumber.cpp" />
     <ClCompile Include="Solution_insertIntoBST.cpp" />
     <ClCompile Include="Solution_maxDepth.cpp" />
@@ -152,11 +153,13 @@
     <ClCompile Include="Solution_solveNQueens.cpp" />
     <ClCompile Include="Solution_subsets.cpp" />
     <ClCompile Include="Solution_validateBinarySearchTree.cpp" />
+    <ClCompile Include="VectorPrinter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BSTPrinter.h" />
     <ClInclude Include="ListPrinter.h" />
     <ClInclude Include="SolutionBase.h" />
+    <ClInclude Include="Solution_findAllTreePath.h" />
     <ClInclude Include="Solution_findRepeatNumber.h" />
     <ClInclude Include="Solution_insertIntoBST.h" />
     <ClInclude Include="Solution_maxDepth.h" />
@@ -167,6 +170,7 @@
     <ClInclude Include="Solution_subsets.h" />
     <ClInclude Include="Solution_validateBinarySearchTree.h" />
     <ClInclude Include="TreeNode.h" />
+    <ClInclude Include="VectorPrinter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

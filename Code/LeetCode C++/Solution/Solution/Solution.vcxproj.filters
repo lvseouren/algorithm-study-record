@@ -66,6 +66,12 @@
     <ClCompile Include="Solution_solveNQueens.cpp">
       <Filter>源文件\solution</Filter>
     </ClCompile>
+    <ClCompile Include="Solution_findAllTreePath.cpp">
+      <Filter>源文件\solution</Filter>
+    </ClCompile>
+    <ClCompile Include="VectorPrinter.cpp">
+      <Filter>源文件\helper</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TreeNode.h">
@@ -104,8 +110,14 @@
     <ClInclude Include="SolutionBase.h">
       <Filter>头文件\solution</Filter>
     </ClInclude>
-    <ClInclude Include="Solution_solveNQueens.h">
+    <ClInclude Include="VectorPrinter.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_findAllTreePath.h">
+      <Filter>头文件\solution</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_solveNQueens.h">
+      <Filter>头文件\solution</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
