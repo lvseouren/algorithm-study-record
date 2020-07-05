@@ -125,10 +125,10 @@
     <ClInclude Include="Solution_solveNQueens.h">
       <Filter>头文件\solution</Filter>
     </ClInclude>
-    <ClInclude Include="Solution_longestValidParentheses.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Solution_maxPathSum.h">
+      <Filter>头文件\solution</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_longestValidParentheses.h">
       <Filter>头文件\solution</Filter>
     </ClInclude>
   </ItemGroup>
