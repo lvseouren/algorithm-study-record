@@ -151,6 +151,7 @@
     <ClCompile Include="Solution_maxDepth.cpp" />
     <ClCompile Include="Solution_maxPathSum.cpp" />
     <ClCompile Include="Solution_mergeTwoList.cpp" />
+    <ClCompile Include="Solution_partition.cpp" />
     <ClCompile Include="Solution_reverseBetween.cpp" />
     <ClCompile Include="Solution_reverseList.cpp" />
     <ClCompile Include="Solution_solveNQueens.cpp" />
@@ -170,6 +171,7 @@
     <ClInclude Include="Solution_maxDepth.h" />
     <ClInclude Include="Solution_maxPathSum.h" />
     <ClInclude Include="Solution_mergeTwoList.h" />
+    <ClInclude Include="Solution_partition.h" />
     <ClInclude Include="Solution_reverseBetween.h" />
     <ClInclude Include="Solution_reverseList.h" />
     <ClInclude Include="Solution_solveNQueens.h" />
