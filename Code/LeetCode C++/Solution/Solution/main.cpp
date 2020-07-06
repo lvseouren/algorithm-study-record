@@ -17,6 +17,7 @@
 #include "Solution_findAllTreePath.h"
 #include "Solution_maxPathSum.h"
 #include "Solution_longestValidParentheses.h"
+#include "Solution_findCommonAncestor.h"
 
 void PrintBST_preOrder(TreeNode* root)
 {
@@ -123,6 +124,12 @@ void longestValidParentheses()
 	s.RunTest();
 }
 
+void lowestCommonAncestor()
+{
+	Solution_findCommonAncestor s;
+	s.RunTest();
+}
+
 int main()
 {
 	//findRepeatNumber();
@@ -136,5 +143,6 @@ int main()
 	//solveNQueens();
 	//findAllTreePath();
 	//maxPathSum();
-	longestValidParentheses();
+	//longestValidParentheses();
+	lowestCommonAncestor();
 }
