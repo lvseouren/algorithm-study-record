@@ -153,12 +153,12 @@ int main()
 	//insertBST();
 	//reverseList();
 	//reverserBetween();
-	//mergeTwoList();
+	mergeTwoList();
 	//solveNQueens();
 	//findAllTreePath();
 	//maxPathSum();
 	//longestValidParentheses();
 	//lowestCommonAncestor();
 	//partition();
-	sortList();
+	//sortList();
 }
