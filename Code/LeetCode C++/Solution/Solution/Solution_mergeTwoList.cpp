@@ -7,71 +7,32 @@ Solution_mergeTwoList::Solution_mergeTwoList()
 
 ListNode* Solution_mergeTwoList::mergeTwoLists(ListNode* l1, ListNode* l2)
 {
-	ListNode* head = NULL;
-	ListNode* dummy = NULL;
-	while (l1 || l2)
+	ListNode* before = new ListNode(-1);
+	ListNode* dummy = before;
+	while (l1 && l2)
 	{
-		if (l1 == NULL)
+		if (l1->val < l2->val)
 		{
-			if (head == NULL)
-			{
-				head = l2;
-				dummy = head;
-			}
-			else
-			{
-				dummy->next = l2;
-				dummy = dummy->next;
-			}
-			l2 = l2->next;
-		}
-		else if (l2 == NULL)
-		{
-			if (head == NULL)
-			{
-				head = l1;
-				dummy = head;
-			}
-			else
-			{
-				dummy->next = l1;
-				dummy = dummy->next;
-			}
+			dummy->next = l1;
+			dummy = dummy->next;
 			l1 = l1->next;
 		}
 		else
 		{
-			if (l1->val < l2->val)
-			{
-				if (head == NULL)
-				{
-					head = l1;
-					dummy = head;
-				}
-				else
-				{
-					dummy->next = l1;
-					dummy = dummy->next;
-				}
-				l1 = l1->next;
-			}
-			else
-			{
-				if (head == NULL)
-				{
-					head = l2;
-					dummy = head;
-				}
-				else
-				{
-					dummy->next = l2;
-					dummy = dummy->next;
-				}
-				l2 = l2->next;
-			}
+			dummy->next = l2;
+			dummy = dummy->next;
+			l2 = l2->next;
 		}
 	}
-	return head;
+	if (l1)
+	{
+		dummy->next = l1;
+	}
+	if (l2)
+	{
+		dummy->next = l2;
+	}
+	return before->next;
 }
 
 void Solution_mergeTwoList::RunTest()
