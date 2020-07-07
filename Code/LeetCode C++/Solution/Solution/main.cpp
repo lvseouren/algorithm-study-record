@@ -19,6 +19,7 @@
 #include "Solution_longestValidParentheses.h"
 #include "Solution_findCommonAncestor.h"
 #include "Solution_partition.h"
+#include "Solution_sortList.h"
 
 void PrintBST_preOrder(TreeNode* root)
 {
@@ -137,6 +138,12 @@ void partition()
 	s.RunTest();
 }
 
+void sortList()
+{
+	Solution_sortList s;
+	s.RunTest();
+}
+
 int main()
 {
 	//findRepeatNumber();
@@ -152,5 +159,6 @@ int main()
 	//maxPathSum();
 	//longestValidParentheses();
 	//lowestCommonAncestor();
-	partition();
+	//partition();
+	sortList();
 }
