@@ -82,6 +82,9 @@
       <Filter>源文件\solution</Filter>
     </ClCompile>
     <ClCompile Include="Solution_partition.cpp">
+      <Filter>源文件\solution</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution_sortList.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -141,6 +144,9 @@
       <Filter>头文件\solution</Filter>
     </ClInclude>
     <ClInclude Include="Solution_partition.h">
+      <Filter>头文件\solution</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_sortList.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
