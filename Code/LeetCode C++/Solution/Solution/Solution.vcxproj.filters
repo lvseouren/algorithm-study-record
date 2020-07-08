@@ -84,8 +84,11 @@
     <ClCompile Include="Solution_partition.cpp">
       <Filter>源文件\solution</Filter>
     </ClCompile>
-    <ClCompile Include="Solution_sortList.cpp">
+    <ClCompile Include="Solution_reorderList.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution_sortList.cpp">
+      <Filter>源文件\solution</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -146,8 +149,11 @@
     <ClInclude Include="Solution_partition.h">
       <Filter>头文件\solution</Filter>
     </ClInclude>
-    <ClInclude Include="Solution_sortList.h">
+    <ClInclude Include="Solution_reorderList.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_sortList.h">
+      <Filter>头文件\solution</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
