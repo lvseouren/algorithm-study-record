@@ -20,6 +20,7 @@
 #include "Solution_findCommonAncestor.h"
 #include "Solution_partition.h"
 #include "Solution_sortList.h"
+#include "Solution_reorderList.h"
 
 void PrintBST_preOrder(TreeNode* root)
 {
@@ -144,6 +145,12 @@ void sortList()
 	s.RunTest();
 }
 
+void reorderList()
+{
+	Solution_reorderList s;
+	s.RunTest();
+}
+
 int main()
 {
 	//findRepeatNumber();
@@ -153,7 +160,7 @@ int main()
 	//insertBST();
 	//reverseList();
 	//reverserBetween();
-	mergeTwoList();
+	//mergeTwoList();
 	//solveNQueens();
 	//findAllTreePath();
 	//maxPathSum();
@@ -161,4 +168,5 @@ int main()
 	//lowestCommonAncestor();
 	//partition();
 	//sortList();
+	reorderList();
 }
