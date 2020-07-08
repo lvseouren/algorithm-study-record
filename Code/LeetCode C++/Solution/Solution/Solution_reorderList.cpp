@@ -63,8 +63,40 @@ void Solution_reorderList::reorderList(ListNode* head)
 	head = before->next;
 }
 
+ListNode* Solution_reorderList::reorderRecursive(ListNode* head)
+{
+	dummy = head;
+	slow = head;
+	fast = head?head->next:NULL;
+	recursiveFunc(head);
+	return head;
+}
+
+ListNode* Solution_reorderList::recursiveFunc(ListNode* head)
+{
+	if (head == NULL || head->next == NULL)
+		return head;
+	ListNode* ret = recursiveFunc(head->next);
+	if (fast && fast->next)
+	{
+		fast = fast->next->next;
+		slow = slow->next;
+	}
+	if (dummy == slow->next)
+	{
+		dummy->next = NULL;
+		return NULL;
+	}
+	next = dummy->next;
+	dummy->next = ret;
+	dummy = next;
+	ret->next = dummy;
+	return head;
+}
+
 void Solution_reorderList::RunTest()
 {
+	RunTestCase({ });
 	RunTestCase({ 1});
 	RunTestCase({ 1,2,3,4 });
 	RunTestCase({ 1,2,3,4,5 });
@@ -72,9 +104,12 @@ void Solution_reorderList::RunTest()
 
 void Solution_reorderList::RunTestCase(vector<int> list)
 {
-	ListNode* root = new ListNode(list);
+	ListNode* root = NULL;
+	if(list.size()>0)
+		root = new ListNode(list);
+
 	listPrinter->print(root);
-	reorderList(root);
+	reorderRecursive(root);
 	listPrinter->print(root);
 	cout << endl;
 }
