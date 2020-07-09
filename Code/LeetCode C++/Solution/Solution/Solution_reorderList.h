@@ -7,9 +7,13 @@ public:
 	Solution_reorderList();
 	void reorderList(ListNode* head);
 	void reorderRecursive(ListNode* head);
-	ListNode* recursiveFunc(ListNode* head);
+	void recursiveFunc(ListNode* head);
 	void RunTest();
 private:
+	int t;
+	int len;
+	ListNode* left;
+	ListNode* dummy;
 	void RunTestCase(vector<int>);
 };
 

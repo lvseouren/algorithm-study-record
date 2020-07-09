@@ -68,32 +68,34 @@ void Solution_reorderList::reorderList(ListNode* head)
 
 void Solution_reorderList::reorderRecursive(ListNode* head)
 {
-	head = recursiveFunc(head);
+	if (head == NULL || head->next == NULL)
+		return;
+	len = 0;
+	dummy = head;
+	while(dummy)
+	{
+		len++;
+		dummy = dummy->next;
+	}
+
+	left = head;
+	t = 0;
+	recursiveFunc(head);
 }
 
-ListNode* Solution_reorderList::recursiveFunc(ListNode* head)
+void Solution_reorderList::recursiveFunc(ListNode* head)
 {
-	//1.如果是链表只剩下1个元素或者空的话直接返回；
-	if (!head || !head->next) return head;
-
-	//2.找到当前链表的最后一个节点和倒数第二个节点
-	//倒数第二个节点的next设置为null，然后剥离出来最后一个节点；
-	ListNode* lastnode = head;
-	ListNode* pre=NULL;
-	while (lastnode->next) {
-		pre = lastnode;
-		lastnode = lastnode->next;
-	}
-	pre->next = nullptr;
-
-	//3.将最后一个节点前插进来，然后他的next值就是递归的调用这个函数去处理
-	ListNode* cur = head;
-	ListNode* nextnode = cur->next;
-	cur->next = lastnode;
-	lastnode->next = recursiveFunc(nextnode);
-
-	//4.直接返回头节点即可l
-	return head;
+	if (head && head->next)
+		recursiveFunc(head->next);
+	if (t == len / 2)
+		return;
+	ListNode* next = left->next;
+	left->next = head;
+	head->next = next;
+	left = next;
+	t++;
+	if (t == len / 2)
+		left->next = NULL;
 }
 
 void Solution_reorderList::RunTest()
@@ -104,6 +106,7 @@ void Solution_reorderList::RunTest()
 	RunTestCase({ 1});
 	RunTestCase({ 1,2,3,4 });
 	RunTestCase({ 1,2,3,4,5 });
+	RunTestCase({ 1,2,3,4,5,6,7,8,9,10 });
 }
 
 void Solution_reorderList::RunTestCase(vector<int> list)
