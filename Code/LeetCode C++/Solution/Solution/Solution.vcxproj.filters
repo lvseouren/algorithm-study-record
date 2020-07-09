@@ -25,6 +25,12 @@
     <Filter Include="头文件\solution">
       <UniqueIdentifier>{857bea2c-68b8-4c9d-b42b-8a5d7c54d1a7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\solution\List">
+      <UniqueIdentifier>{cf05bfa3-30ba-4e2d-b0cc-9e62b44d87fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\solution\Tree">
+      <UniqueIdentifier>{ccef53a7-c9d9-4c39-b60f-01f3d2eb6f2e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -36,26 +42,8 @@
     <ClCompile Include="Solution_subsets.cpp">
       <Filter>源文件\solution</Filter>
     </ClCompile>
-    <ClCompile Include="Solution_maxDepth.cpp">
-      <Filter>源文件\solution</Filter>
-    </ClCompile>
-    <ClCompile Include="Solution_validateBinarySearchTree.cpp">
-      <Filter>源文件\solution</Filter>
-    </ClCompile>
-    <ClCompile Include="Solution_insertIntoBST.cpp">
-      <Filter>源文件\solution</Filter>
-    </ClCompile>
-    <ClCompile Include="Solution_reverseList.cpp">
-      <Filter>源文件\solution</Filter>
-    </ClCompile>
-    <ClCompile Include="Solution_reverseBetween.cpp">
-      <Filter>源文件\solution</Filter>
-    </ClCompile>
     <ClCompile Include="ListPrinter.cpp">
       <Filter>源文件\helper</Filter>
-    </ClCompile>
-    <ClCompile Include="Solution_mergeTwoList.cpp">
-      <Filter>源文件\solution</Filter>
     </ClCompile>
     <ClCompile Include="SolutionBase.cpp">
       <Filter>源文件\solution</Filter>
@@ -66,29 +54,50 @@
     <ClCompile Include="Solution_solveNQueens.cpp">
       <Filter>源文件\solution</Filter>
     </ClCompile>
-    <ClCompile Include="Solution_findAllTreePath.cpp">
-      <Filter>源文件\solution</Filter>
-    </ClCompile>
     <ClCompile Include="VectorPrinter.cpp">
       <Filter>源文件\helper</Filter>
-    </ClCompile>
-    <ClCompile Include="Solution_maxPathSum.cpp">
-      <Filter>源文件\solution</Filter>
     </ClCompile>
     <ClCompile Include="Solution_longestValidParentheses.cpp">
       <Filter>源文件\solution</Filter>
     </ClCompile>
-    <ClCompile Include="Solution_findCommonAncestor.cpp">
-      <Filter>源文件\solution</Filter>
+    <ClCompile Include="Solution_sortList.cpp">
+      <Filter>源文件\solution\List</Filter>
     </ClCompile>
-    <ClCompile Include="Solution_partition.cpp">
-      <Filter>源文件\solution</Filter>
+    <ClCompile Include="Solution_reverseList.cpp">
+      <Filter>源文件\solution\List</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution_reverseBetween.cpp">
+      <Filter>源文件\solution\List</Filter>
     </ClCompile>
     <ClCompile Include="Solution_reorderList.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\solution\List</Filter>
     </ClCompile>
-    <ClCompile Include="Solution_sortList.cpp">
-      <Filter>源文件\solution</Filter>
+    <ClCompile Include="Solution_findCommonAncestor.cpp">
+      <Filter>源文件\solution\Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution_findAllTreePath.cpp">
+      <Filter>源文件\solution\Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution_insertIntoBST.cpp">
+      <Filter>源文件\solution\Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution_maxDepth.cpp">
+      <Filter>源文件\solution\Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution_maxPathSum.cpp">
+      <Filter>源文件\solution\Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution_mergeTwoList.cpp">
+      <Filter>源文件\solution\List</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution_partition.cpp">
+      <Filter>源文件\solution\List</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution_validateBinarySearchTree.cpp">
+      <Filter>源文件\solution\Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution_hasCycle.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +163,9 @@
     </ClInclude>
     <ClInclude Include="Solution_sortList.h">
       <Filter>头文件\solution</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_hasCycle.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

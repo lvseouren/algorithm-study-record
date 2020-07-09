@@ -146,6 +146,7 @@
     <ClCompile Include="Solution_findAllTreePath.cpp" />
     <ClCompile Include="Solution_findCommonAncestor.cpp" />
     <ClCompile Include="Solution_findRepeatNumber.cpp" />
+    <ClCompile Include="Solution_hasCycle.cpp" />
     <ClCompile Include="Solution_insertIntoBST.cpp" />
     <ClCompile Include="Solution_longestValidParentheses.cpp" />
     <ClCompile Include="Solution_maxDepth.cpp" />
@@ -168,6 +169,7 @@
     <ClInclude Include="Solution_findAllTreePath.h" />
     <ClInclude Include="Solution_findCommonAncestor.h" />
     <ClInclude Include="Solution_findRepeatNumber.h" />
+    <ClInclude Include="Solution_hasCycle.h" />
     <ClInclude Include="Solution_insertIntoBST.h" />
     <ClInclude Include="Solution_longestValidParentheses.h" />
     <ClInclude Include="Solution_maxDepth.h" />

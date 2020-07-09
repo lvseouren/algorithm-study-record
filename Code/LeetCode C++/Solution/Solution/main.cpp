@@ -21,6 +21,7 @@
 #include "Solution_partition.h"
 #include "Solution_sortList.h"
 #include "Solution_reorderList.h"
+#include "Solution_hasCycle.h"
 
 void PrintBST_preOrder(TreeNode* root)
 {
@@ -151,6 +152,12 @@ void reorderList()
 	s.RunTest();
 }
 
+void hasCycle()
+{
+	Solution_hasCycle s;
+	s.RunTest();
+}
+
 int main()
 {
 	//findRepeatNumber();
@@ -168,5 +175,6 @@ int main()
 	//lowestCommonAncestor();
 	//partition();
 	//sortList();
-	reorderList();
+	//reorderList();
+	hasCycle();
 }
