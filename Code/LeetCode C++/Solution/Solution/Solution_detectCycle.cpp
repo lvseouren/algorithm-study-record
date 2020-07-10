@@ -6,20 +6,32 @@ Solution_detectCycle::Solution_detectCycle()
 
 ListNode* Solution_detectCycle::detectCycle(ListNode* head)
 {
-	ListNode* dummy = head;
-	ListNode* startNode = NULL;
-	map<ListNode*, bool> nodeDict;
-	while(dummy)
+	ListNode* slow = head;
+	ListNode* fast = head;
+	bool hasCycle = false;
+
+	while(fast&&fast->next)
 	{
-		if (nodeDict.count(dummy))
+		slow = slow->next;
+		fast = fast->next->next;
+		if (fast == slow)
 		{
-			startNode = dummy;
+			hasCycle = true;
 			break;
 		}
-		nodeDict[dummy] = true;
-		dummy = dummy->next;
 	}
-	return startNode;
+	if (hasCycle)
+	{
+		fast = head;
+		while (fast != slow)
+		{
+			slow = slow->next;
+			fast = fast->next;
+		}
+		return fast;
+	}
+	else
+		return NULL;
 }
 
 void Solution_detectCycle::RunTest()
