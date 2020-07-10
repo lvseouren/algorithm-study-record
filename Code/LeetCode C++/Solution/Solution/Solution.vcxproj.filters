@@ -97,6 +97,9 @@
       <Filter>源文件\solution\Tree</Filter>
     </ClCompile>
     <ClCompile Include="Solution_hasCycle.cpp">
+      <Filter>源文件\solution\List</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution_detectCycle.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -158,14 +161,17 @@
     <ClInclude Include="Solution_partition.h">
       <Filter>头文件\solution</Filter>
     </ClInclude>
-    <ClInclude Include="Solution_reorderList.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Solution_sortList.h">
       <Filter>头文件\solution</Filter>
     </ClInclude>
     <ClInclude Include="Solution_hasCycle.h">
-      <Filter>头文件</Filter>
+      <Filter>头文件\solution</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_detectCycle.h">
+      <Filter>头文件\solution</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_reorderList.h">
+      <Filter>头文件\solution</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

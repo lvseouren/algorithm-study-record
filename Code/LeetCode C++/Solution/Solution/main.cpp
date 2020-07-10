@@ -22,6 +22,7 @@
 #include "Solution_sortList.h"
 #include "Solution_reorderList.h"
 #include "Solution_hasCycle.h"
+#include "Solution_detectCycle.h"
 
 void PrintBST_preOrder(TreeNode* root)
 {
@@ -158,6 +159,12 @@ void hasCycle()
 	s.RunTest();
 }
 
+void detectCycle()
+{
+	Solution_detectCycle s;
+	s.RunTest();
+}
+
 int main()
 {
 	//findRepeatNumber();
@@ -176,5 +183,6 @@ int main()
 	//partition();
 	//sortList();
 	//reorderList();
-	hasCycle();
+	//hasCycle();
+	detectCycle();
 }
