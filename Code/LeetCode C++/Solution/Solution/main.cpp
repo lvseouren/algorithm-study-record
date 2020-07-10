@@ -23,6 +23,7 @@
 #include "Solution_reorderList.h"
 #include "Solution_hasCycle.h"
 #include "Solution_detectCycle.h"
+#include "Solution_isPalindrome.h"
 
 void PrintBST_preOrder(TreeNode* root)
 {
@@ -165,6 +166,12 @@ void detectCycle()
 	s.RunTest();
 }
 
+void isPalindrome()
+{
+	Solution_isPalindrome s;
+	s.RunTest();
+}
+
 int main()
 {
 	//findRepeatNumber();
@@ -184,5 +191,6 @@ int main()
 	//sortList();
 	//reorderList();
 	//hasCycle();
-	detectCycle();
+	//detectCycle();
+	isPalindrome();
 }

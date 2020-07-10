@@ -100,6 +100,9 @@
       <Filter>源文件\solution\List</Filter>
     </ClCompile>
     <ClCompile Include="Solution_detectCycle.cpp">
+      <Filter>源文件\solution\List</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution_isPalindrome.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -172,6 +175,9 @@
     </ClInclude>
     <ClInclude Include="Solution_reorderList.h">
       <Filter>头文件\solution</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_isPalindrome.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
