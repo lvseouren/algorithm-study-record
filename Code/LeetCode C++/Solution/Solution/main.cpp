@@ -199,10 +199,10 @@ int main()
 	//reorderList();
 	//hasCycle();
 	//detectCycle();
-	//isPalindrome();
+	isPalindrome();
 
 
 	//------------------------------------------面试题
 	//--bytedance
-	evenReorderMerge();
+	//evenReorderMerge();
 }
