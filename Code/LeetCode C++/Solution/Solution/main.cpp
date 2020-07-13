@@ -24,6 +24,7 @@
 #include "Solution_hasCycle.h"
 #include "Solution_detectCycle.h"
 #include "Solution_isPalindrome.h"
+#include "Solution_evenReorderMerge.h"
 
 void PrintBST_preOrder(TreeNode* root)
 {
@@ -172,6 +173,12 @@ void isPalindrome()
 	s.RunTest();
 }
 
+void evenReorderMerge()
+{
+	Solution_evenReorderMerge s;
+	s.RunTest();
+}
+
 int main()
 {
 	//findRepeatNumber();
@@ -192,5 +199,10 @@ int main()
 	//reorderList();
 	//hasCycle();
 	//detectCycle();
-	isPalindrome();
+	//isPalindrome();
+
+
+	//------------------------------------------面试题
+	//--bytedance
+	evenReorderMerge();
 }

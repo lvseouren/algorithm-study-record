@@ -31,6 +31,12 @@
     <Filter Include="源文件\solution\Tree">
       <UniqueIdentifier>{ccef53a7-c9d9-4c39-b60f-01f3d2eb6f2e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\solution\Interview">
+      <UniqueIdentifier>{7c751500-f39a-46eb-bfc5-6c2eea310418}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\solution\Interview\bytedance">
+      <UniqueIdentifier>{a8a3733b-c7e6-4a16-ac14-c6d9057997d2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -105,6 +111,9 @@
     <ClCompile Include="Solution_isPalindrome.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Solution_evenReorderMerge.cpp">
+      <Filter>源文件\solution\Interview\bytedance</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TreeNode.h">
@@ -177,6 +186,9 @@
       <Filter>头文件\solution</Filter>
     </ClInclude>
     <ClInclude Include="Solution_isPalindrome.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_evenReorderMerge.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
