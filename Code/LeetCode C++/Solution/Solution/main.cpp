@@ -25,6 +25,7 @@
 #include "Solution_detectCycle.h"
 #include "Solution_isPalindrome.h"
 #include "Solution_evenReorderMerge.h"
+#include "Solution_copyRandomList.h"
 
 void PrintBST_preOrder(TreeNode* root)
 {
@@ -179,6 +180,12 @@ void evenReorderMerge()
 	s.RunTest();
 }
 
+void copyRandomList()
+{
+	Solution_copyRandomList s;
+	s.RunTest();
+}
+
 int main()
 {
 	//findRepeatNumber();
@@ -199,7 +206,8 @@ int main()
 	//reorderList();
 	//hasCycle();
 	//detectCycle();
-	isPalindrome();
+	//isPalindrome();
+	copyRandomList();
 
 
 	//------------------------------------------面试题

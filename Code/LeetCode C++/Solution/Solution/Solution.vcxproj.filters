@@ -108,11 +108,14 @@
     <ClCompile Include="Solution_detectCycle.cpp">
       <Filter>源文件\solution\List</Filter>
     </ClCompile>
-    <ClCompile Include="Solution_isPalindrome.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Solution_evenReorderMerge.cpp">
       <Filter>源文件\solution\Interview\bytedance</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution_isPalindrome.cpp">
+      <Filter>源文件\solution\List</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution_copyRandomList.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -185,11 +188,14 @@
     <ClInclude Include="Solution_reorderList.h">
       <Filter>头文件\solution</Filter>
     </ClInclude>
-    <ClInclude Include="Solution_isPalindrome.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="Solution_copyRandomList.h">
+      <Filter>头文件\solution</Filter>
     </ClInclude>
     <ClInclude Include="Solution_evenReorderMerge.h">
-      <Filter>头文件</Filter>
+      <Filter>头文件\solution</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_isPalindrome.h">
+      <Filter>头文件\solution</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
