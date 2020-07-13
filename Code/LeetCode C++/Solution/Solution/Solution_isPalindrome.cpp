@@ -7,12 +7,37 @@ Solution_isPalindrome::Solution_isPalindrome()
 bool Solution_isPalindrome::isPalindrome(ListNode* head)
 {
 	if (head == NULL)
-		return false;
+		return true;
 
-	flag = true;
-	left = head;
-	recursiveFunc(head);
-	return flag;
+	ListNode* fast = head->next;
+	ListNode* slow = head;
+	while(fast&&fast->next)
+	{
+		slow = slow->next;
+		fast = fast->next->next;
+	}
+	ListNode* prev = NULL;
+	ListNode* next = NULL;
+	while(slow)
+	{
+		next = slow->next;
+		slow->next = prev;
+		prev = slow;
+		slow = next;
+	}
+	slow = slow ? slow : prev;
+	bool ret = true;
+	while(head&&slow)
+	{
+		if (slow->val != head->val)
+		{
+			ret = false;
+			break;
+		}
+		slow = slow->next;
+		head = head->next;
+	}
+	return ret;
 }
 
 ListNode* Solution_isPalindrome::recursiveFunc(ListNode* head)
