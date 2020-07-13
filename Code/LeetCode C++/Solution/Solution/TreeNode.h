@@ -31,3 +31,17 @@ struct ListNode {
 		}
 	}
 };
+
+class Node {
+public:
+	int val;
+	Node* next;
+	Node* random;
+	int index;
+
+	Node(int _val) {
+		val = _val;
+		next = NULL;
+		random = NULL;
+	}
+};
