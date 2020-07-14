@@ -26,6 +26,7 @@
 #include "Solution_isPalindrome.h"
 #include "Solution_evenReorderMerge.h"
 #include "Solution_copyRandomList.h"
+#include "MinStack.h"
 
 void PrintBST_preOrder(TreeNode* root)
 {
@@ -186,6 +187,23 @@ void copyRandomList()
 	s.RunTest();
 }
 
+void minStackTest()
+{
+	MinStack minStack;
+	minStack.push(2);
+	minStack.push(0);
+	minStack.push(3);
+	minStack.push(0);
+	int min1 = minStack.getMin();  
+	minStack.pop();
+	int min2 = minStack.getMin();      
+	minStack.pop();
+	int min3 = minStack.getMin();
+	minStack.pop();
+	int min4 = minStack.getMin();
+	cout << min1 << endl << min2 << endl << min3 << endl << min4 << endl;
+}
+
 int main()
 {
 	//findRepeatNumber();
@@ -207,8 +225,8 @@ int main()
 	//hasCycle();
 	//detectCycle();
 	//isPalindrome();
-	copyRandomList();
-
+	//copyRandomList();
+	minStackTest();
 
 	//------------------------------------------面试题
 	//--bytedance

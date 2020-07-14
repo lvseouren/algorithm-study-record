@@ -37,6 +37,9 @@
     <Filter Include="源文件\solution\Interview\bytedance">
       <UniqueIdentifier>{a8a3733b-c7e6-4a16-ac14-c6d9057997d2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\solution\Stack">
+      <UniqueIdentifier>{a7362345-8bcf-4197-9981-7334fda7ca0b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -115,7 +118,10 @@
       <Filter>源文件\solution\List</Filter>
     </ClCompile>
     <ClCompile Include="Solution_copyRandomList.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\solution\List</Filter>
+    </ClCompile>
+    <ClCompile Include="MinStack.cpp">
+      <Filter>源文件\solution\Stack</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -196,6 +202,9 @@
     </ClInclude>
     <ClInclude Include="Solution_isPalindrome.h">
       <Filter>头文件\solution</Filter>
+    </ClInclude>
+    <ClInclude Include="MinStack.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
