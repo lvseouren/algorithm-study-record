@@ -27,6 +27,7 @@
 #include "Solution_evenReorderMerge.h"
 #include "Solution_copyRandomList.h"
 #include "MinStack.h"
+#include "Solution_evalRPN.h"
 
 void PrintBST_preOrder(TreeNode* root)
 {
@@ -204,6 +205,13 @@ void minStackTest()
 	cout << min1 << endl << min2 << endl << min3 << endl << min4 << endl;
 }
 
+void evalRPN()
+{
+	vector<string> input = { "10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+" };
+	Solution_evalRPN s;
+	cout << s.evalRPN(input) << endl;
+}
+
 int main()
 {
 	//findRepeatNumber();
@@ -226,7 +234,8 @@ int main()
 	//detectCycle();
 	//isPalindrome();
 	//copyRandomList();
-	minStackTest();
+	//minStackTest();
+	evalRPN();
 
 	//------------------------------------------面试题
 	//--bytedance

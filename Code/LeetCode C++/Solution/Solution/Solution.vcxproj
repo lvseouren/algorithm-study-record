@@ -174,6 +174,7 @@
     <ClInclude Include="SolutionBase.h" />
     <ClInclude Include="Solution_copyRandomList.h" />
     <ClInclude Include="Solution_detectCycle.h" />
+    <ClInclude Include="Solution_evalRPN.h" />
     <ClInclude Include="Solution_evenReorderMerge.h" />
     <ClInclude Include="Solution_findAllTreePath.h" />
     <ClInclude Include="Solution_findCommonAncestor.h" />

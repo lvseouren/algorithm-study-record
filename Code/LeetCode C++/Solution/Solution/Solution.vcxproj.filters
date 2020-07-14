@@ -206,5 +206,8 @@
     <ClInclude Include="MinStack.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_evalRPN.h">
+      <Filter>头文件\solution</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
