@@ -173,6 +173,7 @@
     <ClInclude Include="MinStack.h" />
     <ClInclude Include="SolutionBase.h" />
     <ClInclude Include="Solution_copyRandomList.h" />
+    <ClInclude Include="Solution_decodeString.h" />
     <ClInclude Include="Solution_detectCycle.h" />
     <ClInclude Include="Solution_evalRPN.h" />
     <ClInclude Include="Solution_evenReorderMerge.h" />

@@ -28,6 +28,7 @@
 #include "Solution_copyRandomList.h"
 #include "MinStack.h"
 #include "Solution_evalRPN.h"
+#include "Solution_decodeString.h"
 
 void PrintBST_preOrder(TreeNode* root)
 {
@@ -212,6 +213,12 @@ void evalRPN()
 	cout << s.evalRPN(input) << endl;
 }
 
+void decodeString()
+{
+	Solution_decodeString s;
+	string output = s.decodeString("3[a2[c]]");
+}
+
 int main()
 {
 	//findRepeatNumber();
@@ -235,7 +242,8 @@ int main()
 	//isPalindrome();
 	//copyRandomList();
 	//minStackTest();
-	evalRPN();
+	//evalRPN();
+	decodeString();
 
 	//------------------------------------------面试题
 	//--bytedance

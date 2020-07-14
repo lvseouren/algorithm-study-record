@@ -209,5 +209,8 @@
     <ClInclude Include="Solution_evalRPN.h">
       <Filter>头文件\solution</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_decodeString.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
