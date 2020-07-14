@@ -216,7 +216,7 @@ void evalRPN()
 void decodeString()
 {
 	Solution_decodeString s;
-	string output = s.decodeString("3[a2[c]]");
+	s.RunTest();
 }
 
 int main()
