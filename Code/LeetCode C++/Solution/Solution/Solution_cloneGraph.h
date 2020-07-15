@@ -8,34 +8,27 @@ public:
 		if (node == NULL)
 			return node;
 		Node* dummy;
-
-		map<Node*, int> oldNodeToIndex;
-		map<int, Node*> indexToNewNode;
+		map<Node*, Node*> mp;
 		stack<Node*> st;
 		st.push(node);
+		mp[node] = new Node(node->val);
+
 		while(!st.empty())
 		{
 			dummy = st.top();
 			st.pop();
-			oldNodeToIndex[dummy] = dummy->val;
-			indexToNewNode[dummy->val] = new Node(dummy->val);
-			for (vector<Node*>::iterator it = dummy->neighbors.begin(); it != dummy->neighbors.end(); ++it)
+			for (auto it:dummy->neighbors)
 			{
-				if (!oldNodeToIndex[*it])
-					st.push(*it);
+				if(!mp[it])
+				{
+					st.push(it);
+					mp[it] = new Node(it->val);
+				}
+				mp[dummy]->neighbors.push_back(mp[it]);
 			}
 		}
 
-		for (std::map<Node*, int>::iterator iter = oldNodeToIndex.begin(); iter != oldNodeToIndex.end(); ++iter)
-		{
-			Node* temp = iter->first;
-			Node* newNode = indexToNewNode[temp->val];
-			for(vector<Node*>::iterator it = temp->neighbors.begin();it != temp->neighbors.end();++it)
-			{
-				newNode->neighbors.push_back(indexToNewNode[(*it)->val]);
-			}
-		}
-		return indexToNewNode[1];
+		return mp[node];
 	}
 
 	void RunTest()
