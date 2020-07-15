@@ -227,5 +227,8 @@
     <ClInclude Include="Node.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_numIslands.h">
+      <Filter>头文件\solution</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

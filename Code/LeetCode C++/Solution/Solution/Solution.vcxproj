@@ -190,6 +190,7 @@
     <ClInclude Include="Solution_maxDepth.h" />
     <ClInclude Include="Solution_maxPathSum.h" />
     <ClInclude Include="Solution_mergeTwoList.h" />
+    <ClInclude Include="Solution_numIslands.h" />
     <ClInclude Include="Solution_partition.h" />
     <ClInclude Include="Solution_reorderList.h" />
     <ClInclude Include="Solution_reverseBetween.h" />

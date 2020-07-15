@@ -31,6 +31,7 @@
 #include "Solution_decodeString.h"
 #include "Solution_inorderTraversal.h"
 #include "Solution_cloneGraph.h"
+#include "Solution_numIslands.h"
 
 void PrintBST_preOrder(TreeNode* root)
 {
@@ -233,6 +234,12 @@ void cloneGraph()
 	s.RunTest();
 }
 
+void numIslands()
+{
+	Solution_numIslands s;
+	s.RunTest();
+}
+
 int main()
 {
 	//findRepeatNumber();
@@ -259,7 +266,8 @@ int main()
 	//evalRPN();
 	//decodeString();
 	//inorderTravelsal();
-	cloneGraph();
+	//cloneGraph();
+	numIslands();
 	//------------------------------------------面试题
 	//--bytedance
 	//evenReorderMerge();
