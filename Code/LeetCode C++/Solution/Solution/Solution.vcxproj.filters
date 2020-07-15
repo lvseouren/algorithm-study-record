@@ -221,5 +221,11 @@
     <ClInclude Include="Solution_inorderTraversal.h">
       <Filter>头文件\solution</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_cloneGraph.h">
+      <Filter>头文件\solution</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

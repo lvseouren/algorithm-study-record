@@ -171,7 +171,9 @@
     <ClInclude Include="BSTPrinter.h" />
     <ClInclude Include="ListPrinter.h" />
     <ClInclude Include="MinStack.h" />
+    <ClInclude Include="Node.h" />
     <ClInclude Include="SolutionBase.h" />
+    <ClInclude Include="Solution_cloneGraph.h" />
     <ClInclude Include="Solution_copyRandomList.h" />
     <ClInclude Include="Solution_decodeString.h" />
     <ClInclude Include="Solution_detectCycle.h" />
