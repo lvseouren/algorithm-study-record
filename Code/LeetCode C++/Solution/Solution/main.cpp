@@ -29,6 +29,7 @@
 #include "MinStack.h"
 #include "Solution_evalRPN.h"
 #include "Solution_decodeString.h"
+#include "Solution_inorderTraversal.h"
 
 void PrintBST_preOrder(TreeNode* root)
 {
@@ -219,6 +220,12 @@ void decodeString()
 	s.RunTest();
 }
 
+void inorderTravelsal()
+{
+	Solution_inorderTraversal s;
+	s.RunTest();
+}
+
 int main()
 {
 	//findRepeatNumber();
@@ -243,7 +250,8 @@ int main()
 	//copyRandomList();
 	//minStackTest();
 	//evalRPN();
-	decodeString();
+	//decodeString();
+	inorderTravelsal();
 
 	//------------------------------------------面试题
 	//--bytedance

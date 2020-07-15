@@ -40,6 +40,12 @@
     <Filter Include="源文件\solution\Stack">
       <UniqueIdentifier>{a7362345-8bcf-4197-9981-7334fda7ca0b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\solution\tree">
+      <UniqueIdentifier>{a592c6d0-a6a5-4293-95c0-373d19cf023e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\solution\list">
+      <UniqueIdentifier>{bd2c7cf1-c40c-48fb-8ada-ee2ec58f9cd5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -137,37 +143,13 @@
     <ClInclude Include="Solution_findRepeatNumber.h">
       <Filter>头文件\solution</Filter>
     </ClInclude>
-    <ClInclude Include="Solution_insertIntoBST.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_maxDepth.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_mergeTwoList.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_reverseBetween.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_reverseList.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
     <ClInclude Include="Solution_subsets.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_validateBinarySearchTree.h">
       <Filter>头文件\solution</Filter>
     </ClInclude>
     <ClInclude Include="SolutionBase.h">
       <Filter>头文件\solution</Filter>
     </ClInclude>
-    <ClInclude Include="Solution_findAllTreePath.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
     <ClInclude Include="Solution_solveNQueens.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_maxPathSum.h">
       <Filter>头文件\solution</Filter>
     </ClInclude>
     <ClInclude Include="Solution_longestValidParentheses.h">
@@ -175,33 +157,6 @@
     </ClInclude>
     <ClInclude Include="VectorPrinter.h">
       <Filter>头文件\helper</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_findCommonAncestor.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_partition.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_sortList.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_hasCycle.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_detectCycle.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_reorderList.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_copyRandomList.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_evenReorderMerge.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_isPalindrome.h">
-      <Filter>头文件\solution</Filter>
     </ClInclude>
     <ClInclude Include="MinStack.h">
       <Filter>头文件</Filter>
@@ -211,6 +166,60 @@
     </ClInclude>
     <ClInclude Include="Solution_decodeString.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_hasCycle.h">
+      <Filter>头文件\solution\list</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_findCommonAncestor.h">
+      <Filter>头文件\solution\tree</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_copyRandomList.h">
+      <Filter>头文件\solution\list</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_detectCycle.h">
+      <Filter>头文件\solution\list</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_evenReorderMerge.h">
+      <Filter>头文件\solution\list</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_findAllTreePath.h">
+      <Filter>头文件\solution\tree</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_insertIntoBST.h">
+      <Filter>头文件\solution\tree</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_isPalindrome.h">
+      <Filter>头文件\solution\list</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_maxDepth.h">
+      <Filter>头文件\solution\tree</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_maxPathSum.h">
+      <Filter>头文件\solution\tree</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_mergeTwoList.h">
+      <Filter>头文件\solution\list</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_partition.h">
+      <Filter>头文件\solution\list</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_reorderList.h">
+      <Filter>头文件\solution\list</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_reverseBetween.h">
+      <Filter>头文件\solution\list</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_reverseList.h">
+      <Filter>头文件\solution\list</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_sortList.h">
+      <Filter>头文件\solution\list</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_validateBinarySearchTree.h">
+      <Filter>头文件\solution\tree</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_inorderTraversal.h">
+      <Filter>头文件\solution</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
