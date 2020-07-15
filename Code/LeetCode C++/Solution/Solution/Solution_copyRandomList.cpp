@@ -4,18 +4,18 @@ Solution_copyRandomList::Solution_copyRandomList()
 {
 }
 
-Node* Solution_copyRandomList::copyRandomList(Node* head)
+RandomNode* Solution_copyRandomList::copyRandomList(RandomNode* head)
 {
 	if (head == NULL)
 		return head;
-	Node* before = new Node(-1);
-	map<int, Node*> intNewNodeDict;
-	map<Node*, int> oldNodeIntDict;
+	RandomNode* before = new RandomNode(-1);
+	map<int, RandomNode*> intNewNodeDict;
+	map<RandomNode*, int> oldNodeIntDict;
 	int index = 0;
-	Node* dummy = before;
+	RandomNode* dummy = before;
 	while(head)
 	{
-		dummy->next = new Node(head->val);
+		dummy->next = new RandomNode(head->val);
 		dummy->next->index = head->index;//tobedelete
 		dummy->next->random = head->random;
 		intNewNodeDict[index] = dummy->next;
@@ -38,17 +38,17 @@ Node* Solution_copyRandomList::copyRandomList(Node* head)
 
 void Solution_copyRandomList::RunTest()
 {
-	Node* head = new Node(7);
+	RandomNode* head = new RandomNode(7);
 	head->index = 0;
-	head->next = new Node(13);
+	head->next = new RandomNode(13);
 	head->next->index = 1;
 	head->next->random = head;
-	head->next->next = new Node(11);
+	head->next->next = new RandomNode(11);
 	head->next->next->index = 2;
-	head->next->next->next = new Node(10);
+	head->next->next->next = new RandomNode(10);
 	head->next->next->next->random = head->next->next;
 	head->next->next->next->index = 3;
-	head->next->next->next->next = new Node(1);
+	head->next->next->next->next = new RandomNode(1);
 	head->next->next->next->next->random = head;
 	head->next->next->next->next->index = 4;
 	head->next->next->random = head->next->next->next->next;

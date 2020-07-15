@@ -32,14 +32,14 @@ struct ListNode {
 	}
 };
 
-class Node {
+class RandomNode {
 public:
 	int val;
-	Node* next;
-	Node* random;
+	RandomNode* next;
+	RandomNode* random;
 	int index;
 
-	Node(int _val) {
+	RandomNode(int _val) {
 		val = _val;
 		next = NULL;
 		random = NULL;

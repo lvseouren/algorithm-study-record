@@ -4,7 +4,7 @@ class Solution_copyRandomList
 {
 public:
 	Solution_copyRandomList();
-	Node* copyRandomList(Node* head);
+	RandomNode* copyRandomList(RandomNode* head);
 	void RunTest();
 };
 
