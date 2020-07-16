@@ -175,6 +175,7 @@
     <ClInclude Include="SolutionBase.h" />
     <ClInclude Include="Solution_cloneGraph.h" />
     <ClInclude Include="Solution_copyRandomList.h" />
+    <ClInclude Include="Solution_dailyTemperatures.h" />
     <ClInclude Include="Solution_decodeString.h" />
     <ClInclude Include="Solution_detectCycle.h" />
     <ClInclude Include="Solution_evalRPN.h" />
@@ -189,6 +190,7 @@
     <ClInclude Include="Solution_largestRectangleArea.h" />
     <ClInclude Include="Solution_longestValidParentheses.h" />
     <ClInclude Include="Solution_maxDepth.h" />
+    <ClInclude Include="Solution_maximalRectangle.h" />
     <ClInclude Include="Solution_maxPathSum.h" />
     <ClInclude Include="Solution_mergeTwoList.h" />
     <ClInclude Include="Solution_numIslands.h" />

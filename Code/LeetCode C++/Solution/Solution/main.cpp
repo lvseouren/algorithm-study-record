@@ -33,6 +33,7 @@
 #include "Solution_cloneGraph.h"
 #include "Solution_numIslands.h"
 #include "Solution_largestRectangleArea.h"
+#include "Solution_dailyTemperatures.h"
 
 void PrintBST_preOrder(TreeNode* root)
 {
@@ -247,6 +248,12 @@ void largestRectangleArea()
 	s.RunTest();
 }
 
+void dailyTemperatures()
+{
+	Solution_dailyTemperatures s;
+	s.RunTest();
+}
+
 int main()
 {
 	//findRepeatNumber();
@@ -275,7 +282,8 @@ int main()
 	//inorderTravelsal();
 	//cloneGraph();
 	//numIslands();
-	largestRectangleArea();
+	//largestRectangleArea();
+	dailyTemperatures();
 	//------------------------------------------面试题
 	//--bytedance
 	//evenReorderMerge();

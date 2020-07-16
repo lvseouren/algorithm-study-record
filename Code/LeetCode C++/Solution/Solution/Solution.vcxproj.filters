@@ -46,6 +46,9 @@
     <Filter Include="头文件\solution\list">
       <UniqueIdentifier>{bd2c7cf1-c40c-48fb-8ada-ee2ec58f9cd5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\solution\stack">
+      <UniqueIdentifier>{30f58ba7-6789-45e8-b0e9-a5236420f30e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -230,8 +233,14 @@
     <ClInclude Include="Solution_numIslands.h">
       <Filter>头文件\solution</Filter>
     </ClInclude>
-    <ClInclude Include="Solution_largestRectangleArea.h">
+    <ClInclude Include="Solution_maximalRectangle.h">
       <Filter>头文件\solution</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_largestRectangleArea.h">
+      <Filter>头文件\solution\stack</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_dailyTemperatures.h">
+      <Filter>头文件\solution\stack</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
