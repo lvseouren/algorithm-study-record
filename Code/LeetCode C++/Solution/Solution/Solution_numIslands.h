@@ -4,41 +4,42 @@ using namespace std;
 
 class Solution_numIslands {
 public:
+	map<int,bool> visited;
+	int rowCnt;
+	int colCnt;
+
 	int numIslands(vector<vector<char>>& grid)
 	{
-		int nums = 0;
-		
-		for (int i = 0; i < grid.size(); i++)
+		int ret = 0;
+		rowCnt = grid.size();
+		for(int i = 0;i< rowCnt;i++)
 		{
-			for (int j = 0; j < grid[i].size(); j++)
+			colCnt = grid[i].size();
+			for(int j = 0;j< colCnt;j++)
 			{
-				if (grid[i][j] == '1')
-				{
-					if (!checkLeftOrUpIsIsland(grid, i, j))
-					{
-						nums++;
-					}
-				}
+				ret += searchRecursive(grid, i, j, false);
 			}
 		}
-		return nums;
+		return ret;
 	}
 
-	bool checkLeftOrUpIsIsland(vector<vector<char>>& grid, int i, int j)
+	int searchRecursive(vector<vector<char>>& grid, int row, int col, bool isPreIsland)
 	{
-		if (i == 0)
-		{
-			if (j == 0)
-				return false;
-			else
-				return grid[i][j - 1] == '1';
-		}
+		if (row < 0||col<0||row>=rowCnt||col>=colCnt||visited[row * colCnt + col])
+			return 0;
+		visited[row * colCnt + col] = true;
+		if (grid[row][col] == '0')
+			return 0;
 		else
 		{
-			if (j == 0)
-				return grid[i - 1][j] == '1';
+			searchRecursive(grid, row + 1, col, true);
+			searchRecursive(grid, row - 1, col, true);
+			searchRecursive(grid, row, col+1, true);
+			searchRecursive(grid, row, col-1, true);
+			if (isPreIsland)
+				return 0;
 			else
-				return grid[i - 1][j] == '1' || grid[i][j - 1] == '1';
+				return 1;
 		}
 	}
 
@@ -50,10 +51,13 @@ public:
 		RunTestCase(input);
 		input = { {'1','1','1'},{'0','1','0'},{'1','1','1'} };
 		RunTestCase(input);
+		input = { {'1','0','1','1','0','1','1'} };
+		RunTestCase(input);
 	}
 
 	void RunTestCase(vector<vector<char>> grid)
 	{
+		visited.clear();
 		for (int i = 0; i < grid.size(); i++)
 		{
 			for (int j = 0; j < grid[i].size(); j++)
