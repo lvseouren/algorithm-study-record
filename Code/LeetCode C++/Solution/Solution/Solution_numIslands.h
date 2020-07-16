@@ -4,7 +4,6 @@ using namespace std;
 
 class Solution_numIslands {
 public:
-	map<int,bool> visited;
 	int rowCnt;
 	int colCnt;
 
@@ -17,30 +16,27 @@ public:
 			colCnt = grid[i].size();
 			for(int j = 0;j< colCnt;j++)
 			{
-				ret += searchRecursive(grid, i, j, false);
+				ret += searchRecursive(grid, i, j);
 			}
 		}
 		return ret;
 	}
 
-	int searchRecursive(vector<vector<char>>& grid, int row, int col, bool isPreIsland)
+	int searchRecursive(vector<vector<char>>& grid, int row, int col)
 	{
-		if (row < 0||col<0||row>=rowCnt||col>=colCnt||visited[row * colCnt + col])
-			return 0;
-		visited[row * colCnt + col] = true;
 		if (grid[row][col] == '0')
 			return 0;
-		else
-		{
-			searchRecursive(grid, row + 1, col, true);
-			searchRecursive(grid, row - 1, col, true);
-			searchRecursive(grid, row, col+1, true);
-			searchRecursive(grid, row, col-1, true);
-			if (isPreIsland)
-				return 0;
-			else
-				return 1;
-		}
+
+		grid[row][col] = '0';
+		if (row + 1 < rowCnt)
+			searchRecursive(grid, row + 1, col);
+		if (row - 1 >= 0)
+			searchRecursive(grid, row - 1, col);
+		if (col + 1 < colCnt)
+			searchRecursive(grid, row, col + 1);
+		if (col - 1 >= 0)
+			searchRecursive(grid, row, col - 1);
+		return 1;
 	}
 
 	void RunTest()
@@ -57,7 +53,6 @@ public:
 
 	void RunTestCase(vector<vector<char>> grid)
 	{
-		visited.clear();
 		for (int i = 0; i < grid.size(); i++)
 		{
 			for (int j = 0; j < grid[i].size(); j++)
