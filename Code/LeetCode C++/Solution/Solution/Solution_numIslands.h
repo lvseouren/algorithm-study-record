@@ -4,39 +4,41 @@ using namespace std;
 
 class Solution_numIslands {
 public:
-	int rowCnt;
-	int colCnt;
-
 	int numIslands(vector<vector<char>>& grid)
 	{
-		int ret = 0;
-		rowCnt = grid.size();
-		for(int i = 0;i< rowCnt;i++)
+		if (grid.empty())
+			return 0;
+		int i,j,ret = 0;
+		int rowCnt = grid.size();
+		int colCnt = grid[0].size();
+		for(i = 0;i< rowCnt;++i)
 		{
-			colCnt = grid[i].size();
-			for(int j = 0;j< colCnt;j++)
+			for(j = 0;j< colCnt;++j)
 			{
-				ret += searchRecursive(grid, i, j);
+				if (grid[i][j] == '1')
+				{
+					ret++;
+					searchRecursive(grid, i, j, rowCnt, colCnt);
+				}
 			}
 		}
 		return ret;
 	}
 
-	int searchRecursive(vector<vector<char>>& grid, int row, int col)
+	void searchRecursive(vector<vector<char>>& grid, int row, int col, int rowCnt, int colCnt)
 	{
 		if (grid[row][col] == '0')
-			return 0;
+			return;
 
 		grid[row][col] = '0';
-		if (row + 1 < rowCnt)
-			searchRecursive(grid, row + 1, col);
-		if (row - 1 >= 0)
-			searchRecursive(grid, row - 1, col);
-		if (col + 1 < colCnt)
-			searchRecursive(grid, row, col + 1);
-		if (col - 1 >= 0)
-			searchRecursive(grid, row, col - 1);
-		return 1;
+		if (row + 1 < rowCnt&&grid[row+1][col]=='1')
+			searchRecursive(grid, row + 1, col, rowCnt, colCnt);
+		if (row - 1 >= 0&&grid[row-1][col]=='1')
+			searchRecursive(grid, row - 1, col, rowCnt, colCnt);
+		if (col + 1 < colCnt&&grid[row][col+1]=='1')
+			searchRecursive(grid, row, col + 1, rowCnt, colCnt);
+		if (col - 1 >= 0&&grid[row][col-1]=='1')
+			searchRecursive(grid, row, col - 1, rowCnt,colCnt);
 	}
 
 	void RunTest()
