@@ -32,6 +32,7 @@
 #include "Solution_inorderTraversal.h"
 #include "Solution_cloneGraph.h"
 #include "Solution_numIslands.h"
+#include "Solution_largestRectangleArea.h"
 
 void PrintBST_preOrder(TreeNode* root)
 {
@@ -240,6 +241,12 @@ void numIslands()
 	s.RunTest();
 }
 
+void largestRectangleArea()
+{
+	Solution_largestRectangleArea s;
+	s.RunTest();
+}
+
 int main()
 {
 	//findRepeatNumber();
@@ -267,7 +274,8 @@ int main()
 	//decodeString();
 	//inorderTravelsal();
 	//cloneGraph();
-	numIslands();
+	//numIslands();
+	largestRectangleArea();
 	//------------------------------------------面试题
 	//--bytedance
 	//evenReorderMerge();

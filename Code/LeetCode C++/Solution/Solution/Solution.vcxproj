@@ -186,6 +186,7 @@
     <ClInclude Include="Solution_inorderTraversal.h" />
     <ClInclude Include="Solution_insertIntoBST.h" />
     <ClInclude Include="Solution_isPalindrome.h" />
+    <ClInclude Include="Solution_largestRectangleArea.h" />
     <ClInclude Include="Solution_longestValidParentheses.h" />
     <ClInclude Include="Solution_maxDepth.h" />
     <ClInclude Include="Solution_maxPathSum.h" />
