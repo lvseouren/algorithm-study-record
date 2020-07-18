@@ -35,6 +35,7 @@
 #include "Solution_largestRectangleArea.h"
 #include "Solution_dailyTemperatures.h"
 #include "Solution_maximalRectangle.h"
+#include "Solution_maximalSquare.h"
 
 void PrintBST_preOrder(TreeNode* root)
 {
@@ -261,6 +262,12 @@ void maximalRectangle()
 	s.RunTest();
 }
 
+void maximalSquare()
+{
+	Solution_maximalSquare s;
+	s.RunTest();
+}
+
 int main()
 {
 	//findRepeatNumber();
@@ -291,7 +298,8 @@ int main()
 	//numIslands();
 	//largestRectangleArea();
 	//dailyTemperatures();
-	maximalRectangle();
+	//maximalRectangle();
+	maximalSquare();
 
 	//------------------------------------------面试题
 	//--bytedance

@@ -233,13 +233,16 @@
     <ClInclude Include="Solution_numIslands.h">
       <Filter>头文件\solution</Filter>
     </ClInclude>
-    <ClInclude Include="Solution_maximalRectangle.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
     <ClInclude Include="Solution_largestRectangleArea.h">
       <Filter>头文件\solution\stack</Filter>
     </ClInclude>
     <ClInclude Include="Solution_dailyTemperatures.h">
+      <Filter>头文件\solution\stack</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_maximalRectangle.h">
+      <Filter>头文件\solution\stack</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_maximalSquare.h">
       <Filter>头文件\solution\stack</Filter>
     </ClInclude>
   </ItemGroup>

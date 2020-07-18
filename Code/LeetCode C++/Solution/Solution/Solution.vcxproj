@@ -191,6 +191,7 @@
     <ClInclude Include="Solution_longestValidParentheses.h" />
     <ClInclude Include="Solution_maxDepth.h" />
     <ClInclude Include="Solution_maximalRectangle.h" />
+    <ClInclude Include="Solution_maximalSquare.h" />
     <ClInclude Include="Solution_maxPathSum.h" />
     <ClInclude Include="Solution_mergeTwoList.h" />
     <ClInclude Include="Solution_numIslands.h" />
