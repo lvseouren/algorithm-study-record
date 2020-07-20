@@ -168,12 +168,15 @@
     <ClCompile Include="VectorPrinter.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="algorithm.h" />
+    <ClInclude Include="algorithm_numWaterBottles.h" />
     <ClInclude Include="BSTPrinter.h" />
     <ClInclude Include="contest.h" />
     <ClInclude Include="Contest_maxNumOfSubstrings.h" />
     <ClInclude Include="ListPrinter.h" />
     <ClInclude Include="MinStack.h" />
     <ClInclude Include="Node.h" />
+    <ClInclude Include="solution.h" />
     <ClInclude Include="SolutionBase.h" />
     <ClInclude Include="Solution_cloneGraph.h" />
     <ClInclude Include="Solution_copyRandomList.h" />

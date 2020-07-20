@@ -58,6 +58,12 @@
     <Filter Include="头文件\contest\weekly\198">
       <UniqueIdentifier>{62f67f4b-bdd2-46e1-817c-4b18669769d4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Algorithm">
+      <UniqueIdentifier>{9e59aa8a-6247-4ea6-b776-e275c72d6b97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Algorithm\greedy">
+      <UniqueIdentifier>{b34e0c80-e441-4e96-86f4-b85289386ec1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -176,9 +182,6 @@
     <ClInclude Include="Solution_evalRPN.h">
       <Filter>头文件\solution</Filter>
     </ClInclude>
-    <ClInclude Include="Solution_decodeString.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Solution_hasCycle.h">
       <Filter>头文件\solution\list</Filter>
     </ClInclude>
@@ -259,6 +262,18 @@
     </ClInclude>
     <ClInclude Include="contest.h">
       <Filter>头文件\contest</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm_numWaterBottles.h">
+      <Filter>头文件\Algorithm\greedy</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm.h">
+      <Filter>头文件\Algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="solution.h">
+      <Filter>头文件\solution</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_decodeString.h">
+      <Filter>头文件\solution</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
