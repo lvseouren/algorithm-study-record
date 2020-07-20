@@ -169,6 +169,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BSTPrinter.h" />
+    <ClInclude Include="contest.h" />
+    <ClInclude Include="Contest_maxNumOfSubstrings.h" />
     <ClInclude Include="ListPrinter.h" />
     <ClInclude Include="MinStack.h" />
     <ClInclude Include="Node.h" />

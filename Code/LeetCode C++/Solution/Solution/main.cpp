@@ -36,6 +36,7 @@
 #include "Solution_dailyTemperatures.h"
 #include "Solution_maximalRectangle.h"
 #include "Solution_maximalSquare.h"
+#include "contest.h"
 
 void PrintBST_preOrder(TreeNode* root)
 {
@@ -299,9 +300,13 @@ int main()
 	//largestRectangleArea();
 	//dailyTemperatures();
 	//maximalRectangle();
-	maximalSquare();
+	//maximalSquare();
 
 	//------------------------------------------面试题
 	//--bytedance
 	//evenReorderMerge();
+
+	//contest
+	contest ct;
+	ct.RunTest();
 }

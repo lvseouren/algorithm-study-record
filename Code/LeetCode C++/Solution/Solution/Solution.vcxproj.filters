@@ -49,6 +49,15 @@
     <Filter Include="头文件\solution\stack">
       <UniqueIdentifier>{30f58ba7-6789-45e8-b0e9-a5236420f30e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\contest">
+      <UniqueIdentifier>{4b3941ae-20bc-43c5-af32-c301480296f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\contest\weekly">
+      <UniqueIdentifier>{4714363f-522f-4316-adc1-72b4cfc5e76d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\contest\weekly\198">
+      <UniqueIdentifier>{62f67f4b-bdd2-46e1-817c-4b18669769d4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -244,6 +253,12 @@
     </ClInclude>
     <ClInclude Include="Solution_maximalSquare.h">
       <Filter>头文件\solution\stack</Filter>
+    </ClInclude>
+    <ClInclude Include="Contest_maxNumOfSubstrings.h">
+      <Filter>头文件\contest\weekly\198</Filter>
+    </ClInclude>
+    <ClInclude Include="contest.h">
+      <Filter>头文件\contest</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
