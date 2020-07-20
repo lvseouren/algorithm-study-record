@@ -15,6 +15,7 @@
 #pragma once
 #include <vector>
 #include "Solution_largestRectangleArea.h"
+#include <stack>
 
 using namespace std;
 class Solution_maximalRectangle {
