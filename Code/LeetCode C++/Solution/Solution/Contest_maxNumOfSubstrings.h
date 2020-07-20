@@ -1,114 +1,81 @@
 #pragma once
 #include <vector>
 #include <string>
+#include <algorithm>
 #include <map>
 #include "SolutionBase.h"
 using namespace std;
 class Contest_maxNumOfSubstrings:SolutionBase {
 public:
-	vector<string> ret;
-	vector<string> maxNumOfSubstrings(string s) 
+	struct Seg 
 	{
-		vector<string> ret;
-		if (s.empty())
-			return ret;
-		map<char, int> left;
-		map<char, int> right;
-		for (int i = 0; i < s.length(); i++)
+		Seg(int lf,int rt)
 		{
-			if (left.find(s[i]) == left.end())
-				left[s[i]] = i;
-			right[s[i]] = i;
+			left = lf;
+			right = rt;
 		}
-		for (char c = 'a'; c <= 'z'; c++)
+		int left, right;
+		bool operator <(const Seg& rhs) const
 		{
-			if (left.find(c) != left.end())
+			if (rhs.right == right)
+				return left > rhs.left;
+			return right < rhs.right;
+		}
+	};
+	vector<string> maxNumOfSubstrings(string s)
+	{
+		vector<Seg> seg(26, Seg( -1, -1 ));
+		for (int i = 0; i < s.length(); ++i)
+		{
+			int char_idx = s[i] - 'a';
+			if(seg[char_idx].left == -1)
+				seg[char_idx].left = i;
+			seg[char_idx].right = i;
+		}
+		for(int i = 0;i<26;++i)
+		{
+			if(seg[i].left!=-1)
 			{
-				if (left[c] == right[c])
+				for (int j = seg[i].left; j <= seg[i].right; ++j)
 				{
-					ret.push_back(string(1, c));
-				}
-				else
-				{
-					bool skip = false;
-					for (int i = left[c] + 1; i < right[c]; i++)
-					{
-						if (left[s[i]] < left[c])
-						{
-							skip = true;
-							break;
-						}
+					int char_idx = s[j] - 'a';
+					if(seg[i].left <= seg[char_idx].left && seg[char_idx].right <= seg[i].right)
+						continue;
 
-						if (right[s[i]] < right[c])
-						{
-							skip = true;
-							break;
-						}
-						right[c] = right[s[i]];
-					}
-					if (!skip)
-						ret.push_back(s.substr(left[c], right[c] - left[c] + 1));
+					seg[i].left = min(seg[i].left, seg[char_idx].left);
+					seg[i].right = max(seg[i].right, seg[char_idx].right);
+					j = seg[i].left;
 				}
 			}
 		}
-		if (ret.empty())
-			ret.push_back(s);
-		return ret;
-	}
 
-	vector<string> recursiveFunc(string& s, map<char,int>& left, map<char,int>& right, int start, int end)
-	{
-		vector<string> curRet;
-		for (char c = 'a'; c <= 'z'; c++)
+		sort(seg.begin(), seg.end());
+		vector<string> ans;
+		int end = -1;
+		for(auto& segment:seg)
 		{
-			if (left.find(c) != left.end())
+			int left = segment.left, right = segment.right;
+			if(left == -1)
+				continue;
+			if(end == -1||left>end)
 			{
-				if (left[c] < start||right[c]>end)
-					return curRet;
-				if (left[c] == right[c])
-				{
-					ret.push_back(string(1, c));
-				}
-				else
-				{
-					bool skip = false;
-					for (int i = left[c] + 1; i < right[c]; i++)
-					{
-						if (left[s[i]] < left[c])
-						{
-							skip = true;
-							break;
-						}
-
-						if (right[s[i]] < right[c])
-						{
-							vector<string> temp = recursiveFunc(s, left, right, left[c],right[s[i]]);
-							if (!temp.empty())
-							{
-								skip = true;
-								break;
-							}
-						}
-						right[c] = right[s[i]];
-					}
-					if (!skip)
-						ret.push_back(s.substr(left[c], right[c] - left[c] + 1));
-				}
+				end = right;
+				ans.emplace_back(s.substr(left, right - left + 1));
 			}
 		}
+		return ans;
 	}
 
 	void RunTest()
 	{
-	/*	RunTestCase("adefaddaccc");
+		RunTestCase("adefaddaccc");
 		RunTestCase("abbaccd");
-		RunTestCase("abab");*/
+		RunTestCase("abab");
 		RunTestCase("ababa"); 
 	}
 
 	void RunTestCase(string input)
 	{
-		ret.clear();
 		cout << "input=" << input << endl;
 		auto ret = maxNumOfSubstrings(input);
 		vecPrinter->print(ret);
