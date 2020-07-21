@@ -200,6 +200,7 @@
     <ClInclude Include="Solution_maximalSquare.h" />
     <ClInclude Include="Solution_maxPathSum.h" />
     <ClInclude Include="Solution_mergeTwoList.h" />
+    <ClInclude Include="MyQueue.h" />
     <ClInclude Include="Solution_numIslands.h" />
     <ClInclude Include="Solution_partition.h" />
     <ClInclude Include="Solution_reorderList.h" />

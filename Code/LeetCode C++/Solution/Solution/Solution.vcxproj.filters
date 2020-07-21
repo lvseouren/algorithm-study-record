@@ -278,5 +278,8 @@
     <ClInclude Include="Contest_countSubTrees.h">
       <Filter>头文件\contest\weekly\198</Filter>
     </ClInclude>
+    <ClInclude Include="MyQueue.h">
+      <Filter>头文件\solution\stack</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

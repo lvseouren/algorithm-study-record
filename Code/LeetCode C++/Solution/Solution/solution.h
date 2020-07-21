@@ -31,6 +31,7 @@
 #include "Solution_dailyTemperatures.h"
 #include "Solution_maximalRectangle.h"
 #include "Solution_maximalSquare.h"
+#include "MyQueue.h"
 class solution
 {
 public:
@@ -66,6 +67,31 @@ public:
 		//dailyTemperatures();
 		//maximalRectangle();
 		//maximalSquare();
+		myQueueRunTest();
+	}
+
+	void myQueueRunTest()
+	{
+		int input = 3;
+		cout << "push:" << input << endl;
+		MyQueue* obj = new MyQueue();
+		obj->push(input);
+		obj->push(4);
+		obj->push(5);
+		obj->push(6);
+		int param_2 = obj->pop();
+		cout << param_2 << endl;
+		int param_3 = obj->pop();
+		cout << param_3 << endl;
+		bool param_4 = obj->empty();
+		if(param_4)
+			cout << "队列为空" << endl;
+		else
+			cout << "队列不为空" << endl;
+		param_2 = obj->pop();
+		cout << param_2 << endl;
+		param_2 = obj->pop();
+		cout << param_2 << endl;
 	}
 
 	void PrintBST_preOrder(TreeNode* root)
