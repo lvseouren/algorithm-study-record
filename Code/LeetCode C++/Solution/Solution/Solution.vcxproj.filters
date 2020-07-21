@@ -275,5 +275,8 @@
     <ClInclude Include="Solution_decodeString.h">
       <Filter>头文件\solution</Filter>
     </ClInclude>
+    <ClInclude Include="Contest_countSubTrees.h">
+      <Filter>头文件\contest\weekly\198</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

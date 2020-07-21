@@ -37,8 +37,8 @@ int main()
 	//evenReorderMerge();
 
 	//--------------------------------------------contest
-	//RunTest_Contest()
+	RunTest_Contest();
 
 	//--------------------------------------------algorithm
-	RunTest_Algorithm();
+	//RunTest_Algorithm();
 }
