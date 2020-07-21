@@ -32,6 +32,8 @@
 #include "Solution_maximalRectangle.h"
 #include "Solution_maximalSquare.h"
 #include "MyQueue.h"
+#include "Solution_updateMatrix.h"
+
 class solution
 {
 public:
@@ -67,7 +69,14 @@ public:
 		//dailyTemperatures();
 		//maximalRectangle();
 		//maximalSquare();
-		myQueueRunTest();
+		//myQueueRunTest();
+		updateMatrix();
+	}
+
+	void updateMatrix()
+	{
+		Solution_updateMatrix s;
+		s.RunTest();
 	}
 
 	void myQueueRunTest()

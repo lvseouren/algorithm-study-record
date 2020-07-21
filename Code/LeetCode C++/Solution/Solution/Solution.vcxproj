@@ -209,6 +209,7 @@
     <ClInclude Include="Solution_solveNQueens.h" />
     <ClInclude Include="Solution_sortList.h" />
     <ClInclude Include="Solution_subsets.h" />
+    <ClInclude Include="Solution_updateMatrix.h" />
     <ClInclude Include="Solution_validateBinarySearchTree.h" />
     <ClInclude Include="TreeNode.h" />
     <ClInclude Include="VectorPrinter.h" />

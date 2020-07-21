@@ -281,5 +281,8 @@
     <ClInclude Include="MyQueue.h">
       <Filter>头文件\solution\stack</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_updateMatrix.h">
+      <Filter>头文件\solution\stack</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
