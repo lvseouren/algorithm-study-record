@@ -18,7 +18,7 @@ public:
 			{
 				if (matrix[i][j] != 0)
 				{
-					for(int distance = 1;distance<rowCnt;distance++)
+					for(int distance = 1;distance<max(rowCnt,colCnt);distance++)
 					{
 						if(CheckSurroundNum(matrix, i, j, distance))
 						{
@@ -33,8 +33,8 @@ public:
 
 	bool CheckSurroundNum(vector<vector<int>>& matrix, int row, int col, int distance)
 	{
-		int rowStart = row - distance;
-		int rowEnd = row + distance;
+		int rowStart = row - distance > 0 ? row - distance : 0;
+		int rowEnd = row + distance < rowCnt - 1 ? row + distance : rowCnt - 1;
 		int colStart = col - distance > 0 ? col - distance : 0;
 		int colEnd = col + distance < colCnt - 1 ? col + distance : colCnt - 1;
 
