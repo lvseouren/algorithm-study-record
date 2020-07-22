@@ -33,6 +33,7 @@
 #include "Solution_maximalSquare.h"
 #include "MyQueue.h"
 #include "Solution_updateMatrix.h"
+#include "Solution_singleNumber.h"
 
 class solution
 {
@@ -70,7 +71,14 @@ public:
 		//maximalRectangle();
 		//maximalSquare();
 		//myQueueRunTest();
-		updateMatrix();
+		//updateMatrix();
+		singleNumber();
+	}
+
+	void singleNumber()
+	{
+		Solution_singleNumer s;
+		s.RunTest();
 	}
 
 	void updateMatrix()
