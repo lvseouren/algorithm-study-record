@@ -181,6 +181,7 @@
     <ClInclude Include="SolutionBase.h" />
     <ClInclude Include="Solution_cloneGraph.h" />
     <ClInclude Include="Solution_copyRandomList.h" />
+    <ClInclude Include="Solution_countBits.h" />
     <ClInclude Include="Solution_dailyTemperatures.h" />
     <ClInclude Include="Solution_decodeString.h" />
     <ClInclude Include="Solution_detectCycle.h" />

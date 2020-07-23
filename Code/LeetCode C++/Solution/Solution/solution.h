@@ -35,6 +35,7 @@
 #include "Solution_updateMatrix.h"
 #include "Solution_singleNumber.h"
 #include "Solution_hammingWeight.h"
+#include "Solution_countBits.h"
 
 class solution
 {
@@ -74,7 +75,14 @@ public:
 		//myQueueRunTest();
 		//updateMatrix();
 		//singleNumber();
-		hammingWeight();
+		//hammingWeight();
+		countBits();
+	}
+
+	void countBits()
+	{
+		Solution_countBits s;
+		s.RunTest();
 	}
 
 	void hammingWeight()
