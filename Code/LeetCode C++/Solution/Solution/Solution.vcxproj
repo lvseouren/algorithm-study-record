@@ -207,6 +207,7 @@
     <ClInclude Include="Solution_partition.h" />
     <ClInclude Include="Solution_reorderList.h" />
     <ClInclude Include="Solution_reverseBetween.h" />
+    <ClInclude Include="Solution_reverseBits.h" />
     <ClInclude Include="Solution_reverseList.h" />
     <ClInclude Include="Solution_singleNumber.h" />
     <ClInclude Include="Solution_solveNQueens.h" />

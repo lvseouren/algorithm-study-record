@@ -36,6 +36,7 @@
 #include "Solution_singleNumber.h"
 #include "Solution_hammingWeight.h"
 #include "Solution_countBits.h"
+#include "Solution_reverseBits.h"
 
 class solution
 {
@@ -76,7 +77,14 @@ public:
 		//updateMatrix();
 		//singleNumber();
 		//hammingWeight();
-		countBits();
+		//countBits();
+		reverseBits();
+	}
+
+	void reverseBits()
+	{
+		Solution_reverseBits s;
+		s.RunTest();
 	}
 
 	void countBits()
