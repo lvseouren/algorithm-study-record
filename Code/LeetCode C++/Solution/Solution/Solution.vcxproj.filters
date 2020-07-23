@@ -290,5 +290,8 @@
     <ClInclude Include="Solution_singleNumber.h">
       <Filter>头文件\solution\binary</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_hammingWeight.h">
+      <Filter>头文件\solution\binary</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

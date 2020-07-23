@@ -34,6 +34,7 @@
 #include "MyQueue.h"
 #include "Solution_updateMatrix.h"
 #include "Solution_singleNumber.h"
+#include "Solution_hammingWeight.h"
 
 class solution
 {
@@ -72,7 +73,14 @@ public:
 		//maximalSquare();
 		//myQueueRunTest();
 		//updateMatrix();
-		singleNumber();
+		//singleNumber();
+		hammingWeight();
+	}
+
+	void hammingWeight()
+	{
+		Solution_hammingWeight s;
+		s.RunTest();
 	}
 
 	void singleNumber()
