@@ -7,10 +7,17 @@ class Solution_countBits:SolutionBase {
 public:
 	vector<int> countBits(int num) 
 	{
-		vector<int> ret(num+1);
-		for(int i=0;i<=num;i++)
+		vector<int> ret(num+1, 0);
+		int pre = 0;
+		int curMax = INT_MIN;
+		for (int i = 1; i <= num; i++)
 		{
-			ret[i] = getCount(i);
+			ret[i] = ret[pre++] + 1;
+			if (ret[i] > curMax)
+			{
+				curMax = ret[i];
+				pre = 0;
+			}
 		}
 		return ret;
 	}
