@@ -299,5 +299,8 @@
     <ClInclude Include="Solution_reverseBits.h">
       <Filter>头文件\solution\binary</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_rangeBitwiseAnd.h">
+      <Filter>头文件\solution\binary</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

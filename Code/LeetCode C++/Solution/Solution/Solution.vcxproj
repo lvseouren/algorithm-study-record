@@ -205,6 +205,7 @@
     <ClInclude Include="MyQueue.h" />
     <ClInclude Include="Solution_numIslands.h" />
     <ClInclude Include="Solution_partition.h" />
+    <ClInclude Include="Solution_rangeBitwiseAnd.h" />
     <ClInclude Include="Solution_reorderList.h" />
     <ClInclude Include="Solution_reverseBetween.h" />
     <ClInclude Include="Solution_reverseBits.h" />
