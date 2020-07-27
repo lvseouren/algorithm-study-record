@@ -3,6 +3,8 @@
 using namespace std;
 class Solution_rangeBitwiseAnd {
 public:
+	//转化为m,n的最大公共前缀
+	//使用反证法还是可以证明其正确性的
 	int rangeBitwiseAnd(int m, int n) 
 	{
 		int cnt = 0;
