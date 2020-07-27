@@ -6,9 +6,21 @@ class Solution_search {
 public:
 	int search(vector<int>& nums, int target) 
 	{
-		if (nums.empty())
-			return -1;
-		return binarySearch(nums, 0, nums.size(), target);
+		int left = 0;
+		int right = nums.size();
+		while(left<right)
+		{
+			int mid = left + (right - left) / 2;
+			if (nums[mid] == target)
+				return mid;
+			else if(nums[mid]<target)
+			{
+				left = mid+1;
+			}
+			else if (nums[mid] > target)
+				right = mid;
+		}
+		return -1;
 	}
 
 	int binarySearch(vector<int>& nums, int left, int right, int target)
@@ -25,8 +37,8 @@ public:
 
 	void RunTest()
 	{
-		//RunTestCase({ -1,0,3,5,9,12 }, 9);
-		//RunTestCase({ -1,0,3,5,9,12 }, 2);
+		RunTestCase({ -1,0,3,5,9,12 }, 9);
+		RunTestCase({ -1,0,3,5,9,12 }, 2);
 		RunTestCase({ 2,5 }, 2);
 	}
 
