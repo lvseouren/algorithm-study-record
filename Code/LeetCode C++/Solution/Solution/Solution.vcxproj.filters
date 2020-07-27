@@ -67,6 +67,9 @@
     <Filter Include="头文件\solution\binary">
       <UniqueIdentifier>{053fe016-f9a1-4724-80dc-c2091bec550b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\solution\binary search">
+      <UniqueIdentifier>{e1202ac9-9cca-4715-a024-d054fe38be32}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -301,6 +304,9 @@
     </ClInclude>
     <ClInclude Include="Solution_rangeBitwiseAnd.h">
       <Filter>头文件\solution\binary</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_search.h">
+      <Filter>头文件\solution\binary search</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

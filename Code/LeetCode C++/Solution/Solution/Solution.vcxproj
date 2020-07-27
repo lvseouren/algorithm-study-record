@@ -210,6 +210,7 @@
     <ClInclude Include="Solution_reverseBetween.h" />
     <ClInclude Include="Solution_reverseBits.h" />
     <ClInclude Include="Solution_reverseList.h" />
+    <ClInclude Include="Solution_search.h" />
     <ClInclude Include="Solution_singleNumber.h" />
     <ClInclude Include="Solution_solveNQueens.h" />
     <ClInclude Include="Solution_sortList.h" />

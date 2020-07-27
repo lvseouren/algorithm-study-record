@@ -38,6 +38,7 @@
 #include "Solution_countBits.h"
 #include "Solution_reverseBits.h"
 #include "Solution_rangeBitwiseAnd.h"
+#include "Solution_search.h"
 
 class solution
 {
@@ -80,7 +81,14 @@ public:
 		//hammingWeight();
 		//countBits();
 		//reverseBits();
-		rangeBitwiseAnd();
+		//rangeBitwiseAnd();
+		search();
+	}
+
+	void search()
+	{
+		Solution_search s;
+		s.RunTest();
 	}
 
 	void rangeBitwiseAnd()
