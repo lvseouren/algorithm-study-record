@@ -39,6 +39,7 @@
 #include "Solution_reverseBits.h"
 #include "Solution_rangeBitwiseAnd.h"
 #include "Solution_search.h"
+#include "Solution_findMedianSortedArrays.h"
 
 class solution
 {
@@ -82,7 +83,14 @@ public:
 		//countBits();
 		//reverseBits();
 		//rangeBitwiseAnd();
-		search();
+		//search();
+		findMedianSortedArray();
+	}
+
+	void findMedianSortedArray()
+	{
+		Solution_findMedianSortedArrays s;
+		s.RunTest();
 	}
 
 	void search()

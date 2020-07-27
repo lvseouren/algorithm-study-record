@@ -189,6 +189,7 @@
     <ClInclude Include="Solution_evenReorderMerge.h" />
     <ClInclude Include="Solution_findAllTreePath.h" />
     <ClInclude Include="Solution_findCommonAncestor.h" />
+    <ClInclude Include="Solution_findMedianSortedArrays.h" />
     <ClInclude Include="Solution_findRepeatNumber.h" />
     <ClInclude Include="Solution_hammingWeight.h" />
     <ClInclude Include="Solution_hasCycle.h" />
