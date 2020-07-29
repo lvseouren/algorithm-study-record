@@ -40,6 +40,8 @@
 #include "Solution_rangeBitwiseAnd.h"
 #include "Solution_search.h"
 #include "Solution_findMedianSortedArrays.h"
+#include "Solution_mySqrt.h"
+#include "Solution_guessNumber.h"
 
 class solution
 {
@@ -83,8 +85,22 @@ public:
 		//countBits();
 		//reverseBits();
 		//rangeBitwiseAnd();
-		//search();
-		findMedianSortedArray();
+		search();
+		//findMedianSortedArray();
+		//mySqrt();
+		//guessNumber();
+	}
+
+	void guessNumber()
+	{
+		Solution_guessNumber s;
+		s.RunTest();
+	}
+
+	void mySqrt()
+	{
+		Solution_mySqrt s;
+		s.RunTest();
 	}
 
 	void findMedianSortedArray()

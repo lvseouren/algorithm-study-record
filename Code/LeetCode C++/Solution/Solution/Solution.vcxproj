@@ -191,6 +191,7 @@
     <ClInclude Include="Solution_findCommonAncestor.h" />
     <ClInclude Include="Solution_findMedianSortedArrays.h" />
     <ClInclude Include="Solution_findRepeatNumber.h" />
+    <ClInclude Include="Solution_guessNumber.h" />
     <ClInclude Include="Solution_hammingWeight.h" />
     <ClInclude Include="Solution_hasCycle.h" />
     <ClInclude Include="Solution_inorderTraversal.h" />
@@ -204,6 +205,7 @@
     <ClInclude Include="Solution_maxPathSum.h" />
     <ClInclude Include="Solution_mergeTwoList.h" />
     <ClInclude Include="MyQueue.h" />
+    <ClInclude Include="Solution_mySqrt.h" />
     <ClInclude Include="Solution_numIslands.h" />
     <ClInclude Include="Solution_partition.h" />
     <ClInclude Include="Solution_rangeBitwiseAnd.h" />
@@ -212,6 +214,7 @@
     <ClInclude Include="Solution_reverseBits.h" />
     <ClInclude Include="Solution_reverseList.h" />
     <ClInclude Include="Solution_search.h" />
+    <ClInclude Include="Solution_searchRange.h" />
     <ClInclude Include="Solution_singleNumber.h" />
     <ClInclude Include="Solution_solveNQueens.h" />
     <ClInclude Include="Solution_sortList.h" />

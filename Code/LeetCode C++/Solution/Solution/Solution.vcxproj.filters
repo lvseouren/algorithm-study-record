@@ -311,5 +311,14 @@
     <ClInclude Include="Solution_findMedianSortedArrays.h">
       <Filter>头文件\solution\binary search</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_searchRange.h">
+      <Filter>头文件\solution\binary search</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_mySqrt.h">
+      <Filter>头文件\solution\binary search</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_guessNumber.h">
+      <Filter>头文件\solution\binary search</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
