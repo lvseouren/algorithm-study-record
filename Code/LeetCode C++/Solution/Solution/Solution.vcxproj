@@ -191,6 +191,7 @@
     <ClInclude Include="Solution_findCommonAncestor.h" />
     <ClInclude Include="Solution_findMedianSortedArrays.h" />
     <ClInclude Include="Solution_findRepeatNumber.h" />
+    <ClInclude Include="Solution_firstBadVersion.h" />
     <ClInclude Include="Solution_guessNumber.h" />
     <ClInclude Include="Solution_hammingWeight.h" />
     <ClInclude Include="Solution_hasCycle.h" />

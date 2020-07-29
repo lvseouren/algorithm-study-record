@@ -42,6 +42,7 @@
 #include "Solution_findMedianSortedArrays.h"
 #include "Solution_mySqrt.h"
 #include "Solution_guessNumber.h"
+#include "Solution_firstBadVersion.h"
 
 class solution
 {
@@ -85,10 +86,17 @@ public:
 		//countBits();
 		//reverseBits();
 		//rangeBitwiseAnd();
-		search();
+		//search();
 		//findMedianSortedArray();
 		//mySqrt();
 		//guessNumber();
+		firstBadVersion();
+	}
+
+	void firstBadVersion()
+	{
+		Solution_firstBadVersion s;
+		s.RunTest();
 	}
 
 	void guessNumber()

@@ -320,5 +320,8 @@
     <ClInclude Include="Solution_guessNumber.h">
       <Filter>头文件\solution\binary search</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_firstBadVersion.h">
+      <Filter>头文件\solution\binary search</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
