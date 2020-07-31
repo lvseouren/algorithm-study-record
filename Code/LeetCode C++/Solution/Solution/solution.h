@@ -45,6 +45,8 @@
 #include "Solution_firstBadVersion.h"
 #include "Solution_findPeakElement.h"
 #include "Solution_findMin.h"
+#include "Solution_searchRange.h"
+#include "Solution_findClosestElements.h"
 
 class solution
 {
@@ -94,7 +96,21 @@ public:
 		//guessNumber();
 		//firstBadVersion();
 		//findPeakElement();
-		findMin();
+		//findMin();
+		//searchRange();
+		findClosestElements();
+	}
+
+	void findClosestElements()
+	{
+		Solution_findClosestElements s;
+		s.RunTest();
+	}
+
+	void searchRange()
+	{
+		Solution_searchRange s;
+		s.RunTest();
 	}
 
 	void findMin()
