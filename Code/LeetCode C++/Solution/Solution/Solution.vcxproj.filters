@@ -323,5 +323,11 @@
     <ClInclude Include="Solution_firstBadVersion.h">
       <Filter>头文件\solution\binary search</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_findPeakElement.h">
+      <Filter>头文件\solution\binary search</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_findMin.h">
+      <Filter>头文件\solution\binary search</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -43,6 +43,8 @@
 #include "Solution_mySqrt.h"
 #include "Solution_guessNumber.h"
 #include "Solution_firstBadVersion.h"
+#include "Solution_findPeakElement.h"
+#include "Solution_findMin.h"
 
 class solution
 {
@@ -90,7 +92,21 @@ public:
 		//findMedianSortedArray();
 		//mySqrt();
 		//guessNumber();
-		firstBadVersion();
+		//firstBadVersion();
+		//findPeakElement();
+		findMin();
+	}
+
+	void findMin()
+	{
+		Solution_findMin s;
+		s.RunTest();
+	}
+
+	void findPeakElement()
+	{
+		Solution_findPeakElement s;
+		s.RunTest();
 	}
 
 	void firstBadVersion()
