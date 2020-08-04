@@ -335,5 +335,8 @@
     <ClInclude Include="Solution_findDuplicate.h">
       <Filter>头文件\solution\binary search</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_smallestDistancePair.h">
+      <Filter>头文件\solution\binary search</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
