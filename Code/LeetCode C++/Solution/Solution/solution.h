@@ -47,6 +47,7 @@
 #include "Solution_findMin.h"
 #include "Solution_searchRange.h"
 #include "Solution_findClosestElements.h"
+#include "Solution_findDuplicate.h"
 
 class solution
 {
@@ -98,7 +99,14 @@ public:
 		//findPeakElement();
 		//findMin();
 		//searchRange();
-		findClosestElements();
+		//findClosestElements();
+		findDuplicate();
+	}
+
+	void findDuplicate()
+	{
+		Solution_findDuplicate s;
+		s.RunTest();
 	}
 
 	void findClosestElements()
