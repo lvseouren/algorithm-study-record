@@ -7,62 +7,47 @@ class Solution_splitArray {
 public:
 	int splitArray(vector<int>& nums, int m) 
 	{
-		int cnt = nums.size();
-		int ret = INT_MIN;
-		vector<long> sum;
-		for (int i = 0; i < cnt; ++i)
+		long left = INT_MIN, right = 0;
+		for(int i = 0;i<nums.size();++i)
 		{
-			if (i > 0)
-				sum.push_back(sum[i-1] + nums[i]);
+			left = max(left, nums[i]);
+			right += nums[i];
+		}
+		while(left<right)
+		{
+			int mid = left + (right - left) / 2;
+			if (check(nums, mid, m))
+				right = mid;
 			else
-				sum.push_back(nums[i]);
+				left = mid + 1;
 		}
-		int average = sum[cnt-1] / m;
-		int preCutIndex = -1;
-		while(m>1)
+		return right;
+	}
+
+	bool check(vector<int>& nums, int sum, int m)
+	{
+		int cnt = 1;
+		int curSum = 0;
+		for(int i = 0;i<nums.size();++i)
 		{
-			int curIndex = preCutIndex + 1;
-			int curSetSum;
-			int left = curIndex, right = cnt - m;
-			while (left < right)
+			if (curSum + nums[i] > sum)
 			{
-				int mid = left + (right - left) / 2;
-				curSetSum = preCutIndex >= 0 ? sum[mid] - sum[preCutIndex] : sum[mid];
-				if(curSetSum>average)
-				{
-					right = mid;
-				}else
-				{
-					left = mid + 1;
-				}
-			}
-			curSetSum = preCutIndex>=0?sum[right] - sum[preCutIndex]:sum[right];
-			if (m>1&&right > 0&&right>preCutIndex+1)
+				curSum = nums[i];
+				cnt++;
+			}else
 			{
-				int setSum = preCutIndex >= 0 ? sum[right-1] - sum[preCutIndex] : sum[right-1];
-				if(abs(setSum-average)<abs(curSetSum-average))
-				{
-					right--;
-					curSetSum = setSum;
-				}
+				curSum += nums[i];
 			}
-			preCutIndex = right;
-			ret = max(ret, curSetSum);
-			m--;
 		}
-		if (preCutIndex >= 0)
-			ret = max(ret, sum[cnt - 1] - sum[preCutIndex]);
-		else
-			ret = sum[cnt - 1];
-		return ret;
+		return cnt <= m;
 	}
 
 	void RunTest()
 	{
-		//RunTestCase({ 7,2,5,10,8 }, 2);
-		//RunTestCase({ 1,3,1 }, 3);
-		//RunTestCase({ 1,3,1 }, 2);
-		//RunTestCase({ 1,3,1 }, 1);
+		RunTestCase({ 7,2,5,10,8 }, 2);
+		RunTestCase({ 1,3,1 }, 3);
+		RunTestCase({ 1,3,1 }, 2);
+		RunTestCase({ 1,3,1 }, 1);
 		RunTestCase({ 10,5,13,4,8,4,5,11,14,9,16,10,20,8 }, 8);
 	}
 
