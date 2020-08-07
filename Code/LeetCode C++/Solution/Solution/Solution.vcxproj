@@ -223,6 +223,7 @@
     <ClInclude Include="Solution_singleNumber.h" />
     <ClInclude Include="Solution_smallestDistancePair.h" />
     <ClInclude Include="Solution_solveNQueens.h" />
+    <ClInclude Include="Solution_sortArray.h" />
     <ClInclude Include="Solution_sortList.h" />
     <ClInclude Include="Solution_splitArray.h" />
     <ClInclude Include="Solution_subsets.h" />

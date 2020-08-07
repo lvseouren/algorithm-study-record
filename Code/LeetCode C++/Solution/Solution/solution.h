@@ -50,6 +50,7 @@
 #include "Solution_findDuplicate.h"
 #include "Solution_smallestDistancePair.h"
 #include "Solution_splitArray.h"
+#include "Solution_sortArray.h"
 
 class solution
 {
@@ -104,7 +105,14 @@ public:
 		//findClosestElements();
 		//findDuplicate();
 		//smallestDistancePair();
-		splitArray();
+		//splitArray();
+		sortArray();
+	}
+
+	void sortArray()
+	{
+		Solution_sortArray s;
+		s.RunTest();
 	}
 
 	void splitArray()

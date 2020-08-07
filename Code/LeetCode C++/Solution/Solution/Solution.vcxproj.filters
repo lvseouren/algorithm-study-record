@@ -70,6 +70,9 @@
     <Filter Include="头文件\solution\binary search">
       <UniqueIdentifier>{e1202ac9-9cca-4715-a024-d054fe38be32}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\solution\sort">
+      <UniqueIdentifier>{4765129b-26c0-48ef-859d-be80f2165f44}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -340,6 +343,9 @@
     </ClInclude>
     <ClInclude Include="Solution_splitArray.h">
       <Filter>头文件\solution\binary search</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_sortArray.h">
+      <Filter>头文件\solution\sort</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
