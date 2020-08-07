@@ -4,38 +4,44 @@
 #include "SolutionBase.h"
 class Solution_sortArray:SolutionBase {
 public:
+	vector<int> tmp;
 	vector<int> sortArray(vector<int>& nums) 
 	{
-		return mergeSort(nums, 0, nums.size()-1);
+		tmp.resize(nums.size(), 0);
+		mergeSort(nums, 0, nums.size()-1);
+		return nums;
 	}
 
-	vector<int> mergeSort(vector<int>& nums, int left, int right)
+	void mergeSort(vector<int>& nums, int left, int right)
 	{
-		if (left == right)
-			return { nums[left] };
+		if (left >= right)
+			return;
 		int mid = (left + right) / 2;
-		vector<int> leftNum = mergeSort(nums, left, mid);
-		vector<int> rightNum = mergeSort(nums, mid+1, right);
-		return merge(leftNum, rightNum);
+		mergeSort(nums, left, mid);
+		mergeSort(nums, mid+1, right);
+		merge(nums, left, mid, right);
 	}
 
-	vector<int> merge(vector<int> left, vector<int> right)
+	void merge(vector<int>& nums, int left, int mid, int right)
 	{
-		vector<int> ret;
-		int i=0, j = 0;
-		while(i<left.size()&&j<right.size())
+		int i = left, j = mid+1;
+		int index = left;
+		while (i <= mid && j <= right)
 		{
-			ret.push_back(left[i] < right[j] ? left[i++] : right[j++]);
+			tmp[index++] = nums[i] < nums[j] ? nums[i++] : nums[j++];
 		}
-		while(i<left.size())
+		while(i<=mid)
 		{
-			ret.push_back(left[i++]);
+			tmp[index++] = nums[i++];
 		}
-		while(j<right.size())
+		while(j<=right)
 		{
-			ret.push_back(right[j++]);
+			tmp[index++] = nums[j++];
 		}
-		return ret;
+		for(int i = 0;i<right-left+1;i++)
+		{
+			nums[left + i] = tmp[left+i];
+		}
 	}
 
 	void RunTest()
