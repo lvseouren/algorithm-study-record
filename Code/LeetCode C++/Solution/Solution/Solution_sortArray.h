@@ -58,18 +58,19 @@ public:
 			if (i < j)
 				swap(nums[i], nums[j]);
 		}
-		nums[right] = nums[i];
-		nums[i] = pivot;
-		
+		/*nums[right] = nums[i];
+		nums[i] = pivot;*/
+		swap(nums[i], nums[right]);
+
 		quickSort(nums, left, i-1);
 		quickSort(nums, i + 1, right);
 	}
 
 	void swap(int& a,int& b)
 	{
-		a = a ^ b;
-		b = a ^ b;
-		a = a ^ b;
+		int temp = a;
+		a = b;
+		b = temp;
 	}
 
 	void RunTest()
