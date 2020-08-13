@@ -7,8 +7,7 @@ public:
 	vector<int> tmp;
 	vector<int> sortArray(vector<int>& nums) 
 	{
-		tmp.resize(nums.size(), 0);
-		mergeSort(nums, 0, nums.size()-1);
+		quickSort(nums, 0, nums.size()-1);
 		return nums;
 	}
 
@@ -44,11 +43,40 @@ public:
 		}
 	}
 
+	void quickSort(vector<int>& nums, int left, int right)
+	{
+		if (left >= right||left<0||right>=nums.size())
+			return;
+		int i = left, j = right, pivot = nums[right];
+		while(i!=j)
+		{
+			while (i < j && nums[i] <= pivot)
+				i++;
+			while (i < j && nums[j] >= pivot)
+				j--;
+			
+			if (i < j)
+				swap(nums[i], nums[j]);
+		}
+		nums[right] = nums[i];
+		nums[i] = pivot;
+		
+		quickSort(nums, left, i-1);
+		quickSort(nums, i + 1, right);
+	}
+
+	void swap(int& a,int& b)
+	{
+		a = a ^ b;
+		b = a ^ b;
+		a = a ^ b;
+	}
+
 	void RunTest()
 	{
-		RunTestCase({ 5,2,3,1 });
+		//RunTestCase({ 5,2,3,1 });
 		RunTestCase({ 5,1,1,2,0,0 });
-		RunTestCase({ 1 });
+		//RunTestCase({ 1 });
 	}
 
 	void RunTestCase(vector<int> nums)
