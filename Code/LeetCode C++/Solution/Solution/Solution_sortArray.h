@@ -7,7 +7,7 @@ public:
 	vector<int> tmp;
 	vector<int> sortArray(vector<int>& nums) 
 	{
-		quickSort(nums, 0, nums.size()-1);
+		heapSort(nums);
 		return nums;
 	}
 
@@ -66,6 +66,48 @@ public:
 		quickSort(nums, i + 1, right);
 	}
 
+	void heapSort(vector<int>& nums)
+	{
+		PrintHeapInfo(nums, "初始堆:", true);
+		int cnt = nums.size();
+		for(int i = cnt/2-1;i>=0;i--)
+			maxHeapify(nums, i, cnt-1);
+		
+		PrintHeapInfo(nums, "最大化堆处理结束:", true);
+		for(int i =cnt-1;i>0;i--)
+		{
+			sink(nums, i);
+		}
+	}
+
+	void maxHeapify(vector<int>& nums, int left, int right)
+	{
+		int dad = left;
+		int son = dad * 2 + 1;
+		while(son<= right)
+		{
+			if (son + 1 <= right && nums[son + 1] > nums[son])
+				son++;
+			if (nums[dad] > nums[son])
+				return;
+			else
+			{
+				swap(nums[dad], nums[son]);
+				dad = son;
+				son = dad * 2 + 1;
+			}
+		}
+
+		PrintHeapInfo(nums, "maxHeapify:", true);
+	}
+
+	void sink(vector<int>& nums, int right)
+	{
+		swap(nums[0], nums[right]);
+		PrintHeapInfo(nums, "sink:");
+		maxHeapify(nums, 0, right - 1);
+	}
+
 	void swap(int& a,int& b)
 	{
 		int temp = a;
@@ -73,19 +115,28 @@ public:
 		b = temp;
 	}
 
+	void PrintHeapInfo(vector<int>& nums, string msg, bool isNeedEndl=false)
+	{
+		cout << msg << endl;
+		bstPrinter->print(bstPrinter->generateTree(&nums));
+		if(isNeedEndl)
+			cout << "-----------------------------------" << endl;
+	}
+
 	void RunTest()
 	{
-		//RunTestCase({ 5,2,3,1 });
+		RunTestCase({ 5,2,3,1 });
+		RunTestCase({ 5,2,3 });
 		RunTestCase({ 5,1,1,2,0,0 });
-		//RunTestCase({ 1 });
+		RunTestCase({ 1 });
 	}
 
 	void RunTestCase(vector<int> nums)
 	{
 		cout << "input:";
 		vecPrinter->print(nums);
-		cout << endl << "output:";
 		nums = sortArray(nums);
+		cout << endl << "output:";
 		vecPrinter->print(nums);
 		cout << endl;
 	}
