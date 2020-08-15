@@ -13,6 +13,7 @@ public:
 	void printBFS(TreeNode* root);
 	TreeNode* generateBST(vector<int> list);
 	TreeNode* generateBST(vector<int>* list);
+	TreeNode* generateTree(vector<int>* list);
 	void testConsolePos();
 	void setxy(int x, int y);
 private:
