@@ -51,6 +51,7 @@
 #include "Solution_smallestDistancePair.h"
 #include "Solution_splitArray.h"
 #include "Solution_sortArray.h"
+#include "Solution_minimumTotal.h"
 
 class solution
 {
@@ -106,7 +107,14 @@ public:
 		//findDuplicate();
 		//smallestDistancePair();
 		//splitArray();
-		sortArray();
+		//sortArray();
+		minimumTotal();
+	}
+
+	void minimumTotal()
+	{
+		Solution_minimumtotal s;
+		s.RunTest();
 	}
 
 	void sortArray()
