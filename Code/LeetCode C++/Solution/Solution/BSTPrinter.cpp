@@ -96,6 +96,37 @@ TreeNode* BSTPrinter::generateBST(vector<int>* list)
 	return root;
 }
 
+TreeNode* BSTPrinter::generateTree(vector<int>* list)
+{
+	if (list == NULL || list->size() == 0)
+		return NULL;
+	vector<int>::iterator it = list->begin();
+	TreeNode* root = new TreeNode(*it);
+	TreeNode* dummy = root;
+	deque<TreeNode*> queue;
+	queue.push_back(root);
+	it++;
+	while (it != list->end())
+	{
+		if (!dummy->left)
+		{
+			dummy->left = new TreeNode(*it++);
+			queue.push_back(dummy->left);
+		}
+		else if (!dummy->right)
+		{
+			dummy->right = new TreeNode(*it++);
+			queue.push_back(dummy->right);
+		}
+		else
+		{
+			queue.pop_front();
+			dummy = queue.front();
+		}
+	}
+	return root;
+}
+
 void BSTPrinter::getxy(int* x, int* y) //该函数获取当前控制台bai光标位置
 {
 	CONSOLE_SCREEN_BUFFER_INFO c;
