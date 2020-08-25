@@ -353,5 +353,8 @@
     <ClInclude Include="Solution_minimumTotal.h">
       <Filter>头文件\solution\dp</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_canJump.h">
+      <Filter>头文件\solution\dp</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

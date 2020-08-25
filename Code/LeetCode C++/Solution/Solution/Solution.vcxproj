@@ -179,6 +179,7 @@
     <ClInclude Include="Node.h" />
     <ClInclude Include="solution.h" />
     <ClInclude Include="SolutionBase.h" />
+    <ClInclude Include="Solution_canJump.h" />
     <ClInclude Include="Solution_cloneGraph.h" />
     <ClInclude Include="Solution_copyRandomList.h" />
     <ClInclude Include="Solution_countBits.h" />
