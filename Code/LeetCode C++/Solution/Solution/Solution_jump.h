@@ -5,35 +5,33 @@ public:
 	int jump(vector<int>& nums) 
 	{
 		int cnt = nums.size();
-		vector<int> dp(cnt, INT_MAX);
+		vector<int> dp(max(cnt, 2), 0);
 		dp[0] = 0;
-		map<int, int> mapToLastIndex;
-		mapToLastIndex[0] = 0;
-		for (int i = 0; i < cnt; ++i)
-		{
-			dp[i] = getDp(i, mapToLastIndex);
-			mapToLastIndex[dp[i] + 1] = mapToLastIndex.find(dp[i]+1)==mapToLastIndex.end()? i + nums[i]:max(mapToLastIndex[dp[i]+1],i+nums[i]);
-		}
-		return getDp(cnt-1,mapToLastIndex);
-	}
+		map<int, int> stepRight;
+		stepRight[0] = 0;
+		stepRight[1] = nums[0];
 
-	int getDp(int index, map<int,int>& data)
-	{
-		int ret = INT_MAX;
-		for (auto value : data)
+		for (int i = 1; i < cnt; ++i)
 		{
-			if (value.second >= index&&ret>value.first)
+			if (i > stepRight[dp[i - 1]])
 			{
-				ret = value.first;
+				dp[i] = dp[i - 1] + 1;
 			}
+			else
+			{
+				dp[i] = dp[i - 1];
+			}
+			stepRight[dp[i]+1] = max(stepRight[dp[i]+1], i + nums[i]);
 		}
-		return ret;
+		return dp[cnt - 1];
 	}
 
 	void RunTest()
 	{
 		RunTestCase({ 2,3,1,1,4 });
 		RunTestCase({ 0 });
+		RunTestCase({ 1 });
+		RunTestCase({ 7,0,9,6,9,6,1,7,9,0,1,2,9,0,3 });
 	}
 
 	void RunTestCase(vector<int> nums)
