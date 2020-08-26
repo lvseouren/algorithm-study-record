@@ -5,25 +5,22 @@ public:
 	int jump(vector<int>& nums) 
 	{
 		int cnt = nums.size();
-		vector<int> dp(max(cnt, 2), 0);
-		dp[0] = 0;
-		map<int, int> stepRight;
-		stepRight[0] = 0;
-		stepRight[1] = nums[0];
-
-		for (int i = 1; i < cnt; ++i)
+		int rightMost = 0;
+		int step = 0;
+		int end = 0;
+		for (int i = 0; i < cnt-1; ++i)
 		{
-			if (i > stepRight[dp[i - 1]])
+			if (rightMost>=i)
 			{
-				dp[i] = dp[i - 1] + 1;
+				rightMost = max(rightMost, i + nums[i]);
+				if (i == end)
+				{
+					end = rightMost;
+					step++;
+				}
 			}
-			else
-			{
-				dp[i] = dp[i - 1];
-			}
-			stepRight[dp[i]+1] = max(stepRight[dp[i]+1], i + nums[i]);
 		}
-		return dp[cnt - 1];
+		return step;
 	}
 
 	void RunTest()
