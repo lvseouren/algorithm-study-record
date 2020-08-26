@@ -53,6 +53,8 @@
 #include "Solution_sortArray.h"
 #include "Solution_minimumTotal.h"
 #include "Solution_canJump.h"
+#include "Solution_jump.h"
+
 class solution
 {
 public:
@@ -109,7 +111,14 @@ public:
 		//splitArray();
 		//sortArray();
 		//minimumTotal();
-		canJump();
+		//canJump();
+		jump();
+	}
+
+	void jump()
+	{
+		Solution_jump s;
+		s.RunTest();
 	}
 
 	void canJump()
