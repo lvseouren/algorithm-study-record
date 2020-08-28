@@ -24,6 +24,36 @@ public:
 		return ret;
 	}
 
+	int lengthOfLIS_nlogn(vector<int>& nums)
+	{
+		int cnt = nums.size();
+		if (cnt < 1)
+			return 0;
+		vector<int> d;
+		d.push_back(nums[0]);
+		for (int i = 0; i < cnt; ++i)
+		{
+			if (nums[i] > d.back())
+			{
+				d.push_back(nums[i]);
+			}
+			else
+			{
+				int left = 0, right = d.size()-1;
+				while (left < right)
+				{
+					int mid = left + (right - left) / 2;
+					if (d[mid] >= nums[i])
+						right = mid;
+					else
+						left = mid + 1;
+				}
+				d[left] = nums[i];
+			}
+		}
+		return d.size();
+	}
+
 	void RunTest()
 	{
 		RunTestCase({ 10,9,2,5,3,7,101,18 });
@@ -36,6 +66,6 @@ public:
 	{
 		cout << "input:" << endl;
 		vecPrinter->print(nums);
-		cout << "output:" << lengthOfLIS(nums) << endl << endl;
+		cout << "output:" << lengthOfLIS_nlogn(nums) << endl << endl;
 	}
 };
