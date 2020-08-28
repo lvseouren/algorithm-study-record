@@ -7,28 +7,35 @@ public:
 		if (s.empty())
 			return true;
 
-		for (auto subStr : wordDict)
+		int cnt = s.size();
+		vector<bool> dp(cnt, false);
+		for (int i = 0; i < cnt; ++i)
 		{
-			if (isStartWith(s, subStr))
+			for (auto subStr : wordDict)
 			{
-
-				bool ret = wordBreak(s.substr(subStr.size()), wordDict);
-				if (ret)
-					return true;
+				if (dp[i])
+					break;
+				int len = subStr.size();
+				if (i < len - 1)
+					dp[i] = false;
+				else
+				{
+					int pre = i - len;
+					if (pre >= 0)
+						dp[i] = pre+len<=cnt && s.substr(pre + 1, len).compare(subStr) == 0 && dp[pre];
+					else
+						dp[i] = pre + len <= cnt && s.substr(pre + 1, len).compare(subStr) == 0;
+				}
 			}
 		}
-		return false;
-	}
-
-	bool isStartWith(string s, string subStr)
-	{
-		return s.substr(0, subStr.size()).compare(subStr) == 0;
+		return dp[cnt-1];
 	}
 
 	void RunTest()
 	{
 		RunTestCase("leetcode", { "leet","code" });
 		RunTestCase("catsandog", { "cats","dog","sand","and","cat" });
+		RunTestCase("catsandog", { "cats","dog","sand","and","cat", "an" });
 	}
 
 	void RunTestCase(string s, vector<string> wordDict)
