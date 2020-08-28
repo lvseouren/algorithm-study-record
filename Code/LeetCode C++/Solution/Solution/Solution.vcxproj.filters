@@ -359,5 +359,8 @@
     <ClInclude Include="Solution_jump.h">
       <Filter>头文件\solution\dp</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_minCut.h">
+      <Filter>头文件\solution\dp</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

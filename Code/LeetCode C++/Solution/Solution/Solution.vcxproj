@@ -212,6 +212,7 @@
     <ClInclude Include="Solution_maxPathSum.h" />
     <ClInclude Include="Solution_mergeTwoList.h" />
     <ClInclude Include="MyQueue.h" />
+    <ClInclude Include="Solution_minCut.h" />
     <ClInclude Include="Solution_minimumTotal.h" />
     <ClInclude Include="Solution_mySqrt.h" />
     <ClInclude Include="Solution_numIslands.h" />

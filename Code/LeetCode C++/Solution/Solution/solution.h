@@ -54,6 +54,7 @@
 #include "Solution_minimumTotal.h"
 #include "Solution_canJump.h"
 #include "Solution_jump.h"
+#include "Solution_minCut.h"
 
 class solution
 {
@@ -112,7 +113,14 @@ public:
 		//sortArray();
 		//minimumTotal();
 		//canJump();
-		jump();
+		//jump();
+		minCut();
+	}
+
+	void minCut()
+	{
+		Solution_minCut s;
+		s.RunTest();
 	}
 
 	void jump()
