@@ -56,6 +56,7 @@
 #include "Solution_jump.h"
 #include "Solution_minCut.h"
 #include "Solution_longestOfLIS.h"
+#include "Solution_wordBreak.h"
 
 class solution
 {
@@ -116,7 +117,14 @@ public:
 		//canJump();
 		//jump();
 		//minCut();
-		lengthOfLIS();
+		//lengthOfLIS();
+		wordBreak();
+	}
+
+	void wordBreak()
+	{
+		Solution_wordBreak s;
+		s.RunTest();
 	}
 
 	void lengthOfLIS()

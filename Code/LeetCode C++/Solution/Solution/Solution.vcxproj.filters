@@ -365,5 +365,8 @@
     <ClInclude Include="Solution_longestOfLIS.h">
       <Filter>头文件\solution\dp</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_wordBreak.h">
+      <Filter>头文件\solution\dp</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
