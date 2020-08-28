@@ -57,6 +57,7 @@
 #include "Solution_minCut.h"
 #include "Solution_longestOfLIS.h"
 #include "Solution_wordBreak.h"
+#include "Solution_longestCommonSubSeq.h"
 
 class solution
 {
@@ -118,7 +119,14 @@ public:
 		//jump();
 		//minCut();
 		//lengthOfLIS();
-		wordBreak();
+		//wordBreak();
+		longestCommonSubSequence();
+	}
+
+	void longestCommonSubSequence()
+	{
+		Solution_longestCommonSubSeq s;
+		s.RunTest();
 	}
 
 	void wordBreak()
