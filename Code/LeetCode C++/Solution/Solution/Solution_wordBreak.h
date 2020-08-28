@@ -1,34 +1,32 @@
 #pragma once
 #include "SolutionBase.h"
+#include <set>
 class Solution_wordBreak:SolutionBase {
 public:
 	bool wordBreak(string s, vector<string>& wordDict) 
 	{
-		if (s.empty())
-			return true;
-
-		int cnt = s.size();
-		vector<bool> dp(cnt, false);
-		for (int i = 0; i < cnt; ++i)
+		set<string> dict;
+		int maxLen = 0;
+		for (auto str : wordDict)
 		{
-			for (auto subStr : wordDict)
+			dict.insert(str);
+			maxLen = max(maxLen, str.length());
+		}
+		int cnt = s.size();
+		vector<bool> dp(cnt+1, false);
+		dp[0] = true;
+		for (int i = 1; i <= cnt; ++i)
+		{
+			for (int j = i; j >= 0 && j >= i - maxLen; --j)
 			{
-				if (dp[i])
-					break;
-				int len = subStr.size();
-				if (i < len - 1)
-					dp[i] = false;
-				else
+				if (dp[j] && dict.find(s.substr(j,i-j))!=dict.end())
 				{
-					int pre = i - len;
-					if (pre >= 0)
-						dp[i] = pre+len<=cnt && s.substr(pre + 1, len).compare(subStr) == 0 && dp[pre];
-					else
-						dp[i] = pre + len <= cnt && s.substr(pre + 1, len).compare(subStr) == 0;
+					dp[i] = true;
+					break;
 				}
 			}
 		}
-		return dp[cnt-1];
+		return dp[cnt];
 	}
 
 	void RunTest()
