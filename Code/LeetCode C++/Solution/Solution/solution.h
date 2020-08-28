@@ -55,6 +55,7 @@
 #include "Solution_canJump.h"
 #include "Solution_jump.h"
 #include "Solution_minCut.h"
+#include "Solution_longestOfLIS.h"
 
 class solution
 {
@@ -114,7 +115,14 @@ public:
 		//minimumTotal();
 		//canJump();
 		//jump();
-		minCut();
+		//minCut();
+		lengthOfLIS();
+	}
+
+	void lengthOfLIS()
+	{
+		Solution_lengthOfLIS s;
+		s.RunTest();
 	}
 
 	void minCut()

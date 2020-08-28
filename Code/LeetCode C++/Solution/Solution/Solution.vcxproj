@@ -205,6 +205,7 @@
     <ClInclude Include="Solution_isPalindrome.h" />
     <ClInclude Include="Solution_jump.h" />
     <ClInclude Include="Solution_largestRectangleArea.h" />
+    <ClInclude Include="Solution_longestOfLIS.h" />
     <ClInclude Include="Solution_longestValidParentheses.h" />
     <ClInclude Include="Solution_maxDepth.h" />
     <ClInclude Include="Solution_maximalRectangle.h" />
