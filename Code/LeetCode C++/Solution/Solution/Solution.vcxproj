@@ -172,11 +172,25 @@
     <ClInclude Include="algorithm_numWaterBottles.h" />
     <ClInclude Include="BSTPrinter.h" />
     <ClInclude Include="contest.h" />
+    <ClInclude Include="Contest_204_1.h" />
+    <ClInclude Include="Contest_204_2.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Contest_204_3.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Contest_204_4.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Contest_countSubTrees.h" />
     <ClInclude Include="Contest_maxNumOfSubstrings.h" />
     <ClInclude Include="ListPrinter.h" />
     <ClInclude Include="MinStack.h" />
     <ClInclude Include="Node.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="solution.h" />
     <ClInclude Include="SolutionBase.h" />
     <ClInclude Include="Solution_canJump.h" />
@@ -233,11 +247,15 @@
     <ClInclude Include="Solution_sortList.h" />
     <ClInclude Include="Solution_splitArray.h" />
     <ClInclude Include="Solution_subsets.h" />
+    <ClInclude Include="Solution_template.h" />
     <ClInclude Include="Solution_updateMatrix.h" />
     <ClInclude Include="Solution_validateBinarySearchTree.h" />
     <ClInclude Include="Solution_wordBreak.h" />
     <ClInclude Include="TreeNode.h" />
     <ClInclude Include="VectorPrinter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Solution.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

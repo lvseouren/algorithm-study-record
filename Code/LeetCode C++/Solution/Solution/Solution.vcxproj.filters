@@ -76,6 +76,9 @@
     <Filter Include="头文件\solution\dp">
       <UniqueIdentifier>{00af99b3-11b7-4f14-85ca-3560907bc92f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\contest\weekly\204">
+      <UniqueIdentifier>{de6fce76-c3ba-46b2-ae71-c9da63e7de4f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -371,5 +374,28 @@
     <ClInclude Include="Solution_longestCommonSubSeq.h">
       <Filter>头文件\solution\dp</Filter>
     </ClInclude>
+    <ClInclude Include="Contest_204_1.h">
+      <Filter>头文件\contest\weekly\204</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Contest_204_2.h">
+      <Filter>头文件\contest\weekly\204</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_template.h">
+      <Filter>头文件\solution</Filter>
+    </ClInclude>
+    <ClInclude Include="Contest_204_3.h">
+      <Filter>头文件\contest\weekly\204</Filter>
+    </ClInclude>
+    <ClInclude Include="Contest_204_4.h">
+      <Filter>头文件\contest\weekly\204</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Solution.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>
