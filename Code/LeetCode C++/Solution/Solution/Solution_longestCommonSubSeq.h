@@ -6,12 +6,6 @@ public:
 	{
 		if (text1.empty() || text2.empty())
 			return 0;
-		//if(text1.size()>text2.size())
-		//{
-		//	string temp = text1;
-		//	text1 = text2;
-		//	text2 = temp;
-		//}
 		vector < vector<int>> dp(text1.size(), vector<int>(text2.size(), 0));
 		for (int j = 0; j < text2.size(); ++j)
 			for (int i = 0; i<text1.size(); ++i)
