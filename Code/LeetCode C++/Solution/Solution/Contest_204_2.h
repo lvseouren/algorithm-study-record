@@ -7,35 +7,6 @@ public:
 	{
 		int cnt = nums.size();
 		int maxLen = 0;
-		int fushuCnt = 0;
-		int preZero = 0;
-		vector<int> dp(cnt + 1, 0);
-		for (int j = 1; j <= cnt; ++j)
-		{
-			fill(dp.begin(), dp.end(), 0);
-			for (int i = j; i <= cnt; ++i)
-			{
-				if (nums[i - 1] == 0)
-				{
-					dp[i] = 0;
-					fushuCnt = 0;
-					preZero = i;
-				}
-				else if (nums[i - 1] > 0)
-				{
-					dp[i] = max(dp[i], dp[i - 1] + 1);
-				}
-				else
-				{
-					fushuCnt++;
-					if (fushuCnt % 2 == 0)
-					{
-						dp[i] = max(dp[i], i - preZero);
-					}
-				}
-				maxLen = max(maxLen, dp[i]);
-			}
-		}
 		return maxLen;
 	}
 
