@@ -392,6 +392,12 @@
     <ClInclude Include="Contest_204_4.h">
       <Filter>头文件\contest\weekly\204</Filter>
     </ClInclude>
+    <ClInclude Include="Contest_template.h">
+      <Filter>头文件\contest</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_bestSoluToReachSpecValue.h">
+      <Filter>头文件\solution\dp</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Solution.rc">

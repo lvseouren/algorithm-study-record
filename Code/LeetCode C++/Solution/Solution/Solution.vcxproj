@@ -187,12 +187,17 @@
     </ClInclude>
     <ClInclude Include="Contest_countSubTrees.h" />
     <ClInclude Include="Contest_maxNumOfSubstrings.h" />
+    <ClInclude Include="Contest_template.h" />
     <ClInclude Include="ListPrinter.h" />
     <ClInclude Include="MinStack.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="solution.h" />
     <ClInclude Include="SolutionBase.h" />
+    <ClInclude Include="Solution_bestSoluToReachSpecValue.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Solution_canJump.h" />
     <ClInclude Include="Solution_cloneGraph.h" />
     <ClInclude Include="Solution_copyRandomList.h" />
