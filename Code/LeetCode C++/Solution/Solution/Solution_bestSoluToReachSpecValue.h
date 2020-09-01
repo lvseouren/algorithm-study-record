@@ -17,10 +17,10 @@ public:
 		{
 			ret += bookRecord.at(i)* bookExp[i];
 		}
-		if (ret > 0)
-			return ret;
-		else
+		if (ret == 0)
 			return INT_MAX;
+		else
+			return ret;
 	}
 
 	void SetRecord(vector<int> record)
@@ -43,6 +43,11 @@ public:
 	{
 		return bookRecord;
 	}
+
+	void Reset()
+	{
+		SetRecord({ 0,0,0,0 });
+	}
 };
 
 class Solution_bestSoluToReachSpecValue :SolutionBase {
@@ -55,7 +60,15 @@ public:
 	vector<int> bestSoluToReachSpecValue(int desExp, vector<int> bookExp,vector<int> bookCnt)
 	{
 		if (desExp < bookExp[0])
-			return { 1,0,0,0 };
+		{
+			vector<int> ret(4, 0);
+			for(int i = 0;i<bookExp.size();++i)
+				if (bookCnt[i] > 0)
+				{
+					ret[i] = 1;
+					return ret;
+				}
+		}
 
 		desExp = ceil(desExp*1.0/bookExp[0]);
 	
@@ -63,33 +76,51 @@ public:
 		{
 			bookExp[i] /= bookExp[0];
 		}
-		vector<temSolu> dp(desExp+1);
+		int maxBookExp = bookExp[bookExp.size() - 1];
+		vector<temSolu> dp(maxBookExp+1);
+		int lastDpIndex = 0;
 		for (int i = bookExp[0]; i <= desExp; ++i)
 		{
+			int mapIndex = i % (maxBookExp+1);
+			if (i >= maxBookExp + 1)
+			{
+				dp[mapIndex].Reset();
+			}
 			for (int j = bookExp.size()-1; j >= 0; --j)
 			{
 				int curExp = bookExp[j];
 				int preExp = i - curExp;
-				if (preExp >= 0)
+				int curDpIndex = i;
+				if (i >= preExp)
 				{
-					if (dp[preExp].GetTotalExp(bookExp) + curExp < dp[i].GetTotalExp(bookExp) && bookCnt[j]>dp[preExp].GetRecord(j))
+					if (i >= maxBookExp + 1)
 					{
-						dp[i].SetRecord(dp[preExp].GetBookRecord());
-						dp[i].SetRecord(j, dp[preExp].GetRecord(j) + 1);
+						curDpIndex = mapIndex;
+						preExp = mapIndex - curExp;
+					}
+					if (preExp < 0)
+					{
+						preExp = preExp + maxBookExp + 1;
+					}
+					if (dp[preExp].GetTotalExp(bookExp) + curExp < dp[curDpIndex].GetTotalExp(bookExp) && bookCnt[j]>dp[preExp].GetRecord(j))
+					{
+						dp[curDpIndex].SetRecord(dp[preExp].GetBookRecord());
+						dp[curDpIndex].SetRecord(j, dp[preExp].GetRecord(j) + 1);
 					}
 				}
 				else
 				{
 					if (bookCnt[j] > 0)
 					{
-						dp[i].SetRecord({ 0,0,0,0 });
-						dp[i].SetRecord(j, 1);
+						dp[curDpIndex].SetRecord({ 0,0,0,0 });
+						dp[curDpIndex].SetRecord(j, 1);
 					}
 				}
+				lastDpIndex = curDpIndex;
 			}
 		}
 
-		return dp[desExp].GetBookRecord();
+		return dp[lastDpIndex].GetBookRecord();
 	}
 
 	void RunTest()
@@ -101,7 +132,7 @@ public:
 		RunTestCase(5000, { 100,200,500,1000 }, { 15,15,3,4 });
 		RunTestCase(1000, { 100,200,500,1000 }, { 15,15,1,0 });
 		RunTestCase(150, { 100,200,500,1000 }, { 15,15,3,5 });
-		RunTestCase(50, { 100,200,500,1000 }, { 15,15,3,5 });
+		RunTestCase(50, { 100,200,500,1000 }, { 0,15,3,5 });
 	}
 
 	void RunTestCase(int desExp, vector<int> bookExp, vector<int> bookCnt)
