@@ -1,13 +1,15 @@
 #pragma once
 #include "SolutionBase.h"
 #include "math.h"
+#include <windows.h>
+
 class temSolu
 {
 	vector<int> bookRecord;
 public:
-	temSolu()
+	temSolu(int cnt)
 	{
-		bookRecord = vector<int>(4.0);
+		bookRecord = vector<int>(cnt,0);
 	}
 
 	int GetTotalExp(vector<int> bookExp)
@@ -61,7 +63,7 @@ public:
 	{
 		if (desExp < bookExp[0])
 		{
-			vector<int> ret(4, 0);
+			vector<int> ret(bookExp.size(), 0);
 			for(int i = 0;i<bookExp.size();++i)
 				if (bookCnt[i] > 0)
 				{
@@ -76,32 +78,17 @@ public:
 		{
 			bookExp[i] /= bookExp[0];
 		}
-		int maxBookExp = bookExp[bookExp.size() - 1];
-		vector<temSolu> dp(maxBookExp+1);
-		int lastDpIndex = 0;
+	
+		vector<temSolu> dp(desExp+1, temSolu(bookExp.size()));
 		for (int i = bookExp[0]; i <= desExp; ++i)
 		{
-			int mapIndex = i % (maxBookExp+1);
-			if (i >= maxBookExp + 1)
-			{
-				dp[mapIndex].Reset();
-			}
 			for (int j = bookExp.size()-1; j >= 0; --j)
 			{
 				int curExp = bookExp[j];
 				int preExp = i - curExp;
 				int curDpIndex = i;
-				if (i >= preExp)
+				if (preExp>=0)
 				{
-					if (i >= maxBookExp + 1)
-					{
-						curDpIndex = mapIndex;
-						preExp = mapIndex - curExp;
-					}
-					if (preExp < 0)
-					{
-						preExp = preExp + maxBookExp + 1;
-					}
 					if (dp[preExp].GetTotalExp(bookExp) + curExp < dp[curDpIndex].GetTotalExp(bookExp) && bookCnt[j]>dp[preExp].GetRecord(j))
 					{
 						dp[curDpIndex].SetRecord(dp[preExp].GetBookRecord());
@@ -116,18 +103,46 @@ public:
 						dp[curDpIndex].SetRecord(j, 1);
 					}
 				}
-				lastDpIndex = curDpIndex;
 			}
 		}
 
-		return dp[lastDpIndex].GetBookRecord();
+		return dp[desExp].GetBookRecord();
+	}
+
+	vector<int> bestSoluToReachSpecValue_greedy(int desExp, vector<int> bookExp, vector<int> bookCnt)
+	{
+		int curExp = 0;
+		vector<int> ret(bookCnt.size(), 0);
+		while (true)
+		{
+			bool added = false;
+			for (int i = bookExp.size()-1; i >= 0; --i)
+			{
+				if (bookCnt[i]>0 && curExp + bookExp[i] < desExp)
+				{
+					added = true;
+					curExp += bookExp[i];
+					bookCnt[i]--;
+					ret[i]++;
+					break;
+				}
+			}
+			if (!added)
+				break;
+		}
+		vector<int> tobeAdd = bestSoluToReachSpecValue(desExp - curExp, bookExp, bookCnt);
+		for (int i = 0; i < ret.size(); ++i)
+			ret[i] += tobeAdd[i];
+		return ret;
 	}
 
 	void RunTest()
 	{
-		RunTestCase(2300, { 100,200,500,1000 }, {0,9,1,0});
-		//RunTestCase(1500, { 100,200,500,1000 }, { 1,2,3,0 });
-		//RunTestCase(1500, { 100,200,500,1000 }, { 15,15,3,0 });
+		RunTestCase(10000000, { 100,200,500,1000,1500,2000,5000,10000 }, {100000,100009,200,0,10,20,30,40});
+		RunTestCase(1000000, { 100,200,500,1000 }, { 100000,100009,100001,0 });
+		RunTestCase(100000, { 100,200,500,1000 }, { 100000,100009,100001,0 });
+		RunTestCase(10000, { 100,200,500,1000 }, { 100000,100009,100001,0 });
+
 
 		RunTestCase(5000, { 100,200,500,1000 }, { 15,15,3,4 });
 		RunTestCase(1000, { 100,200,500,1000 }, { 15,15,1,0 });
@@ -137,15 +152,21 @@ public:
 
 	void RunTestCase(int desExp, vector<int> bookExp, vector<int> bookCnt)
 	{
+		DWORD startTime = GetTickCount();
+
+		cout << "开始时间：" << startTime << endl;
 		cout << "目标经验值：" << desExp << endl;
 		cout << "技能书经验值集合：";
 		vecPrinter->print(bookExp);
 		cout << "玩家拥有的技能书数量：";
 		vecPrinter->print(bookCnt);
 
-		auto output = bestSoluToReachSpecValue(desExp, bookExp, bookCnt);
+		auto output = bestSoluToReachSpecValue_greedy(desExp, bookExp, bookCnt);
 		cout << "最优方案：";
 		vecPrinter->print(output);
+		DWORD stopTime = GetTickCount();
+		cout << "结束时间：" << stopTime<<endl;
+		cout << "共计耗时：" << stopTime - startTime << "毫秒" << endl;
 		cout << endl;
 	}
 };
