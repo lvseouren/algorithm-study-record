@@ -45,11 +45,6 @@ public:
 	{
 		return bookRecord;
 	}
-
-	void Reset()
-	{
-		SetRecord({ 0,0,0,0 });
-	}
 };
 
 class Solution_bestSoluToReachSpecValue :SolutionBase {
@@ -111,6 +106,11 @@ public:
 
 	vector<int> bestSoluToReachSpecValue_greedy(int desExp, vector<int> bookExp, vector<int> bookCnt)
 	{
+		int threshold = 0;
+		for (int i = 0; i < bookCnt.size(); ++i)
+		{
+			threshold += bookExp[i];
+		}
 		int curExp = 0;
 		vector<int> ret(bookCnt.size(), 0);
 		while (true)
@@ -118,7 +118,7 @@ public:
 			bool added = false;
 			for (int i = bookExp.size()-1; i >= 0; --i)
 			{
-				if (bookCnt[i]>0 && curExp + bookExp[i] < desExp)
+				if (bookCnt[i]>0 && curExp + bookExp[i] < desExp- threshold)
 				{
 					added = true;
 					curExp += bookExp[i];
@@ -138,7 +138,7 @@ public:
 
 	void RunTest()
 	{
-		RunTestCase(10000000, { 100,200,500,1000,1500,2000,5000,10000 }, {100000,100009,200,0,10,20,30,40});
+		RunTestCase(10000500, { 100,200,500,1000,1500,2000,5000,10000 }, {0,100009,201,0,10,20,30,40});
 		RunTestCase(1000000, { 100,200,500,1000 }, { 100000,100009,100001,0 });
 		RunTestCase(100000, { 100,200,500,1000 }, { 100000,100009,100001,0 });
 		RunTestCase(10000, { 100,200,500,1000 }, { 100000,100009,100001,0 });
@@ -148,6 +148,11 @@ public:
 		RunTestCase(1000, { 100,200,500,1000 }, { 15,15,1,0 });
 		RunTestCase(150, { 100,200,500,1000 }, { 15,15,3,5 });
 		RunTestCase(50, { 100,200,500,1000 }, { 0,15,3,5 });
+
+		RunTestCase(2800, { 100,200,500,1000 }, { 0,15,15,0 });
+		RunTestCase(2500, { 100,200,500,1000 }, { 0,15,15,0 });
+		RunTestCase(2400, { 100,200,500,1000 }, { 0,15,1,0 });
+		RunTestCase(1800, { 100,200,500,1000 }, { 0,15,15,0 });
 	}
 
 	void RunTestCase(int desExp, vector<int> bookExp, vector<int> bookCnt)
@@ -162,11 +167,15 @@ public:
 		vecPrinter->print(bookCnt);
 
 		auto output = bestSoluToReachSpecValue_greedy(desExp, bookExp, bookCnt);
+		DWORD stopTime = GetTickCount();
 		cout << "最优方案：";
 		vecPrinter->print(output);
-		DWORD stopTime = GetTickCount();
 		cout << "结束时间：" << stopTime<<endl;
 		cout << "共计耗时：" << stopTime - startTime << "毫秒" << endl;
+		int exp = 0;
+		for (int i = 0; i < output.size(); ++i)
+			exp += (output[i] * bookExp[i]);
+		cout << "方案提供的经验值为：" << exp << endl;
 		cout << endl;
 	}
 };
