@@ -22,7 +22,7 @@ public:
 		}
 
 		//懂了，其实return right更好理解，因为right最终必定会停在返回值，return left也对因为while的终止条件是left==right
-		return left;//why?how to proof it's correctness
+		return left;//why?how to proof its correctness
 	}
 
 	int getPairCountLessThanDistance(vector<int>& nums, int distance)

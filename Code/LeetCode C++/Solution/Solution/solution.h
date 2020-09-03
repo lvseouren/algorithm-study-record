@@ -117,12 +117,12 @@ public:
 		//sortArray();
 		//minimumTotal();
 		//canJump();
-		//jump();
+		jump();
 		//minCut();
 		//lengthOfLIS();
 		//wordBreak();
 		//longestCommonSubSequence();
-		bestSoluToReachSpecValue();
+		//bestSoluToReachSpecValue();
 	}
 	
 	void bestSoluToReachSpecValue()
