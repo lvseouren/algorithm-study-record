@@ -56,17 +56,6 @@ public:
 	//目标：对所有的i进行以下求和 ret[i]*bookExp[i]，使得和值>=desExp且最小
 	vector<int> bestSoluToReachSpecValue(int desExp, vector<int> bookExp,vector<int> bookCnt)
 	{
-		if (desExp < bookExp[0])
-		{
-			vector<int> ret(bookExp.size(), 0);
-			for(int i = 0;i<bookExp.size();++i)
-				if (bookCnt[i] > 0)
-				{
-					ret[i] = 1;
-					return ret;
-				}
-		}
-
 		desExp = ceil(desExp*1.0/bookExp[0]);
 	
 		for (int i = bookExp.size()-1; i>=0; --i)
@@ -106,29 +95,37 @@ public:
 
 	vector<int> bestSoluToReachSpecValue_greedy(int desExp, vector<int> bookExp, vector<int> bookCnt)
 	{
+		if (desExp < bookExp[0])
+		{
+			vector<int> ret(bookExp.size(), 0);
+			for (int i = 0; i < bookExp.size(); ++i)
+				if (bookCnt[i] > 0)
+				{
+					ret[i] = 1;
+					return ret;
+				}
+		}
+
 		int threshold = 0;
 		for (int i = 0; i < bookCnt.size(); ++i)
 		{
 			threshold += bookExp[i];
 		}
 		int curExp = 0;
+		threshold = desExp - threshold;
 		vector<int> ret(bookCnt.size(), 0);
-		while (true)
+		if (threshold > 0)
 		{
-			bool added = false;
-			for (int i = bookExp.size()-1; i >= 0; --i)
+			for (int i = bookExp.size() - 1; i >= 0; --i)
 			{
-				if (bookCnt[i]>0 && curExp + bookExp[i] < desExp- threshold)
-				{
-					added = true;
-					curExp += bookExp[i];
-					bookCnt[i]--;
-					ret[i]++;
-					break;
-				}
+				int cnt = threshold / bookExp[i];
+				cnt = min(cnt, bookCnt[i]);
+				int exp = cnt * bookExp[i];
+				threshold -= exp;
+				curExp += exp;
+				ret[i] = cnt;
+				bookCnt[i] -= cnt;
 			}
-			if (!added)
-				break;
 		}
 		vector<int> tobeAdd = bestSoluToReachSpecValue(desExp - curExp, bookExp, bookCnt);
 		for (int i = 0; i < ret.size(); ++i)
@@ -138,7 +135,8 @@ public:
 
 	void RunTest()
 	{
-		RunTestCase(10000500, { 100,200,500,1000,1500,2000,5000,10000 }, {0,100009,201,0,10,20,30,40});
+		RunTestCase(10000000, { 100,200,500,1000 }, { 100000,100009,100001,0 });
+		RunTestCase(10000500, { 100,200,500,1000,1500,2000,5000,10000 }, {100,100009,200,0,10,20,30,40});
 		RunTestCase(1000000, { 100,200,500,1000 }, { 100000,100009,100001,0 });
 		RunTestCase(100000, { 100,200,500,1000 }, { 100000,100009,100001,0 });
 		RunTestCase(10000, { 100,200,500,1000 }, { 100000,100009,100001,0 });
@@ -152,30 +150,28 @@ public:
 		RunTestCase(2800, { 100,200,500,1000 }, { 0,15,15,0 });
 		RunTestCase(2500, { 100,200,500,1000 }, { 0,15,15,0 });
 		RunTestCase(2400, { 100,200,500,1000 }, { 0,15,1,0 });
+		RunTestCase(2400, { 100,200,500,1000 }, { 999,999,999,999 });
 		RunTestCase(1800, { 100,200,500,1000 }, { 0,15,15,0 });
 	}
 
 	void RunTestCase(int desExp, vector<int> bookExp, vector<int> bookCnt)
 	{
-		DWORD startTime = GetTickCount();
-
-		cout << "开始时间：" << startTime << endl;
-		cout << "目标经验值：" << desExp << endl;
 		cout << "技能书经验值集合：";
 		vecPrinter->print(bookExp);
 		cout << "玩家拥有的技能书数量：";
 		vecPrinter->print(bookCnt);
-
+		DWORD startTime = GetTickCount();
 		auto output = bestSoluToReachSpecValue_greedy(desExp, bookExp, bookCnt);
 		DWORD stopTime = GetTickCount();
-		cout << "最优方案：";
-		vecPrinter->print(output);
-		cout << "结束时间：" << stopTime<<endl;
-		cout << "共计耗时：" << stopTime - startTime << "毫秒" << endl;
+		cout << "目标经验值：" << desExp << endl;
 		int exp = 0;
 		for (int i = 0; i < output.size(); ++i)
 			exp += (output[i] * bookExp[i]);
 		cout << "方案提供的经验值为：" << exp << endl;
+		cout << "最优方案：";
+		vecPrinter->print(output);
+		cout << "共计耗时：" << stopTime - startTime << "毫秒" << endl;
+
 		cout << endl;
 	}
 };

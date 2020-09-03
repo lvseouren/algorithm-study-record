@@ -79,6 +79,9 @@
     <Filter Include="头文件\contest\weekly\204">
       <UniqueIdentifier>{de6fce76-c3ba-46b2-ae71-c9da63e7de4f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\solution\other">
+      <UniqueIdentifier>{a1bd7f92-cc11-4e44-bf82-1172f53e444d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -164,38 +167,17 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="TreeNode.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="ListPrinter.h">
       <Filter>头文件\helper</Filter>
     </ClInclude>
     <ClInclude Include="BSTPrinter.h">
       <Filter>头文件\helper</Filter>
     </ClInclude>
-    <ClInclude Include="Solution_findRepeatNumber.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_subsets.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
     <ClInclude Include="SolutionBase.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_solveNQueens.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_longestValidParentheses.h">
       <Filter>头文件\solution</Filter>
     </ClInclude>
     <ClInclude Include="VectorPrinter.h">
       <Filter>头文件\helper</Filter>
-    </ClInclude>
-    <ClInclude Include="MinStack.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_evalRPN.h">
-      <Filter>头文件\solution</Filter>
     </ClInclude>
     <ClInclude Include="Solution_hasCycle.h">
       <Filter>头文件\solution\list</Filter>
@@ -248,18 +230,6 @@
     <ClInclude Include="Solution_validateBinarySearchTree.h">
       <Filter>头文件\solution\tree</Filter>
     </ClInclude>
-    <ClInclude Include="Solution_inorderTraversal.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_cloneGraph.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
-    <ClInclude Include="Node.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_numIslands.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
     <ClInclude Include="Solution_largestRectangleArea.h">
       <Filter>头文件\solution\stack</Filter>
     </ClInclude>
@@ -285,9 +255,6 @@
       <Filter>头文件\Algorithm</Filter>
     </ClInclude>
     <ClInclude Include="solution.h">
-      <Filter>头文件\solution</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_decodeString.h">
       <Filter>头文件\solution</Filter>
     </ClInclude>
     <ClInclude Include="Contest_countSubTrees.h">
@@ -377,9 +344,6 @@
     <ClInclude Include="Contest_204_1.h">
       <Filter>头文件\contest\weekly\204</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Contest_204_2.h">
       <Filter>头文件\contest\weekly\204</Filter>
     </ClInclude>
@@ -397,6 +361,45 @@
     </ClInclude>
     <ClInclude Include="Solution_bestSoluToReachSpecValue.h">
       <Filter>头文件\solution\dp</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_cloneGraph.h">
+      <Filter>头文件\solution\other</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_decodeString.h">
+      <Filter>头文件\solution\other</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_evalRPN.h">
+      <Filter>头文件\solution\other</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_findRepeatNumber.h">
+      <Filter>头文件\solution\other</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_inorderTraversal.h">
+      <Filter>头文件\solution\other</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_longestValidParentheses.h">
+      <Filter>头文件\solution\other</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_numIslands.h">
+      <Filter>头文件\solution\other</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_solveNQueens.h">
+      <Filter>头文件\solution\other</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_subsets.h">
+      <Filter>头文件\solution\other</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeNode.h">
+      <Filter>头文件\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="MinStack.h">
+      <Filter>头文件\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>头文件\helper</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
