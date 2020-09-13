@@ -31,14 +31,14 @@ void RunTest_Solution()
 int main()
 {
 	//------------------------------------------练习
-	//RunTest_Solution();
+	RunTest_Solution();
 
 	//------------------------------------------面试题
 	//--bytedance
 	//evenReorderMerge();
 
 	//--------------------------------------------contest
-	RunTest_Contest();
+	//RunTest_Contest();
 
 	//--------------------------------------------algorithm
 	//RunTest_Algorithm();

@@ -58,6 +58,7 @@
 #include "Solution_longestOfLIS.h"
 #include "Solution_wordBreak.h"
 #include "Solution_longestCommonSubSeq.h"
+#include "Solution_bestSoluToReachSpecValue.h"
 
 class solution
 {
@@ -120,7 +121,14 @@ public:
 		//minCut();
 		//lengthOfLIS();
 		//wordBreak();
-		longestCommonSubSequence();
+		//longestCommonSubSequence();
+		bestSoluToReachSpecValue();
+	}
+	
+	void bestSoluToReachSpecValue()
+	{
+		Solution_bestSoluToReachSpecValue s;
+		s.RunTest();
 	}
 
 	void longestCommonSubSequence()

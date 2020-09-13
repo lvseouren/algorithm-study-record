@@ -10,7 +10,7 @@ public:
 		int end = 0;
 		for (int i = 0; i < cnt-1; ++i)
 		{
-			if (rightMost>=i)
+			//if (rightMost>=i)
 			{
 				rightMost = max(rightMost, i + nums[i]);
 				if (i == end)
@@ -25,7 +25,7 @@ public:
 
 	void RunTest()
 	{
-		RunTestCase({ 2,3,1,1,4 });
+		RunTestCase({ 4,3,1,1,4 });
 		RunTestCase({ 0 });
 		RunTestCase({ 1 });
 		RunTestCase({ 7,0,9,6,9,6,1,7,9,0,1,2,9,0,3 });
