@@ -79,6 +79,9 @@
     <Filter Include="头文件\contest\weekly\204">
       <UniqueIdentifier>{de6fce76-c3ba-46b2-ae71-c9da63e7de4f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\contest\weekly\206">
+      <UniqueIdentifier>{76aaf286-0499-44ae-aa48-ea91a344aa3a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
