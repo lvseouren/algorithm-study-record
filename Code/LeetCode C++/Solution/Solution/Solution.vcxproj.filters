@@ -82,6 +82,9 @@
     <Filter Include="头文件\solution\other">
       <UniqueIdentifier>{a1bd7f92-cc11-4e44-bf82-1172f53e444d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\contest\weekly\autumn">
+      <UniqueIdentifier>{d80a551e-4e3b-4d97-b1bf-b55aca6d2219}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -400,6 +403,15 @@
     </ClInclude>
     <ClInclude Include="Node.h">
       <Filter>头文件\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Contest_au_1.h">
+      <Filter>头文件\contest\weekly\autumn</Filter>
+    </ClInclude>
+    <ClInclude Include="Contest_au_2.h">
+      <Filter>头文件\contest\weekly\autumn</Filter>
+    </ClInclude>
+    <ClInclude Include="Contest_au_3.h">
+      <Filter>头文件\contest\weekly\autumn</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

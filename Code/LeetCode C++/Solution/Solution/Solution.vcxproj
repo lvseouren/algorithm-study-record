@@ -185,6 +185,18 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="Contest_au_1.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Contest_au_2.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Contest_au_3.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Contest_countSubTrees.h" />
     <ClInclude Include="Contest_maxNumOfSubstrings.h" />
     <ClInclude Include="Contest_template.h" />
