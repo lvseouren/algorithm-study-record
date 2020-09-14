@@ -5,13 +5,29 @@
 #include "Contest_204_2.h"
 #include "Contest_204_3.h"
 #include "Contest_204_4.h"
+#include "Contest_au_1.h"
+#include "Contest_au_2.h"
+#include "Contest_au_3.h"
 
 class contest
 {
 public:
 	void RunTest()
 	{
-		RunTest_204();
+		//RunTest_204();
+		RunTest_Au();
+	}
+
+	void RunTest_Au()
+	{
+		/*Contest_au_1 s;
+		s.RunTest();*/
+
+		//Contest_au_2 s;
+		//s.RunTest();
+
+		Contest_au_3 s;
+		s.RunTest();
 	}
 
 	void RunTest_198()
