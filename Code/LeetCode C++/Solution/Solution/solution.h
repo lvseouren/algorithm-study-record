@@ -59,6 +59,7 @@
 #include "Solution_wordBreak.h"
 #include "Solution_longestCommonSubSeq.h"
 #include "Solution_bestSoluToReachSpecValue.h"
+#include "Solution_sumNumbers.h"
 
 class solution
 {
@@ -122,7 +123,14 @@ public:
 		//lengthOfLIS();
 		//wordBreak();
 		//longestCommonSubSequence();
-		bestSoluToReachSpecValue();
+		//bestSoluToReachSpecValue();
+		sumNumbers();
+	}
+
+	void sumNumbers()
+	{
+		Solution_sumNumbers s;
+		s.RunTest();
 	}
 	
 	void bestSoluToReachSpecValue()

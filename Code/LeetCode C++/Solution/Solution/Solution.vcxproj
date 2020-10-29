@@ -264,6 +264,10 @@
     <ClInclude Include="Solution_sortList.h" />
     <ClInclude Include="Solution_splitArray.h" />
     <ClInclude Include="Solution_subsets.h" />
+    <ClInclude Include="Solution_sumNumbers.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Solution_template.h" />
     <ClInclude Include="Solution_updateMatrix.h" />
     <ClInclude Include="Solution_validateBinarySearchTree.h" />

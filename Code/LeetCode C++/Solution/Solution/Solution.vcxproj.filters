@@ -85,6 +85,9 @@
     <Filter Include="头文件\contest\weekly\autumn">
       <UniqueIdentifier>{d80a551e-4e3b-4d97-b1bf-b55aca6d2219}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\solution\daily">
+      <UniqueIdentifier>{6ffae3d4-c2ea-4ca3-acf4-fb411e52a427}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -412,6 +415,9 @@
     </ClInclude>
     <ClInclude Include="Contest_au_3.h">
       <Filter>头文件\contest\weekly\autumn</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_sumNumbers.h">
+      <Filter>头文件\solution\daily</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
