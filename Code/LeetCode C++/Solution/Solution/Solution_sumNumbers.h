@@ -1,30 +1,26 @@
 #pragma once
 #include "SolutionBase.h"
 class Solution_sumNumbers :SolutionBase {
-	int sum;
 public:
 	int sumNumbers(TreeNode* root)
 	{
-		sum = 0;
-		func(0, root);
-		return sum;
+		return func(0, root);
 	}
 
-	void func(int curNum, TreeNode* node)
+	int func(int curNum, TreeNode* node)
 	{
 		if (node == NULL)
-			return;
+			return 0;
 		else
 		{
 			curNum = curNum * 10 + node->val;
 			if (node->left || node->right)
 			{
-				func(curNum, node->left);
-				func(curNum, node->right);
+				return func(curNum, node->left) + func(curNum, node->right);
 			}
 			else
 			{
-				sum += curNum;
+				return curNum;
 			}
 		}
 	}
@@ -34,6 +30,7 @@ public:
 		TreeNode* root = new TreeNode(1);
 		root->left = new TreeNode(2);
 		root->right = new TreeNode(3);
+		root->left->left = new TreeNode(1);
 		RunTestCase(root);
 		root = new TreeNode(4);
 		root->left = new TreeNode(9);
