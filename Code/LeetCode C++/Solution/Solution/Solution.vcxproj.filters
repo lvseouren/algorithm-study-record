@@ -88,6 +88,9 @@
     <Filter Include="头文件\solution\daily">
       <UniqueIdentifier>{6ffae3d4-c2ea-4ca3-acf4-fb411e52a427}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\solution\slidingWindow">
+      <UniqueIdentifier>{71f1a744-1a9b-46ff-b13d-bd40e8a1b77f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -418,6 +421,12 @@
     </ClInclude>
     <ClInclude Include="Solution_sumNumbers.h">
       <Filter>头文件\solution\daily</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_minWindow.h">
+      <Filter>头文件\solution\slidingWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_smallestRange.h">
+      <Filter>头文件\solution\slidingWindow</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

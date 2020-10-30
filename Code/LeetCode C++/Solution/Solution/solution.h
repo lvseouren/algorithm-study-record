@@ -60,6 +60,7 @@
 #include "Solution_longestCommonSubSeq.h"
 #include "Solution_bestSoluToReachSpecValue.h"
 #include "Solution_sumNumbers.h"
+#include "Solution_minWindow.h"
 
 class solution
 {
@@ -124,7 +125,14 @@ public:
 		//wordBreak();
 		//longestCommonSubSequence();
 		//bestSoluToReachSpecValue();
-		sumNumbers();
+		//sumNumbers();
+		minWindow();
+	}
+
+	void minWindow()
+	{
+		Solution_minWindow s;
+		s.RunTest();
 	}
 
 	void sumNumbers()

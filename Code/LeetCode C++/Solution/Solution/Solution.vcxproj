@@ -247,6 +247,10 @@
     <ClInclude Include="MyQueue.h" />
     <ClInclude Include="Solution_minCut.h" />
     <ClInclude Include="Solution_minimumTotal.h" />
+    <ClInclude Include="Solution_minWindow.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Solution_mySqrt.h" />
     <ClInclude Include="Solution_numIslands.h" />
     <ClInclude Include="Solution_partition.h" />
@@ -259,6 +263,10 @@
     <ClInclude Include="Solution_searchRange.h" />
     <ClInclude Include="Solution_singleNumber.h" />
     <ClInclude Include="Solution_smallestDistancePair.h" />
+    <ClInclude Include="Solution_smallestRange.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Solution_solveNQueens.h" />
     <ClInclude Include="Solution_sortArray.h" />
     <ClInclude Include="Solution_sortList.h" />
