@@ -9,7 +9,9 @@
 #include "Contest_au_3.h"
 #include "Contest_206_2.h"
 #include "Contest_213_1.h"
-
+#include "Contest_213_2.h"
+#include "Contest_213_3.h"
+#include "Contest_213_4.h"
 
 class contest
 {
@@ -24,8 +26,17 @@ public:
 
 	void RunTest_213()
 	{
-		Contest_213_1 c1;
-		c1.RunTest();
+		//Contest_213_1 c1;
+		//c1.RunTest();
+
+		//Contest_213_2 c2;
+		//c2.RunTest();
+
+		/*Contest_213_3 c3;
+		c3.RunTest();*/
+
+		Contest_213_4 c4;
+		c4.RunTest();
 	}
 
 	void RunTest_Au()

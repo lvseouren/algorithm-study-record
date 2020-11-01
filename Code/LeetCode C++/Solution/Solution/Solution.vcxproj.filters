@@ -91,6 +91,9 @@
     <Filter Include="头文件\solution\slidingWindow">
       <UniqueIdentifier>{71f1a744-1a9b-46ff-b13d-bd40e8a1b77f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\contest\weekly\213">
+      <UniqueIdentifier>{81d391ea-cc92-4a1d-a660-2a645b840586}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -427,6 +430,18 @@
     </ClInclude>
     <ClInclude Include="Solution_smallestRange.h">
       <Filter>头文件\solution\slidingWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="Contest_213_1.h">
+      <Filter>头文件\contest\weekly\213</Filter>
+    </ClInclude>
+    <ClInclude Include="Contest_213_2.h">
+      <Filter>头文件\contest\weekly\213</Filter>
+    </ClInclude>
+    <ClInclude Include="Contest_213_3.h">
+      <Filter>头文件\contest\weekly\213</Filter>
+    </ClInclude>
+    <ClInclude Include="Contest_213_4.h">
+      <Filter>头文件\contest\weekly\213</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

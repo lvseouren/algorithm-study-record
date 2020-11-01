@@ -185,6 +185,22 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="Contest_213_1.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Contest_213_2.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Contest_213_3.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Contest_213_4.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Contest_au_1.h">
       <SubType>
       </SubType>
