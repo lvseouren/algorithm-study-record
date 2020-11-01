@@ -8,6 +8,7 @@
 #include "Contest_au_2.h"
 #include "Contest_au_3.h"
 #include "Contest_206_2.h"
+#include "Contest_213_1.h"
 
 
 class contest
@@ -18,7 +19,13 @@ public:
 		//RunTest_204();
 		//RunTest_Au();
 
-		RunTest_206();
+		RunTest_213();
+	}
+
+	void RunTest_213()
+	{
+		Contest_213_1 c1;
+		c1.RunTest();
 	}
 
 	void RunTest_Au()
