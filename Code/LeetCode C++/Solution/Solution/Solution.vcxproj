@@ -295,6 +295,10 @@
     <ClInclude Include="Solution_template.h" />
     <ClInclude Include="Solution_updateMatrix.h" />
     <ClInclude Include="Solution_validateBinarySearchTree.h" />
+    <ClInclude Include="Solution_validMountainArray.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Solution_wordBreak.h" />
     <ClInclude Include="TreeNode.h" />
     <ClInclude Include="VectorPrinter.h" />
