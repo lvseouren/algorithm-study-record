@@ -61,6 +61,7 @@
 #include "Solution_bestSoluToReachSpecValue.h"
 #include "Solution_sumNumbers.h"
 #include "Solution_minWindow.h"
+#include "Solution_validMountainArray.h"
 
 class solution
 {
@@ -126,7 +127,14 @@ public:
 		//longestCommonSubSequence();
 		//bestSoluToReachSpecValue();
 		//sumNumbers();
-		minWindow();
+		//minWindow();
+		validMountainArray();
+	}
+
+	void validMountainArray()
+	{
+		Solution_validMountainArray s;
+		s.RunTest();
 	}
 
 	void minWindow()

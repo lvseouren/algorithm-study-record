@@ -443,6 +443,9 @@
     <ClInclude Include="Contest_213_4.h">
       <Filter>头文件\contest\weekly\213</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_validMountainArray.h">
+      <Filter>头文件\solution\daily</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Solution.rc">
