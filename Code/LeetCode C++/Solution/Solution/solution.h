@@ -63,6 +63,7 @@
 #include "Solution_minWindow.h"
 #include "Solution_validMountainArray.h"
 #include "Solution_insert.h"
+#include "Solution_dachuijiaodui.h"
 
 class solution
 {
@@ -130,7 +131,14 @@ public:
 		//sumNumbers();
 		//minWindow();
 		//validMountainArray();
-		insert();
+		//insert();
+		dachuijiaodui();
+	}
+	
+	void dachuijiaodui()
+	{
+		Solution_dachuijiaodui s;
+		s.RunTest();
 	}
 
 	void insert()

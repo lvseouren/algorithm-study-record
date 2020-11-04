@@ -449,6 +449,9 @@
     <ClInclude Include="Solution_insert.h">
       <Filter>头文件\solution\daily</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_dachuijiaodui.h">
+      <Filter>头文件\solution\daily</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Solution.rc">
