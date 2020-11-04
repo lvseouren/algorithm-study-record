@@ -248,6 +248,10 @@
     <ClInclude Include="Solution_hammingWeight.h" />
     <ClInclude Include="Solution_hasCycle.h" />
     <ClInclude Include="Solution_inorderTraversal.h" />
+    <ClInclude Include="Solution_insert.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Solution_insertIntoBST.h" />
     <ClInclude Include="Solution_isPalindrome.h" />
     <ClInclude Include="Solution_jump.h" />

@@ -62,6 +62,7 @@
 #include "Solution_sumNumbers.h"
 #include "Solution_minWindow.h"
 #include "Solution_validMountainArray.h"
+#include "Solution_insert.h"
 
 class solution
 {
@@ -128,7 +129,14 @@ public:
 		//bestSoluToReachSpecValue();
 		//sumNumbers();
 		//minWindow();
-		validMountainArray();
+		//validMountainArray();
+		insert();
+	}
+
+	void insert()
+	{
+		Solution_insert s;
+		s.RunTest();
 	}
 
 	void validMountainArray()
