@@ -259,6 +259,10 @@
     <ClInclude Include="Solution_insertIntoBST.h" />
     <ClInclude Include="Solution_isPalindrome.h" />
     <ClInclude Include="Solution_jump.h" />
+    <ClInclude Include="Solution_ladderLength.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Solution_largestRectangleArea.h" />
     <ClInclude Include="Solution_longestCommonSubSeq.h" />
     <ClInclude Include="Solution_longestOfLIS.h" />
