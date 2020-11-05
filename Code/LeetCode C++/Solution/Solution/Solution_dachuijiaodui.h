@@ -40,7 +40,7 @@ public:
 					continue;
 				else
 				{
-					if(i<len-2&&s[i]==s[i+1])
+					if(i<len-1&&s[i]==s[i+1])
 					{
 						beforePre = pre;
 						pre = i;
@@ -60,7 +60,7 @@ public:
 
 	void RunTest()
 	{
-		RunTestCase(2, {"helloo","wooooooow"});
+		//RunTestCase(2, {"helloo","wooooooow"});
 		RunTestCase(3, { "helloo","helllo","wooooow" });
 	}
 
