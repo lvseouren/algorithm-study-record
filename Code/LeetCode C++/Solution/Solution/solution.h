@@ -65,6 +65,7 @@
 #include "Solution_insert.h"
 #include "Solution_dachuijiaodui.h"
 #include "Solution_ladderLength.h"
+#include "Solution_countRangeSum.h"
 
 class solution
 {
@@ -134,7 +135,14 @@ public:
 		//validMountainArray();
 		//insert();
 		//dachuijiaodui();
-		ladderLength();
+		//ladderLength();
+		countRangeSum();
+	}
+
+	void countRangeSum()
+	{
+		Solution_countRangeSum s;
+		s.RunTest();
 	}
 
 	void ladderLength()

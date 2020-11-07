@@ -455,6 +455,9 @@
     <ClInclude Include="Solution_ladderLength.h">
       <Filter>头文件\solution\daily</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_countRangeSum.h">
+      <Filter>头文件\solution\daily</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Solution.rc">
