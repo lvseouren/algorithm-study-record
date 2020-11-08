@@ -252,6 +252,10 @@
     <ClInclude Include="Solution_findPeakElement.h" />
     <ClInclude Include="Solution_findRepeatNumber.h" />
     <ClInclude Include="Solution_firstBadVersion.h" />
+    <ClInclude Include="Solution_getMaximumGenerated.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Solution_guessNumber.h" />
     <ClInclude Include="Solution_hammingWeight.h" />
     <ClInclude Include="Solution_hasCycle.h" />
@@ -275,9 +279,17 @@
     <ClInclude Include="Solution_maximalRectangle.h" />
     <ClInclude Include="Solution_maximalSquare.h" />
     <ClInclude Include="Solution_maxPathSum.h" />
+    <ClInclude Include="Solution_maxProfit.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Solution_mergeTwoList.h" />
     <ClInclude Include="MyQueue.h" />
     <ClInclude Include="Solution_minCut.h" />
+    <ClInclude Include="Solution_minDeletions.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Solution_minimumTotal.h" />
     <ClInclude Include="Solution_minWindow.h">
       <SubType>

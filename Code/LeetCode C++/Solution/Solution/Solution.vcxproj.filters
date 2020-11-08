@@ -458,6 +458,15 @@
     <ClInclude Include="Solution_countRangeSum.h">
       <Filter>头文件\solution\daily</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_getMaximumGenerated.h">
+      <Filter>头文件\solution\daily</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_minDeletions.h">
+      <Filter>头文件\solution\daily</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_maxProfit.h">
+      <Filter>头文件\solution\daily</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Solution.rc">

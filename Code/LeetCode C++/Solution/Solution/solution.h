@@ -66,6 +66,9 @@
 #include "Solution_dachuijiaodui.h"
 #include "Solution_ladderLength.h"
 #include "Solution_countRangeSum.h"
+#include "Solution_getMaximumGenerated.h"
+#include "Solution_minDeletions.h"
+#include "Solution_maxProfit.h"
 
 class solution
 {
@@ -136,7 +139,28 @@ public:
 		//insert();
 		//dachuijiaodui();
 		//ladderLength();
-		countRangeSum();
+		//countRangeSum();
+		//getMaximumGenerated();
+		//minDeletions();
+		maxProfit();
+	}
+
+	void maxProfit()
+	{
+		Solution_maxProfit s;
+		s.RunTest();
+	}
+
+	void minDeletions()
+	{
+		Solution_minDeletions s;
+		s.RunTest();
+	}
+
+	void getMaximumGenerated()
+	{
+		Solution_getMaximumGenerated s;
+		s.RunTest();
 	}
 
 	void countRangeSum()
