@@ -5,41 +5,54 @@
 
 #pragma once
 #include "SolutionBase.h"
+
 class Solution_smallestRange :SolutionBase {
 public:
 	vector<int> smallestRange(vector<vector<int>>& nums) 
 	{
-		int rangeLeft = 0, rangeRight = INT_MAX;
-		int size = nums.size();
-		vector<int> next(size);
+		vector <pair<int, int>> sortedList;
+		for (int i = 0; i < nums.size(); ++i)
+			for (int j = 0; j < nums[i].size(); ++j)
+				sortedList.push_back({ nums[i][j], i });
 
-		auto cmp = [&](const int& u, const int& v) {
-			return nums[u][next[u]] > nums[v][next[v]];
-		};
-		priority_queue<int, vector<int>, decltype(cmp)> pq(cmp);
-		int minValue = 0, maxValue = INT_MIN;
-		for (int i = 0; i < size; ++i) {
-			pq.emplace(i);
-			maxValue = max(maxValue, nums[i][0]);
-		}
+		sort(sortedList.begin(), sortedList.end());
 
-		while (true) {
-			int row = pq.top();
-			pq.pop();
-			minValue = nums[row][next[row]];
-			if (maxValue - minValue < rangeRight - rangeLeft) {
-				rangeLeft = minValue;
-				rangeRight = maxValue;
+		int left = 0, right = 0, leftBorder = 0, rightBorder = INT_MAX;
+		map<int, int> cntDict;
+		int containGroup = 0;
+		int desContainGroupCnt = nums.size();
+		while (right < sortedList.size())
+		{
+			int groupId = sortedList[right].second;
+			
+			if (cntDict.count(groupId)==0)
+			{
+				cntDict[groupId] = 1;
+				containGroup++;
 			}
-			if (next[row] == nums[row].size() - 1) {
-				break;
+			else
+			{
+				cntDict[groupId]++;
 			}
-			++next[row];
-			maxValue = max(maxValue, nums[row][next[row]]);
-			pq.emplace(row);
-		}
 
-		return { rangeLeft, rangeRight };
+			if (desContainGroupCnt == containGroup)
+			{
+				while (cntDict[sortedList[left].second] > 1)
+				{
+					cntDict[sortedList[left].second]--;
+					left++;
+				}
+				int minInWindow = sortedList[left].first;
+				int maxInWindow = sortedList[right].first;
+				if (maxInWindow - minInWindow < rightBorder - leftBorder)
+				{
+					leftBorder = minInWindow;
+					rightBorder = maxInWindow;
+				}
+			}
+			right++;
+		}
+		return { leftBorder,rightBorder };
 	}
 
 	void RunTest()
