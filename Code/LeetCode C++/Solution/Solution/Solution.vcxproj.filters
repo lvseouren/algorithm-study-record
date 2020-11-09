@@ -467,6 +467,12 @@
     <ClInclude Include="Solution_maxProfit.h">
       <Filter>头文件\solution\daily</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_checkInclusion.h">
+      <Filter>头文件\solution\slidingWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_findAnagrams.h">
+      <Filter>头文件\solution\slidingWindow</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Solution.rc">

@@ -70,6 +70,8 @@
 #include "Solution_minDeletions.h"
 #include "Solution_maxProfit.h"
 #include "Solution_smallestRange.h"
+#include "Solution_checkInclusion.h"
+#include "Solution_findAnagrams.h"
 
 class solution
 {
@@ -144,7 +146,21 @@ public:
 		//getMaximumGenerated();
 		//minDeletions();
 		//maxProfit();
-		smallestRange();
+		//smallestRange();
+		//checkInclusion();
+		findAnagrams();
+	}
+
+	void findAnagrams()
+	{
+		Solution_findAnagrams s;
+		s.RunTest();
+	}
+
+	void checkInclusion()
+	{
+		Solution_checkInclusion s;
+		s.RunTest();
 	}
 
 	void smallestRange()
