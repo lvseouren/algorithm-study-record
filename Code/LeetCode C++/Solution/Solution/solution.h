@@ -69,6 +69,7 @@
 #include "Solution_getMaximumGenerated.h"
 #include "Solution_minDeletions.h"
 #include "Solution_maxProfit.h"
+#include "Solution_smallestRange.h"
 
 class solution
 {
@@ -142,7 +143,14 @@ public:
 		//countRangeSum();
 		//getMaximumGenerated();
 		//minDeletions();
-		maxProfit();
+		//maxProfit();
+		smallestRange();
+	}
+
+	void smallestRange()
+	{
+		Solution_smallestRange s;
+		s.RunTest();
 	}
 
 	void maxProfit()

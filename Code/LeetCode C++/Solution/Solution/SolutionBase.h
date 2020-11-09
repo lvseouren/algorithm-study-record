@@ -2,6 +2,10 @@
 #include "ListPrinter.h"
 #include "BSTPrinter.h"
 #include "VectorPrinter.h"
+#include <algorithm>
+#include <map>
+
+
 class SolutionBase
 {
 public:
