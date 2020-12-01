@@ -260,6 +260,10 @@
     <ClInclude Include="Solution_findPeakElement.h" />
     <ClInclude Include="Solution_findRepeatNumber.h" />
     <ClInclude Include="Solution_firstBadVersion.h" />
+    <ClInclude Include="Solution_genHuffmanCode.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Solution_getMaximumGenerated.h">
       <SubType>
       </SubType>

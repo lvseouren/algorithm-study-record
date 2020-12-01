@@ -72,6 +72,7 @@
 #include "Solution_smallestRange.h"
 #include "Solution_checkInclusion.h"
 #include "Solution_findAnagrams.h"
+#include "Solution_genHuffmanCode.h"
 
 class solution
 {
@@ -148,7 +149,14 @@ public:
 		//maxProfit();
 		//smallestRange();
 		//checkInclusion();
-		findAnagrams();
+		//findAnagrams();
+		generateHuffmanCode();
+	}
+
+	void generateHuffmanCode()
+	{
+		Solution_genHuffmanCode s;
+		s.RunTest();
 	}
 
 	void findAnagrams()
