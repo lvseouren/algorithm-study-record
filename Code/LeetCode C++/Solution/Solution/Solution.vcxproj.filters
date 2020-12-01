@@ -476,6 +476,9 @@
     <ClInclude Include="Solution_genHuffmanCode.h">
       <Filter>头文件\solution\tree</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_myHashMap.h">
+      <Filter>头文件\solution\other</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Solution.rc">

@@ -73,6 +73,7 @@
 #include "Solution_checkInclusion.h"
 #include "Solution_findAnagrams.h"
 #include "Solution_genHuffmanCode.h"
+#include "Solution_myHashMap.h"
 
 class solution
 {
@@ -150,7 +151,14 @@ public:
 		//smallestRange();
 		//checkInclusion();
 		//findAnagrams();
-		generateHuffmanCode();
+		//generateHuffmanCode();
+		myHashMap();
+	}
+
+	void myHashMap()
+	{
+		Solution_myHashMap s;
+		s.RunTest();
 	}
 
 	void generateHuffmanCode()
