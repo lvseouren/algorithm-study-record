@@ -74,6 +74,9 @@
 #include "Solution_findAnagrams.h"
 #include "Solution_genHuffmanCode.h"
 #include "Solution_myHashMap.h"
+#include "Solution_Answerofjudge.h"
+#include "Solution_solve.h"
+#include "Solution_permute.h"
 
 class solution
 {
@@ -152,7 +155,28 @@ public:
 		//checkInclusion();
 		//findAnagrams();
 		//generateHuffmanCode();
-		myHashMap();
+		//myHashMap();
+		//Answerofjudge();
+		//nowcoder_solve();
+		permute();
+	}
+
+	void permute()
+	{
+		Solution_permute s;
+		s.RunTest();
+	}
+
+	void nowcoder_solve()
+	{
+		Solution_solve s;
+		s.RunTest();
+	}
+
+	void Answerofjudge()
+	{
+		Solution_Answerofjudge s;
+		s.RunTest();
 	}
 
 	void myHashMap()

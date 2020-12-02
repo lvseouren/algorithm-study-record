@@ -222,6 +222,10 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="solution.h" />
     <ClInclude Include="SolutionBase.h" />
+    <ClInclude Include="Solution_Answerofjudge.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Solution_bestSoluToReachSpecValue.h">
       <SubType>
       </SubType>
@@ -314,6 +318,10 @@
     <ClInclude Include="Solution_mySqrt.h" />
     <ClInclude Include="Solution_numIslands.h" />
     <ClInclude Include="Solution_partition.h" />
+    <ClInclude Include="Solution_permute.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Solution_rangeBitwiseAnd.h" />
     <ClInclude Include="Solution_reorderList.h" />
     <ClInclude Include="Solution_reverseBetween.h" />
@@ -324,6 +332,10 @@
     <ClInclude Include="Solution_singleNumber.h" />
     <ClInclude Include="Solution_smallestDistancePair.h" />
     <ClInclude Include="Solution_smallestRange.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Solution_solve.h">
       <SubType>
       </SubType>
     </ClInclude>

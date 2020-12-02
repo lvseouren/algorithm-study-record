@@ -94,6 +94,12 @@
     <Filter Include="头文件\contest\weekly\213">
       <UniqueIdentifier>{81d391ea-cc92-4a1d-a660-2a645b840586}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\solution\nowcoder">
+      <UniqueIdentifier>{b68f739f-348a-4266-a1ce-38d7caff6321}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\solution\backtrack">
+      <UniqueIdentifier>{67d92a24-fd94-4f1d-a0d7-ee910a205c62}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -478,6 +484,15 @@
     </ClInclude>
     <ClInclude Include="Solution_myHashMap.h">
       <Filter>头文件\solution\other</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_Answerofjudge.h">
+      <Filter>头文件\solution\nowcoder</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_solve.h">
+      <Filter>头文件\solution\nowcoder</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_permute.h">
+      <Filter>头文件\solution\backtrack</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
