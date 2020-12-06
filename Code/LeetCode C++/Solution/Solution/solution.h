@@ -77,6 +77,10 @@
 #include "Solution_Answerofjudge.h"
 #include "Solution_solve.h"
 #include "Solution_permute.h"
+#include "Solution_interpret.h"
+#include "Solution_maxOperation.h"
+#include "Solution_concatenatedBinary.h"
+#include "Solution_minimumIncompatibility.h"
 
 class solution
 {
@@ -158,7 +162,35 @@ public:
 		//myHashMap();
 		//Answerofjudge();
 		//nowcoder_solve();
-		permute();
+		//permute();
+		//interpret();
+		//maxOperations();
+		//concatenatedBinary();
+		minimumIncompatibility();
+	}
+
+	void minimumIncompatibility()
+	{
+		Solution_minimumIncompatibility s;
+		s.RunTest();
+	}
+
+	void concatenatedBinary()
+	{
+		Solution_concatenatedBinary s;
+		s.RunTest();
+	}
+
+	void maxOperations()
+	{
+		Solution_maxOperation s;
+		s.RunTest();
+	}
+
+	void interpret()
+	{
+		Solution_interpret s;
+		s.RunTest();
 	}
 
 	void permute()
