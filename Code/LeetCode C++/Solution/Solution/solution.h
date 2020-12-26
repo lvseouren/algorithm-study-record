@@ -81,6 +81,7 @@
 #include "Solution_maxOperation.h"
 #include "Solution_concatenatedBinary.h"
 #include "Solution_minimumIncompatibility.h"
+#include "Solution_longestConsecutive.h"
 
 class solution
 {
@@ -166,7 +167,14 @@ public:
 		//interpret();
 		//maxOperations();
 		//concatenatedBinary();
-		minimumIncompatibility();
+		//minimumIncompatibility();
+		longestConsecutive();
+	}
+
+	void longestConsecutive()
+	{
+		Solution_longestConsecutive s;
+		s.RunTest();
 	}
 
 	void minimumIncompatibility()

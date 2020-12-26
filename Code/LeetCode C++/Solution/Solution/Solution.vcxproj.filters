@@ -509,6 +509,12 @@
     <ClInclude Include="Solution_minimumIncompatibility.h">
       <Filter>头文件\contest\weekly\218</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_longestConsecutive.h">
+      <Filter>头文件\solution\other</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_helper.h">
+      <Filter>头文件\solution\other</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Solution.rc">

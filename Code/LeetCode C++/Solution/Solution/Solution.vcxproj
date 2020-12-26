@@ -279,6 +279,10 @@
     <ClInclude Include="Solution_guessNumber.h" />
     <ClInclude Include="Solution_hammingWeight.h" />
     <ClInclude Include="Solution_hasCycle.h" />
+    <ClInclude Include="Solution_helper.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Solution_inorderTraversal.h" />
     <ClInclude Include="Solution_insert.h">
       <SubType>
@@ -294,6 +298,10 @@
     </ClInclude>
     <ClInclude Include="Solution_largestRectangleArea.h" />
     <ClInclude Include="Solution_longestCommonSubSeq.h" />
+    <ClInclude Include="Solution_longestConsecutive.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Solution_longestOfLIS.h" />
     <ClInclude Include="Solution_longestValidParentheses.h" />
     <ClInclude Include="Solution_maxDepth.h" />
