@@ -77,6 +77,11 @@
 #include "Solution_Answerofjudge.h"
 #include "Solution_solve.h"
 #include "Solution_permute.h"
+#include "Solution_interpret.h"
+#include "Solution_maxOperation.h"
+#include "Solution_concatenatedBinary.h"
+#include "Solution_minimumIncompatibility.h"
+#include "Solution_longestConsecutive.h"
 #include "Solution_calculateInsurance.h"
 #include "Solution_subsets2.h"
 
@@ -161,6 +166,40 @@ public:
 		//Answerofjudge();
 		//nowcoder_solve();
 		//permute();
+		//interpret();
+		//maxOperations();
+		//concatenatedBinary();
+		//minimumIncompatibility();
+		longestConsecutive();
+	}
+
+	void longestConsecutive()
+	{
+		Solution_longestConsecutive s;
+		s.RunTest();
+	}
+
+	void minimumIncompatibility()
+	{
+		Solution_minimumIncompatibility s;
+		s.RunTest();
+	}
+
+	void concatenatedBinary()
+	{
+		Solution_concatenatedBinary s;
+		s.RunTest();
+	}
+
+	void maxOperations()
+	{
+		Solution_maxOperation s;
+		s.RunTest();
+	}
+
+	void interpret()
+	{
+		Solution_interpret s;
 		//calculateInsurance();
 		subsets2();
 	}
@@ -462,9 +501,9 @@ public:
 		cout << param_3 << endl;
 		bool param_4 = obj->empty();
 		if(param_4)
-			cout << "¶ÓÁÐÎª¿Õ" << endl;
+			cout << "ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½" << endl;
 		else
-			cout << "¶ÓÁÐ²»Îª¿Õ" << endl;
+			cout << "ï¿½ï¿½ï¿½Ð²ï¿½Îªï¿½ï¿½" << endl;
 		param_2 = obj->pop();
 		cout << param_2 << endl;
 		param_2 = obj->pop();
@@ -505,7 +544,7 @@ public:
 		root.right->left = new TreeNode(15);
 		root.right->right = new TreeNode(7);
 		int ret = s.maxDepth_iterate_bfs(&root);
-		cout << "×î´óÉî¶ÈÎª£º" << ret << endl;
+		cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½" << ret << endl;
 	}
 
 	void isValidBST()
@@ -518,9 +557,9 @@ public:
 		Solution_validateBinarySearchTree s;
 		bool ret = s.isValidBST(&root);
 		if (ret)
-			cout << "ÊÇÓÐÐ§µÄ¶þ²æ²éÕÒÊ÷" << endl;
+			cout << "ï¿½ï¿½ï¿½ï¿½Ð§ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" << endl;
 		else
-			cout << "²»ÊÇÓÐÐ§µÄ¶þ²æ²éÕÒÊ÷" << endl;
+			cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" << endl;
 	}
 
 	void insertBST()

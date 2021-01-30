@@ -240,6 +240,10 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="Solution_cloneGraph.h" />
+    <ClInclude Include="Solution_concatenatedBinary.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Solution_copyRandomList.h" />
     <ClInclude Include="Solution_countBits.h" />
     <ClInclude Include="Solution_countRangeSum.h">
@@ -279,12 +283,17 @@
     <ClInclude Include="Solution_guessNumber.h" />
     <ClInclude Include="Solution_hammingWeight.h" />
     <ClInclude Include="Solution_hasCycle.h" />
+    <ClInclude Include="Solution_helper.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Solution_inorderTraversal.h" />
     <ClInclude Include="Solution_insert.h">
       <SubType>
       </SubType>
     </ClInclude>
     <ClInclude Include="Solution_insertIntoBST.h" />
+    <ClInclude Include="Solution_interpret.h" />
     <ClInclude Include="Solution_isPalindrome.h" />
     <ClInclude Include="Solution_jump.h" />
     <ClInclude Include="Solution_ladderLength.h">
@@ -293,11 +302,19 @@
     </ClInclude>
     <ClInclude Include="Solution_largestRectangleArea.h" />
     <ClInclude Include="Solution_longestCommonSubSeq.h" />
+    <ClInclude Include="Solution_longestConsecutive.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Solution_longestOfLIS.h" />
     <ClInclude Include="Solution_longestValidParentheses.h" />
     <ClInclude Include="Solution_maxDepth.h" />
     <ClInclude Include="Solution_maximalRectangle.h" />
     <ClInclude Include="Solution_maximalSquare.h" />
+    <ClInclude Include="Solution_maxOperation.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Solution_maxPathSum.h" />
     <ClInclude Include="Solution_maxProfit.h">
       <SubType>
@@ -307,6 +324,10 @@
     <ClInclude Include="MyQueue.h" />
     <ClInclude Include="Solution_minCut.h" />
     <ClInclude Include="Solution_minDeletions.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Solution_minimumIncompatibility.h">
       <SubType>
       </SubType>
     </ClInclude>
