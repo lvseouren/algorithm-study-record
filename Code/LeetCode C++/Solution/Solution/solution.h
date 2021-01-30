@@ -77,6 +77,8 @@
 #include "Solution_Answerofjudge.h"
 #include "Solution_solve.h"
 #include "Solution_permute.h"
+#include "Solution_calculateInsurance.h"
+#include "Solution_subsets2.h"
 
 class solution
 {
@@ -158,7 +160,21 @@ public:
 		//myHashMap();
 		//Answerofjudge();
 		//nowcoder_solve();
-		permute();
+		//permute();
+		//calculateInsurance();
+		subsets2();
+	}
+
+	void subsets2()
+	{
+		Solution_subsets2 s;
+		s.RunTest();
+	}
+
+	void calculateInsurance()
+	{
+		Solution_calculateInsurance s;
+		s.RunTest();
 	}
 
 	void permute()
