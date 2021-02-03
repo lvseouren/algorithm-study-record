@@ -100,9 +100,6 @@
     <Filter Include="头文件\solution\backtrack">
       <UniqueIdentifier>{67d92a24-fd94-4f1d-a0d7-ee910a205c62}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\contest\weekly\218">
-      <UniqueIdentifier>{d0558fca-6728-43a4-9bbc-ebdf80703814}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -497,23 +494,6 @@
     <ClInclude Include="Solution_permute.h">
       <Filter>头文件\solution\backtrack</Filter>
     </ClInclude>
-    <ClInclude Include="Solution_interpret.h">
-      <Filter>头文件\contest\weekly\218</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_maxOperation.h">
-      <Filter>头文件\contest\weekly\218</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_concatenatedBinary.h">
-      <Filter>头文件\contest\weekly\218</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_minimumIncompatibility.h">
-      <Filter>头文件\contest\weekly\218</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_longestConsecutive.h">
-      <Filter>头文件\solution\other</Filter>
-    </ClInclude>
-    <ClInclude Include="Solution_helper.h">
-      <Filter>头文件\solution\other</Filter>
     <ClInclude Include="Solution_calculateInsurance.h">
       <Filter>头文件\solution\other</Filter>
     </ClInclude>
