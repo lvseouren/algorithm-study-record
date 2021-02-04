@@ -1,5 +1,7 @@
 ﻿#pragma once
 #include "SolutionBase.h"
+#include <xlnt/xlnt.hpp>
+
 struct TaxData
 {
 	TaxData(float a, float b)
