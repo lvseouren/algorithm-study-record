@@ -84,6 +84,7 @@
 #include "Solution_longestConsecutive.h"
 #include "Solution_calculateInsurance.h"
 #include "Solution_subsets2.h"
+#include "Solution_calTax.h"
 
 class solution
 {
@@ -170,7 +171,14 @@ public:
 		//maxOperations();
 		//concatenatedBinary();
 		//minimumIncompatibility();
-		longestConsecutive();
+		//longestConsecutive();
+		calTax();
+	}
+
+	void calTax()
+	{
+		Solution_calTax s;
+		s.RunTest();
 	}
 
 	void longestConsecutive()
