@@ -57,20 +57,20 @@ public:
 	TaxData GetTaxOfB(float a)
 	{
 		int temp = a / 12;
-		if (a <= 3000)
+		if (temp <= 3000)
 			return TaxData(a * 0.03, 0.03);
-		else if (a <= 12000)
+		else if (temp <= 12000)
 			return TaxData(a * 0.1 - 210, 0.1);
-		else if (a < 25000)
+		else if (temp < 25000)
 			return TaxData(a * 0.2 - 1410, 0.2);
-		else if (a < 35000)
+		else if (temp < 35000)
 			return TaxData(a * 0.25 - 2660, 0.25);
-		else if (a < 55000)
+		else if (temp < 55000)
 			return TaxData(a * 0.3 - 4410, 0.3);
-		else if (a < 80000)
-			return TaxData(a * 0.35 - 7160, 0.5);
+		else if (temp < 80000)
+			return TaxData(temp * 0.35 - 7160, 0.5);
 		else
-			return TaxData(a * 0.45 - 15160, 0.45);
+			return TaxData(temp * 0.45 - 15160, 0.45);
 	}
 
 	void RunTest()
