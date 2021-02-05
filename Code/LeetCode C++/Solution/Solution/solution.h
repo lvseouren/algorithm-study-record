@@ -301,7 +301,7 @@ public:
 		Solution_ladderLength s;
 		s.RunTest();
 	}
-	
+
 	void dachuijiaodui()
 	{
 		Solution_dachuijiaodui s;
@@ -331,7 +331,7 @@ public:
 		Solution_sumNumbers s;
 		s.RunTest();
 	}
-	
+
 	void bestSoluToReachSpecValue()
 	{
 		Solution_bestSoluToReachSpecValue s;
@@ -508,7 +508,7 @@ public:
 		int param_3 = obj->pop();
 		cout << param_3 << endl;
 		bool param_4 = obj->empty();
-		if(param_4)
+		if (param_4)
 			cout << "����Ϊ��" << endl;
 		else
 			cout << "���в�Ϊ��" << endl;
@@ -565,9 +565,11 @@ public:
 		Solution_validateBinarySearchTree s;
 		bool ret = s.isValidBST(&root);
 		if (ret)
-			cout << "����Ч�Ķ��������" << endl;
+			//cout << "����Ч�Ķ��������" << endl;
+			cout << endl;
 		else
-			cout << "������Ч�Ķ��������" << endl;
+			cout << endl;
+			//cout << "������Ч�Ķ��������" << endl;
 	}
 
 	void insertBST()
