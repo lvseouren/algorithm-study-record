@@ -84,7 +84,7 @@
 #include "Solution_longestConsecutive.h"
 #include "Solution_calculateInsurance.h"
 #include "Solution_subsets2.h"
-#include "Solution_calTax.h"
+#include "Solution_subsetsWithDup.h"
 
 class solution
 {
@@ -172,12 +172,12 @@ public:
 		//concatenatedBinary();
 		//minimumIncompatibility();
 		//longestConsecutive();
-		calTax();
+		subsetsWithDup();
 	}
 
-	void calTax()
+	void subsetsWithDup()
 	{
-		Solution_calTax s;
+		Solution_subsetsWithDup s;
 		s.RunTest();
 	}
 

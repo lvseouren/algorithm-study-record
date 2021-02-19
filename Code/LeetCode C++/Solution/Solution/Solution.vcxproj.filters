@@ -500,6 +500,9 @@
     <ClInclude Include="Solution_subsets2.h">
       <Filter>头文件\solution\backtrack</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_subsetsWithDup.h">
+      <Filter>头文件\solution\backtrack</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Solution.rc">
