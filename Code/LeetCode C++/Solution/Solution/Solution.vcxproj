@@ -326,6 +326,10 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="Solution_permuteUnique.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Solution_rangeBitwiseAnd.h" />
     <ClInclude Include="Solution_reorderList.h" />
     <ClInclude Include="Solution_reverseBetween.h" />
@@ -357,6 +361,10 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="Solution_sumNumbers.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Solution_tcpSlideWindow.h">
       <SubType>
       </SubType>
     </ClInclude>

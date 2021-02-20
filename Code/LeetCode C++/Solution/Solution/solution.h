@@ -85,6 +85,7 @@
 #include "Solution_calculateInsurance.h"
 #include "Solution_subsets2.h"
 #include "Solution_subsetsWithDup.h"
+#include "Solution_permuteUnique.h"
 
 class solution
 {
@@ -172,7 +173,14 @@ public:
 		//concatenatedBinary();
 		//minimumIncompatibility();
 		//longestConsecutive();
-		subsetsWithDup();
+		//subsetsWithDup();
+		permuteUnique();
+	}
+
+	void permuteUnique()
+	{
+		Solution_permuteUnique s;
+		s.RunTest();
 	}
 
 	void subsetsWithDup()

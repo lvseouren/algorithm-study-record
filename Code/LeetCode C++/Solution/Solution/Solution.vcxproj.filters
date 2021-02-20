@@ -503,6 +503,12 @@
     <ClInclude Include="Solution_subsetsWithDup.h">
       <Filter>头文件\solution\backtrack</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_tcpSlideWindow.h">
+      <Filter>头文件\solution\other</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_permuteUnique.h">
+      <Filter>头文件\solution\backtrack</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Solution.rc">
