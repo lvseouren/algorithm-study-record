@@ -9,11 +9,11 @@ public:
 	{
 		visited = vector<int>(nums.size());
 		sort(nums.begin(), nums.end());
-		backtrack(nums, 0);
+		backtrack(nums);
 		return result;
 	}
 
-	void backtrack(vector<int>& nums, int depth)
+	void backtrack(vector<int>& nums)
 	{
 		if (path.size() == nums.size())
 		{
@@ -21,14 +21,24 @@ public:
 			return;
 		}
 
-		for (int i = depth; i < nums.size(); ++i)
+		for (int i = 0; i < nums.size(); ++i)
 		{
-			if(i>depth&&nums[i] == nums[i-1])
-				continue;
-			int num = nums[i];
-			path.push_back(num);
-			backtrack(nums, depth+1);
-			path.pop_back();
+			if(visited[i]==0)
+			{
+				if(i>0&&visited[i-1]==0&&nums[i]==nums[i-1])
+				{
+
+				}
+				else
+				{
+					visited[i] = 1;
+					int num = nums[i];
+					path.push_back(num);
+					backtrack(nums);
+					path.pop_back();
+					visited[i] = 0;
+				}
+			}
 		}
 	}
 
