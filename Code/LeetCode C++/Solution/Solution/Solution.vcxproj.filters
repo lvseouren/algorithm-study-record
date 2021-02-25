@@ -515,6 +515,9 @@
     <ClInclude Include="Solution_permuteUnique.h">
       <Filter>头文件\solution\backtrack</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_isToeplitzMatrix.h">
+      <Filter>头文件\solution\daily</Filter>
+    </ClInclude>
     <ClInclude Include="astar.h">
       <Filter>头文件\solution\gamedev\pathfinding</Filter>
     </ClInclude>

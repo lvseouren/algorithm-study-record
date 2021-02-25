@@ -86,6 +86,7 @@
 #include "Solution_subsets2.h"
 #include "Solution_subsetsWithDup.h"
 #include "Solution_permuteUnique.h"
+#include "Solution_isToeplitzMatrix.h"
 #include "astar.h"
 
 class solution
@@ -176,7 +177,14 @@ public:
 		//longestConsecutive();
 		//subsetsWithDup();
 		//permuteUnique();
+		//isToeplitzMatrix();
 		astarPathFinding();
+	}
+
+	void isToeplitzMatrix()
+	{
+		Solution_isToeplitzMatrix s;
+		s.RunTest();
 	}
 
 	void astarPathFinding()
