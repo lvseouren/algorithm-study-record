@@ -170,6 +170,10 @@
   <ItemGroup>
     <ClInclude Include="algorithm.h" />
     <ClInclude Include="algorithm_numWaterBottles.h" />
+    <ClInclude Include="astar.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="BSTPrinter.h" />
     <ClInclude Include="contest.h" />
     <ClInclude Include="Contest_204_1.h" />

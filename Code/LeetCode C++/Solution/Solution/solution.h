@@ -86,6 +86,7 @@
 #include "Solution_subsets2.h"
 #include "Solution_subsetsWithDup.h"
 #include "Solution_permuteUnique.h"
+#include "astar.h"
 
 class solution
 {
@@ -174,7 +175,14 @@ public:
 		//minimumIncompatibility();
 		//longestConsecutive();
 		//subsetsWithDup();
-		permuteUnique();
+		//permuteUnique();
+		astarPathFinding();
+	}
+
+	void astarPathFinding()
+	{
+		Solution_astar s;
+		s.RunTest();
 	}
 
 	void permuteUnique()

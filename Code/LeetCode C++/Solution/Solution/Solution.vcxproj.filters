@@ -100,6 +100,12 @@
     <Filter Include="头文件\solution\backtrack">
       <UniqueIdentifier>{67d92a24-fd94-4f1d-a0d7-ee910a205c62}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\solution\gamedev">
+      <UniqueIdentifier>{0bc33210-5993-4b0a-8912-e17d3edccb38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\solution\gamedev\pathfinding">
+      <UniqueIdentifier>{def939e4-7de5-47ea-aa55-a288b830a544}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -508,6 +514,9 @@
     </ClInclude>
     <ClInclude Include="Solution_permuteUnique.h">
       <Filter>头文件\solution\backtrack</Filter>
+    </ClInclude>
+    <ClInclude Include="astar.h">
+      <Filter>头文件\solution\gamedev\pathfinding</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
