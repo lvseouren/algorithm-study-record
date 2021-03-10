@@ -15,6 +15,6 @@ public:
 	void RunTestCase()
 	{
 		cout << "Input:" << endl;
-		cout << "Output:"<< funcname() << endl << endl;
+		cout << "Output:" << endl;
 	}
 };

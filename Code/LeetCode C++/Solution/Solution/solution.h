@@ -87,7 +87,8 @@
 #include "Solution_subsetsWithDup.h"
 #include "Solution_permuteUnique.h"
 #include "Solution_isToeplitzMatrix.h"
-#include "astar.h"
+//#include "astar.h"
+#include "Solution_medianSlidingWindow.h"
 
 class solution
 {
@@ -178,7 +179,14 @@ public:
 		//subsetsWithDup();
 		//permuteUnique();
 		//isToeplitzMatrix();
-		astarPathFinding();
+		//astarPathFinding();
+		medianSlidingWidnow();
+	}
+
+	void medianSlidingWidnow()
+	{
+		Solution_medianSlidingWindow s;
+		s.RunTest();
 	}
 
 	void isToeplitzMatrix()
@@ -187,11 +195,11 @@ public:
 		s.RunTest();
 	}
 
-	void astarPathFinding()
-	{
-		Solution_astar s;
-		s.RunTest();
-	}
+	//void astarPathFinding()
+	//{
+	//	Solution_astar s;
+	//	s.RunTest();
+	//}
 
 	void permuteUnique()
 	{

@@ -521,6 +521,9 @@
     <ClInclude Include="astar.h">
       <Filter>头文件\solution\gamedev\pathfinding</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_medianSlidingWindow.h">
+      <Filter>头文件\solution\slidingWindow</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Solution.rc">
