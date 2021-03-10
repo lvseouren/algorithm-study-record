@@ -26,11 +26,13 @@ public:
 	void RunTest()
 	{
 		RunTestCase({ 1,3,-1,-3,5,3,6,7 }, 3);
+		RunTestCase({ 1,3,-1,-3,5,3,6,7 }, 1);
 	}
 
 	void RunTestCase(vector<int> nums, int k)
 	{
-		cout << "Input:" << endl;
+		cout << "Input:(k=" << k << ")" << endl;
+		vecPrinter->print(nums);
 		cout << "Output:" << endl;
 		auto output = medianSlidingWindow(nums, k);
 		vecPrinter->print(output);
