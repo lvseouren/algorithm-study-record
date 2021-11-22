@@ -300,6 +300,10 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="Solution_largestRectangleArea.h" />
+    <ClInclude Include="Solution_Leyi_Atoi.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Solution_longestCommonSubSeq.h" />
     <ClInclude Include="Solution_longestOfLIS.h" />
     <ClInclude Include="Solution_longestValidParentheses.h" />

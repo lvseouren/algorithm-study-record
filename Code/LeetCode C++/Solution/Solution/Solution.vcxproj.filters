@@ -106,6 +106,12 @@
     <Filter Include="头文件\solution\gamedev\pathfinding">
       <UniqueIdentifier>{def939e4-7de5-47ea-aa55-a288b830a544}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Interview">
+      <UniqueIdentifier>{9f07285f-6f98-4eee-b51b-570937ef9ab4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Interview\Leyi">
+      <UniqueIdentifier>{683c561b-2ca6-4331-93e0-5c589adcbc51}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -523,6 +529,9 @@
     </ClInclude>
     <ClInclude Include="Solution_medianSlidingWindow.h">
       <Filter>头文件\solution\slidingWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_Leyi_Atoi.h">
+      <Filter>头文件\Interview\Leyi</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
