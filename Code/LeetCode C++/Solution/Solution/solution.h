@@ -89,6 +89,7 @@
 #include "Solution_isToeplitzMatrix.h"
 //#include "astar.h"
 #include "Solution_medianSlidingWindow.h"
+#include "Solution_Leyi_Atoi.h"
 
 class solution
 {
@@ -180,7 +181,14 @@ public:
 		//permuteUnique();
 		//isToeplitzMatrix();
 		//astarPathFinding();
-		medianSlidingWidnow();
+		//medianSlidingWidnow();
+		leyiAtoi();
+	}
+
+	void leyiAtoi()
+	{
+		Solution_Leyi_Atoi s;
+		s.RunTest();
 	}
 
 	void medianSlidingWidnow()
