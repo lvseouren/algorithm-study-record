@@ -2,6 +2,7 @@
 #include "SolutionBase.h"
 #include <algorithm>
 //https://leetcode-cn.com/problems/string-to-integer-atoi/
+
 class Solution_Leyi_Atoi :SolutionBase {
 public:
 	int myAtoi(string s)
@@ -10,7 +11,7 @@ public:
 		int symbol = 0;
 		int i = 0;
 		int n = s.length();
-		int64_t ret = 0;
+		long long ret = 0;
 		int maxNum = 2147483647;
 		int minNum = -2147483648;
 		while(!isStoped&&i<n)
@@ -22,7 +23,7 @@ public:
 				{
 					if (isNumber(c))
 					{
-						ret = ret * 10 + (c - '0');
+						ret = evaluate(ret, c, symbol);
 						isStarted = true;
 					}
 					else
@@ -51,17 +52,25 @@ public:
 			}else
 			{
 				if (isNumber(c))
-					ret = ret * 10 + (c - '0');
+					ret = evaluate(ret, c, symbol);
 				else
 					isStoped = true;
 
 			}
 			i++;
 		}
-		ret = ret * symbol;
-		ret = max(ret, INT32_MIN);
-		ret = min(ret, INT32_MAX);
+		ret *= symbol;
 		return ret;
+	}
+
+	long long evaluate(long long input, char c, int sign)
+	{
+		input = input * 10 + (c - '0');
+		if (sign == 1)
+			input = min(input, (long long)INT_MAX);
+		else
+			input = min(input, -((long long)INT_MIN));
+		return input;
 	}
 
 	int getSymbol(char c)
@@ -81,10 +90,10 @@ public:
 
 	void RunTest()
 	{
-		RunTestCase("42");
-		RunTestCase("   -42");
-		RunTestCase(" 4193 with words");
-		RunTestCase("words and 987");
+		//RunTestCase("42");
+		//RunTestCase("   -42");
+		//RunTestCase(" 4193 with words");
+		//RunTestCase("words and 987");
 		RunTestCase("-91283472332");
 	}
 
