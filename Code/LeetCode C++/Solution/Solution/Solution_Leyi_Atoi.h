@@ -1,5 +1,6 @@
 #pragma once
 #include "SolutionBase.h"
+#include <algorithm>
 //https://leetcode-cn.com/problems/string-to-integer-atoi/
 class Solution_Leyi_Atoi :SolutionBase {
 public:
@@ -9,7 +10,9 @@ public:
 		int symbol = 0;
 		int i = 0;
 		int n = s.length();
-		int ret = 0;
+		int64_t ret = 0;
+		int maxNum = 2147483647;
+		int minNum = -2147483648;
 		while(!isStoped&&i<n)
 		{
 			char c = s[i];
@@ -24,15 +27,25 @@ public:
 					}
 					else
 						isStoped = true;
-				}else
+				}
+				else
 				{
 					if (isSymbol(c))
+					{
 						symbol = getSymbol(c);
-					else if(isNumber(c))
+						isReadSymbol = true;
+					}
+					else if (isNumber(c))
 					{
 						ret = c - '0';
 						symbol = 1;
+						isReadSymbol = true;
 						isStarted = true;
+					}
+					else
+					{
+						if (c != ' ')
+							break;
 					}
 				}
 			}else
@@ -45,7 +58,10 @@ public:
 			}
 			i++;
 		}
-		return 0;
+		ret = ret * symbol;
+		ret = max(ret, INT32_MIN);
+		ret = min(ret, INT32_MAX);
+		return ret;
 	}
 
 	int getSymbol(char c)
@@ -68,6 +84,8 @@ public:
 		RunTestCase("42");
 		RunTestCase("   -42");
 		RunTestCase(" 4193 with words");
+		RunTestCase("words and 987");
+		RunTestCase("-91283472332");
 	}
 
 	void RunTestCase(string s)
