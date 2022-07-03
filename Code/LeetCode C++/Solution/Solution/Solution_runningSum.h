@@ -1,3 +1,4 @@
+//https://leetcode.cn/problems/running-sum-of-1d-array/
 #pragma once
 #include "SolutionBase.h"
 class Solution_runningSum :SolutionBase {
