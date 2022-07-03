@@ -90,6 +90,8 @@
 //#include "astar.h"
 #include "Solution_medianSlidingWindow.h"
 #include "Solution_Leyi_Atoi.h"
+#include "Solution_decodeMessage.h"
+#include "Solution_spiralMatrix.h"
 
 class solution
 {
@@ -182,7 +184,21 @@ public:
 		//isToeplitzMatrix();
 		//astarPathFinding();
 		//medianSlidingWidnow();
-		leyiAtoi();
+		//leyiAtoi();
+		//decodeMessage();
+		spiralMatrix();
+	}
+
+	void spiralMatrix()
+	{
+		Solution_spiralMatrix s;
+		s.RunTest();
+	}
+
+	void decodeMessage()
+	{
+		Solution_decodeMessage s;
+		s.RunTest();
 	}
 
 	void leyiAtoi()

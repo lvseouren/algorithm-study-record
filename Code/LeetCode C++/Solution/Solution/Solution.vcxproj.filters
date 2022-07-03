@@ -533,6 +533,15 @@
     <ClInclude Include="Solution_Leyi_Atoi.h">
       <Filter>头文件\Interview\Leyi</Filter>
     </ClInclude>
+    <ClInclude Include="Solution_runningSum.h">
+      <Filter>头文件\solution\other</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_decodeMessage.h">
+      <Filter>头文件\solution\other</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_spiralMatrix.h">
+      <Filter>头文件\solution\other</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Solution.rc">
